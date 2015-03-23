@@ -21,24 +21,24 @@
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
             <!--Title-->
-            <TextBlock Text="Logon Page" Foreground="Black" FontSize="40"/>
+            <TextBlock Text="Login Page" Foreground="Black" FontSize="40"/>
 
             <!--Email-->
             <TextBlock Text=" Email:" Foreground="Black" FontSize="30"/>
             <TextBox  BorderBrush="LightGray" 
-                      Name="UserName"/>
+                      x:Name="txtbEmail"/>
 
             <!--Password-->
             <TextBlock  Foreground="Black" Text="Password:" Margin="9,-7,0,0" FontSize="30"/>
             <PasswordBox BorderBrush="LightGray" 
-                         Name="PassWord"/>
+                         x:Name="txtbPassword"/>
 
             <!--Login Button-->
             <Button Content="Login" Background="#FF30DABB" 
-                    Name="Login" Click="Login_Click" Margin="4,0,0,0" />
+                    x:Name="btnLogin" Click="btnLogin_Click" Margin="4,0,0,0" />
 
             <!--  Registration Button-->
-            <Button Content="Registration" Background="#FF30DABB" Name="SignUp"/>
+            <Button Content="Registration" Background="#FF30DABB" x:Name="btnRegister" Click="btnRegister_Click"/>
 
         </StackPanel>
 

@@ -10,22 +10,33 @@ namespace RideSharingWPApp.Request
 {
     class RequestToServer
     {
-        public string preServiceURI = "http://192.168.10.74/RESTFul/v1/";
+        public static string preServiceURI = "http://192.168.10.74/RESTFul/v1/";
         
 
-        public static async Task<string> sendGetRequest(string methodName, Windows.Web.Http.IHttpContent content)
+        public static async Task<string> sendGetRequest(string methodName)
+        {
+            string ServiceURI = preServiceURI + methodName;
+            HttpClient httpClient = new HttpClient();
+            HttpRequestMessage request = new HttpRequestMessage();
+            request.Method = HttpMethod.Post;
+            request.RequestUri = new Uri(ServiceURI);
+            request.Headers.Authorization = Windows.Web.Http.Headers.HttpCredentialsHeaderValue.Parse("ce657571fcbe01921ce838df4cccddf4");
+
+            HttpResponseMessage response = await httpClient.SendRequestAsync(request);
+            string returnString = await response.Content.ReadAsStringAsync();
+            return returnString;
+        }
+
+        public static async Task<string> sendPostRequest(string methodName, Windows.Web.Http.IHttpContent content)
         {
             string ServiceURI = "http://192.168.10.74/RESTFul/v1/" + methodName;
             HttpClient httpClient = new HttpClient();
             HttpRequestMessage request = new HttpRequestMessage();
-            request.Method = HttpMethod.Get;
+            request.Method = HttpMethod.Post;
             request.RequestUri = new Uri(ServiceURI);
             request.Headers.Authorization = Windows.Web.Http.Headers.HttpCredentialsHeaderValue.Parse("ce657571fcbe01921ce838df4cccddf4");
-           
 
-            
-            //Windows.Web.Http.HttpStringContent content =
-            //request.Content = IReadOnlyCollection.
+            request.Content = content;
 
             HttpResponseMessage response = await httpClient.SendRequestAsync(request);
             string returnString = await response.Content.ReadAsStringAsync();

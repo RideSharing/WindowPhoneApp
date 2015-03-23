@@ -19,6 +19,12 @@
     <AppxPackagedFile Include="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\RideSharingWPApp.dll">
       <PackagePath>RideSharingWPApp.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\packages\Newtonsoft.Json.6.0.8\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll">
+      <PackagePath>Newtonsoft.Json.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\packages\Newtonsoft.Json.6.0.8\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.xml">
+      <PackagePath>Newtonsoft.Json.xml</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\AlignmentGrid.png">
       <PackagePath>Assets\AlignmentGrid.png</PackagePath>
     </AppxPackagedFile>

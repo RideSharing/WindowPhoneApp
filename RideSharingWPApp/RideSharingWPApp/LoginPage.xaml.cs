@@ -8,6 +8,9 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using RideSharingWPApp.Request;
+using Windows.Web.Http;
+using Newtonsoft.Json.Linq;
+using System.IO.IsolatedStorage;
 
 namespace RideSharingWPApp
 {
@@ -16,21 +19,77 @@ namespace RideSharingWPApp
         public LoginPage()
         {
             InitializeComponent();
+
+            Loaded += (s, e) =>
+            {
+
+                // Some login-password check condition
+                if (IsolatedStorageSettings.ApplicationSettings.Contains("isLogin"))
+                {
+                    if (IsolatedStorageSettings.ApplicationSettings["isLogin"].Equals("True"))
+                    {
+                        NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.RelativeOrAbsolute));
+                    }
+                }
+            };
+
         }
 
-        private async void Login_Click(object sender, RoutedEventArgs e)
+        private async void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            var postData = new List<KeyValuePair<string, string>>();
-            postData.Add(new KeyValuePair<string, string>("email", "dauxanhrauma@gmail.com"));
-            postData.Add(new KeyValuePair<string, string>("password", "ditconmemay"));
+            Dictionary<string, string> postData = new Dictionary<string, string>();
+            postData.Add("email", txtbEmail.Text.Trim());
+            postData.Add("password", txtbPassword.Password);
+            HttpFormUrlEncodedContent content =
+                new HttpFormUrlEncodedContent(postData);
+
+            //HttpClient client = new HttpClient();
+            //HttpResponseMessage response = await client.PostAsync(uri, formContent);
 
             //Windows.Web.Http.IHttpContent content = (Windows.Web.Http.IHttpContent)postData;
             //Windows.Web.Http.IHttpContent content = new Windows.Web.Http.IHttpContent.
-            Object a = new Object;
-             var result = await RequestToServer.sendGetRequest("itinerary/2", content);
-             //var result = await RequestToServer.sendGetRequest("user");
-             MessageBox.Show(result);
+            
+             //var result = await RequestToServer.sendGetRequest("itinerary/2", content);
+            var result = await RequestToServer.sendPostRequest("user/login", content);
+             //MessageBox.Show(result);
+             //MessageBox.Show(x);
+
+            JObject jsonObject = JObject.Parse(result);
+            
+            if (jsonObject.Value<string>("error").Equals("False"))
+            {
+                //get API key
+                string APIkey = jsonObject.Value<string>("apiKey").Trim();
+
+                //storage for the next login
+                IsolatedStorageSettings.ApplicationSettings["isLogin"] = "True";
+                IsolatedStorageSettings.ApplicationSettings["APIkey"] = APIkey;
+                IsolatedStorageSettings.ApplicationSettings.Save();
+
+                //Navigate to MainPage
+                NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.Relative));
+            }
+            else
+            {
+                MessageBox.Show(jsonObject.Value<string>("message"));
+            }
+
+            //string name = jsonObject.Value<string>("Name");
+            //var y = result.T
              //await dialog.ShowAsync();
+        }
+
+        private async void btnRegister_Click(object sender, RoutedEventArgs e)
+        {
+            Dictionary<string, string> postData = new Dictionary<string, string>();
+            postData.Add("email", txtbEmail.Text.Trim());
+            postData.Add("password", txtbPassword.Password);
+            HttpFormUrlEncodedContent content =
+                new HttpFormUrlEncodedContent(postData);
+            var result = await RequestToServer.sendPostRequest("user", content);
+
+            JObject jsonObject = JObject.Parse(result);
+            MessageBox.Show(jsonObject.Value<string>("message"));
         }
     }
 }
