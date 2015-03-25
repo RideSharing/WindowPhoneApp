@@ -17,13 +17,13 @@
 
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
-        
+
         <!--Panorama control-->
         <phone:Panorama>
             <phone:Panorama.Background>
                 <ImageBrush ImageSource="/RideSharingWPApp;component/Assets/PanoramaBackground.png"/>
             </phone:Panorama.Background>
-            
+
             <!--<phone:Panorama.Title>
                 <TextBlock Text="lkkjlkj" FontSize="110" />
             </phone:Panorama.Title>-->
@@ -47,10 +47,11 @@
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="auto" />
-                        <RowDefinition Height="*" />
+                        <RowDefinition Height="307*" />
+                        <RowDefinition Height="398*"/>
                     </Grid.RowDefinitions>
                     <TextBlock x:Name="txtUserName" Text="OMG" TextWrapping="Wrap"  Style="{StaticResource PhoneTextExtraLargeStyle}" FontFamily="Impact" FontSize="48" FontWeight="Bold" Grid.Row="0" />
-                    <phone:LongListSelector x:Name="longlistMainMenu" Grid.Row="1">
+                    <phone:LongListSelector x:Name="longlistMainMenu" Grid.Row="1" Grid.RowSpan="2">
 
                         <phone:LongListSelector.ListHeaderTemplate>
                             <DataTemplate>
@@ -85,7 +86,7 @@
                                     </Border>
                                     <StackPanel Width="311" Margin="8,-7,0,0">
                                         <TextBlock Text="{Binding Title}" TextWrapping="Wrap" Margin="10,0" Style="{StaticResource PhoneTextExtraLargeStyle}" FontSize="{StaticResource PhoneFontSizeLarge}" />
-                                        
+
                                     </StackPanel>
                                 </StackPanel>
                             </DataTemplate>
@@ -97,11 +98,11 @@
 
 
                 </Grid>
-                
+
                 <!--Double line list with image placeholder and text wrapping using a floating header that scrolls with the content-->
-                
+
             </phone:PanoramaItem>
-            
+
             <phone:PanoramaItem>
                 <Grid>
                     <Grid.RowDefinitions>

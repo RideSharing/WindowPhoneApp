@@ -13,14 +13,19 @@ using Windows.Devices.Geolocation;
 using System.Windows.Shapes;
 using System.Windows.Media;
 using Microsoft.Phone.Maps.Controls;
-using Microsoft.Phone.Maps.Services; //Provides the Geocoordinate class.
+using Microsoft.Phone.Maps.Services;
+using System.Threading.Tasks;
+using System.Text;
+using Newtonsoft.Json.Linq; //Provides the Geocoordinate class.
 
 namespace PhoneApp2
 {
     public partial class MainPage : PhoneApplicationPage
     {
         private List<GeoCoordinate> MyCoordinates = new List<GeoCoordinate>();
-
+        //BingGeocoder.BingGeocoderClient b = new BingGeocoder.BingGeocoderClient("Ajze-B_0BaOUYxiJ0Hizj6wnyAnyRDPI5jfvDa1J7zkrCQZz2GNZkIigjLhi__nM");
+        List<GeoCoordinate> wayPoints = new List<GeoCoordinate>();
+        RouteQuery routeQuery = null;
         private bool _isRouteSearch = false;
         // Constructor
         public MainPage()
@@ -43,6 +48,7 @@ namespace PhoneApp2
             Geoposition myGeoposition = await myGeolocator.GetGeopositionAsync();
             myGeocoordinate = myGeoposition.Coordinate;
 
+            wayPoints.Add(new GeoCoordinate(myGeocoordinate.Latitude, myGeocoordinate.Longitude));
             //GeoCoordinate myxGeocoordinate = new GeoCoordinate(47.6785619, -122.1311156);
 
             GeoCoordinate myGeoCoordinate =
@@ -82,15 +88,79 @@ namespace PhoneApp2
             mapWithMyLocation.Layers.Add(myLocationLayer);
         }
 
-        private void btnSearch_Click(object sender, RoutedEventArgs e)
+        private async void btnSearch_Click(object sender, RoutedEventArgs e)
         {
             
 
             Mygeocodequery = new GeocodeQuery();
             Mygeocodequery.SearchTerm = txtbSearch.Text.Trim();
             Mygeocodequery.GeoCoordinate = new GeoCoordinate(0, 0);
-            Mygeocodequery.QueryCompleted += Mygeocodequery_QueryCompleted;
-            Mygeocodequery.QueryAsync();
+            //Mygeocodequery.QueryCompleted += Mygeocodequery_QueryCompleted;
+            //Mygeocodequery.QueryAsync();
+
+            
+            var result = await RequestToServer.sendGetRequest("12 le duan da nang");
+
+            //handle json return to get lat & long
+            JObject jsonObject = JObject.Parse(result);
+
+            string xlong = jsonObject.SelectToken("resourceSets[0].resources[0].point.coordinates[1]").ToString();
+            string xlat = jsonObject.SelectToken("resourceSets[0].resources[0].point.coordinates[0]").ToString();
+            
+
+            //draw trong suot marker
+            double metersPerPixels = (Math.Cos(Convert.ToDouble(xlat) * Math.PI / 180) * 2 * Math.PI * 6378137) / (256 * Math.Pow(2, mapWithMyLocation.ZoomLevel));
+            double radius = 40 / metersPerPixels;
+
+            Ellipse ellipse = new Ellipse();
+            ellipse.Width = radius * 2;
+            ellipse.Height = radius * 2;
+            ellipse.Fill = new SolidColorBrush(Color.FromArgb(75, 200, 0, 0));
+
+            // Create a MapOverlay to contain the circle.
+            MapOverlay myLocationOverlay = new MapOverlay();
+            myLocationOverlay.Content = ellipse;
+            myLocationOverlay.PositionOrigin = new Point(0.5, 0.5);
+            myLocationOverlay.GeoCoordinate = new GeoCoordinate(Convert.ToDouble(xlat), Convert.ToDouble(xlong));
+
+            wayPoints.Add(myLocationOverlay.GeoCoordinate);
+            // Create a MapLayer to contain the MapOverlay.
+            MapLayer myLocationLayer = new MapLayer();
+            myLocationLayer.Add(myLocationOverlay);
+
+            // Add the MapLayer to the Map.
+            //mapWithMyLocation.Layers.Remove();
+            mapWithMyLocation.Layers.Add(myLocationLayer);
+
+            this.mapWithMyLocation.Center = new GeoCoordinate(Convert.ToDouble(xlat), Convert.ToDouble(xlong));
+            this.mapWithMyLocation.ZoomLevel = 10;
+
+
+
+
+            routeQuery = new RouteQuery();
+            //GeocodeQuery Mygeocodequery = null;
+
+            routeQuery.QueryCompleted += routeQuery_QueryCompleted;
+            routeQuery.TravelMode = TravelMode.Walking;
+            routeQuery.Waypoints = wayPoints;
+            routeQuery.QueryAsync();
+
+            
+        }
+
+        void routeQuery_QueryCompleted(object sender, QueryCompletedEventArgs<Route> e)
+        {
+            if (null == e.Error)
+            {
+                Route MyRoute = e.Result;
+                MapRoute MyMapRoute = new MapRoute(MyRoute);
+                mapWithMyLocation.AddRoute(MyMapRoute);
+
+                //length of route
+                MessageBox.Show(MyMapRoute.Route.LengthInMeters.ToString());
+                routeQuery.Dispose();
+            }
         }
 
         void Mygeocodequery_QueryCompleted(object sender, QueryCompletedEventArgs<IList<MapLocation>> e)
@@ -161,6 +231,12 @@ namespace PhoneApp2
                 //MyMap.AddRoute(MyMapRoute);
                 MyQuery.Dispose();
             }
+        }
+
+        private void mapWithMyLocation_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            GeoCoordinate asd = this.mapWithMyLocation.ConvertViewportPointToGeoCoordinate(e.GetPosition(this.mapWithMyLocation));
+            MessageBox.Show("lat: " + asd.Latitude + "; long: " + asd.Longitude);
         }
 
         // Sample code for building a localized ApplicationBar
