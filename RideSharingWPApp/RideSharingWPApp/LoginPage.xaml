@@ -39,8 +39,10 @@
 
             <!--  Registration Button-->
             <Button Content="Registration" Background="#FF30DABB" x:Name="btnRegister" Click="btnRegister_Click"/>
-
+            
         </StackPanel>
-
+        <Image x:Name="myImg" Grid.Row="1">
+            
+        </Image>
     </Grid>
 </phone:PhoneApplicationPage>

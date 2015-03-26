@@ -11,14 +11,22 @@ using RideSharingWPApp.Request;
 using Windows.Web.Http;
 using Newtonsoft.Json.Linq;
 using System.IO.IsolatedStorage;
+using Microsoft.Phone.Tasks;
+using System.IO;
+using System.Windows.Media.Imaging;
 
 namespace RideSharingWPApp
 {
     public partial class LoginPage : PhoneApplicationPage
     {
+        PhotoChooserTask photoChooserTask;
+
         public LoginPage()
         {
             InitializeComponent();
+
+            photoChooserTask = new PhotoChooserTask();
+            photoChooserTask.Completed += new EventHandler<PhotoResult>(photoChooserTask_Completed);
 
             Loaded += (s, e) =>
             {
@@ -86,7 +94,7 @@ namespace RideSharingWPApp
 
         private async void btnRegister_Click(object sender, RoutedEventArgs e)
         {
-            Dictionary<string, string> postData = new Dictionary<string, string>();
+            /*Dictionary<string, string> postData = new Dictionary<string, string>();
             postData.Add("email", txtbEmail.Text.Trim());
             postData.Add("password", txtbPassword.Password);
             HttpFormUrlEncodedContent content =
@@ -94,7 +102,30 @@ namespace RideSharingWPApp
             var result = await RequestToServer.sendPostRequest("user", content);
 
             JObject jsonObject = JObject.Parse(result);
-            MessageBox.Show(jsonObject.Value<string>("message"));
+            MessageBox.Show(jsonObject.Value<string>("message"));*/
+
+            photoChooserTask.Show();
+
+        }
+
+        void photoChooserTask_Completed(object sender, PhotoResult e)
+        {
+            if (e.TaskResult == TaskResult.OK)
+            {
+                
+
+                //Code to display the photo on the page in an image control named myImage.
+                System.Windows.Media.Imaging.BitmapImage bmp = new System.Windows.Media.Imaging.BitmapImage();
+                bmp.SetSource(e.ChosenPhoto);
+
+                //MessageBox.Show(bmp.ToString());
+                Image myImgage = new Image();
+                myImgage.Source = bmp;
+                string str = ImageConvert.ImageConvert.convertImageToBase64(myImgage);
+
+                myImg.Source = ImageConvert.ImageConvert.convertBase64ToImage(str);
+                //MessageBox.Show(str);
+            }
         }
     }
 }

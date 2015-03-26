@@ -42,5 +42,21 @@ namespace RideSharingWPApp.Request
             string returnString = await response.Content.ReadAsStringAsync();
             return returnString;
         }
+
+        public static async Task<string> sendPutRequest(string methodName, Windows.Web.Http.IHttpContent content)
+        {
+            string ServiceURI = "http://192.168.10.74/RESTFul/v1/" + methodName;
+            HttpClient httpClient = new HttpClient();
+            HttpRequestMessage request = new HttpRequestMessage();
+            request.Method = HttpMethod.Put;
+            request.RequestUri = new Uri(ServiceURI);
+            request.Headers.Authorization = Windows.Web.Http.Headers.HttpCredentialsHeaderValue.Parse("ce657571fcbe01921ce838df4cccddf4");
+
+            request.Content = content;
+
+            HttpResponseMessage response = await httpClient.SendRequestAsync(request);
+            string returnString = await response.Content.ReadAsStringAsync();
+            return returnString;
+        }
     }
 }

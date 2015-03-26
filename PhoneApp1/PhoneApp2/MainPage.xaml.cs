@@ -16,7 +16,9 @@ using Microsoft.Phone.Maps.Controls;
 using Microsoft.Phone.Maps.Services;
 using System.Threading.Tasks;
 using System.Text;
-using Newtonsoft.Json.Linq; //Provides the Geocoordinate class.
+using Newtonsoft.Json.Linq;
+using System.Windows.Input;
+using System.Diagnostics; //Provides the Geocoordinate class.
 
 namespace PhoneApp2
 {
@@ -27,14 +29,54 @@ namespace PhoneApp2
         List<GeoCoordinate> wayPoints = new List<GeoCoordinate>();
         RouteQuery routeQuery = null;
         private bool _isRouteSearch = false;
+        bool draggingNow = false;
+
+        MapOverlay myLocationOverlay = null;
         // Constructor
         public MainPage()
         {
             InitializeComponent();
+            System.Windows.Input.Touch.FrameReported += Touch_FrameReported;
             ShowMyLocationOnTheMap();
 
             // Sample code to localize the ApplicationBar
             //BuildLocalizedApplicationBar();
+        }
+
+        void Touch_FrameReported(object sender, System.Windows.Input.TouchFrameEventArgs e)
+        {
+
+            if (draggingNow == true)
+            {
+                TouchPoint tp = e.GetPrimaryTouchPoint(mapWithMyLocation);
+
+                if (tp.Action == TouchAction.Move)
+                {
+                    if (myLocationOverlay != null)
+                    {
+                        myLocationOverlay.GeoCoordinate = mapWithMyLocation.ConvertViewportPointToGeoCoordinate(tp.Position);
+                    }
+                }
+                else if (tp.Action == TouchAction.Up)
+                {
+                    draggingNow = false;
+                    mapWithMyLocation.IsEnabled = true;
+
+                    MessageBox.Show("Lat: " + myLocationOverlay.GeoCoordinate.Latitude.ToString()
+                        + "Long:" + myLocationOverlay.GeoCoordinate.Longitude.ToString());
+                }
+            }
+
+        }
+
+        void marker_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            Debug.WriteLine("oneMarker_MouseLeftButtonDown");
+            if (myLocationOverlay != null)
+            {
+                draggingNow = true;
+                mapWithMyLocation.IsEnabled = false;
+            }
         }
 
         RouteQuery MyQuery = null;
@@ -58,6 +100,8 @@ namespace PhoneApp2
             this.mapWithMyLocation.Center = myGeoCoordinate;
             this.mapWithMyLocation.ZoomLevel = 16;
 
+            Canvas canCan = new Canvas();
+
             //draw a marker
             Ellipse myCircle = new Ellipse();
             myCircle.Fill = new SolidColorBrush(Colors.Blue);
@@ -74,11 +118,22 @@ namespace PhoneApp2
             ellipse.Height = radius * 2;
             ellipse.Fill = new SolidColorBrush(Color.FromArgb(75, 200, 0, 0));
 
+            canCan.Children.Add(myCircle);
+            TextBlock MarkerTxt = new TextBlock { Text = "Drag" };
+            MarkerTxt.HorizontalAlignment = HorizontalAlignment.Center;
+            Canvas.SetLeft(MarkerTxt, 10);
+            Canvas.SetTop(MarkerTxt, 5);
+            Canvas.SetZIndex(MarkerTxt, 5);
+
+            canCan.Children.Add(MarkerTxt);
+
             // Create a MapOverlay to contain the circle.
-            MapOverlay myLocationOverlay = new MapOverlay();
-            myLocationOverlay.Content = myCircle;
+            myLocationOverlay = new MapOverlay();
+            myLocationOverlay.Content = canCan;
             myLocationOverlay.PositionOrigin = new Point(0.5, 0.5);
             myLocationOverlay.GeoCoordinate = myGeoCoordinate;
+
+            MarkerTxt.MouseLeftButtonDown += marker_MouseLeftButtonDown;
 
             // Create a MapLayer to contain the MapOverlay.
             MapLayer myLocationLayer = new MapLayer();
@@ -99,7 +154,7 @@ namespace PhoneApp2
             //Mygeocodequery.QueryAsync();
 
             
-            var result = await RequestToServer.sendGetRequest("12 le duan da nang");
+            var result = await RequestToServer.sendGetRequest("12 le loi hue");
 
             //handle json return to get lat & long
             JObject jsonObject = JObject.Parse(result);
@@ -142,7 +197,10 @@ namespace PhoneApp2
             //GeocodeQuery Mygeocodequery = null;
 
             routeQuery.QueryCompleted += routeQuery_QueryCompleted;
-            routeQuery.TravelMode = TravelMode.Walking;
+            routeQuery.TravelMode = TravelMode.Driving;
+            routeQuery.RouteOptimization = RouteOptimization.MinimizeDistance;
+            //routeQuery.RouteOptimization = RouteOptimization.MinimizeTime;
+
             routeQuery.Waypoints = wayPoints;
             routeQuery.QueryAsync();
 
@@ -158,7 +216,8 @@ namespace PhoneApp2
                 mapWithMyLocation.AddRoute(MyMapRoute);
 
                 //length of route
-                MessageBox.Show(MyMapRoute.Route.LengthInMeters.ToString());
+                //time = route / v trung binh(hang so)
+                MessageBox.Show("Distance: " + MyMapRoute.Route.LengthInMeters.ToString());
                 routeQuery.Dispose();
             }
         }
