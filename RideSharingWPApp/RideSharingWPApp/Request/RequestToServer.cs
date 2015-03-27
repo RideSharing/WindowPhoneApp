@@ -18,9 +18,9 @@ namespace RideSharingWPApp.Request
             string ServiceURI = preServiceURI + methodName;
             HttpClient httpClient = new HttpClient();
             HttpRequestMessage request = new HttpRequestMessage();
-            request.Method = HttpMethod.Post;
+            request.Method = HttpMethod.Get;
             request.RequestUri = new Uri(ServiceURI);
-            request.Headers.Authorization = Windows.Web.Http.Headers.HttpCredentialsHeaderValue.Parse("ce657571fcbe01921ce838df4cccddf4");
+            request.Headers.Authorization = Windows.Web.Http.Headers.HttpCredentialsHeaderValue.Parse("eefdf7110456167448b6c73b33c68f30");
 
             HttpResponseMessage response = await httpClient.SendRequestAsync(request);
             string returnString = await response.Content.ReadAsStringAsync();

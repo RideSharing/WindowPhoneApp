@@ -14,21 +14,127 @@
     shell:SystemTray.IsVisible="True">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
-    <Grid x:Name="LayoutRoot" Background="Transparent">
+    <Grid x:Name="LayoutRoot">
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="130"/>
+            <RowDefinition Height="130"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="170"/>
+            <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
 
-        <!--TitlePanel contains the name of the application and page title-->
-        <StackPanel Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock Text="MY APPLICATION" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock Text="page name" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+
+
+        <TextBlock HorizontalAlignment="Left" 
+                   Margin="10,16,0,0" 
+                   Grid.Row="1" 
+                   TextWrapping="Wrap" 
+                   Text="Email:" 
+                   VerticalAlignment="Top" 
+                   Height="27" Width="52"/>
+        <TextBox x:Name="txtboxEmail" HorizontalAlignment="Left" Height="72" Margin="0,48,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="456"/>
+        <TextBox x:Name="txtboxPhone" HorizontalAlignment="Left" 
+                 Height="72" 
+                 Margin="0,45,0,0" 
+                 Grid.Row="2" 
+                 TextWrapping="Wrap" 
+                 VerticalAlignment="Top" 
+                 Width="456"/>
+        <TextBlock HorizontalAlignment="Left" 
+                   Margin="10,10,0,0" 
+                   Grid.Row="2" 
+                   TextWrapping="Wrap" 
+                   Text="Phone:" 
+                   VerticalAlignment="Top" 
+                   Height="27" 
+                   Width="60"/>
+        <TextBox x:Name="txtboxPersionalId" HorizontalAlignment="Left" 
+                 Height="72" 
+                 Margin="0,55,0,0" 
+                 Grid.Row="3" 
+                 TextWrapping="Wrap" 
+                 VerticalAlignment="Top" 
+                 Width="456"/>
+        <TextBlock HorizontalAlignment="Left" 
+                   Margin="10,23,0,0" 
+                   Grid.Row="3" 
+                   TextWrapping="Wrap" 
+                   VerticalAlignment="Top" 
+                   Width="205" Height="27">
+        	<Run Text="Persional "/>
+        	<Run Text="ID:"/>
+        </TextBlock>
+        <!--<StackPanel HorizontalAlignment="Right" Width="246" Height="130" VerticalAlignment="Top">
+            <TextBlock TextWrapping="Wrap" Text="TextBlock" Margin="10,0" Height="43"/>
+            <Button Content="Button" Height="70" Margin="152,0,0,0"/>
+        </StackPanel>-->
+
+        <StackPanel HorizontalAlignment="Right" Margin="0,5,0,0" Grid.Row="5" Width="246">
+            <Button x:Name="btnUpgrade" Height="68" Content="Upgrade" Margin="-1,0,1,0">
+                <Button.Background>
+                    <ImageBrush Stretch="Fill"/>
+                </Button.Background>
+            </Button>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" Margin="0,5,0,0" Grid.Row="5" Width="229">
+            <Button x:Name="btnChangePassword" Height="68" Content="Change Password" Margin="-1,0,1,0" Click="btnChangePassword_Click"/>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" Grid.Row="4" Width="229">
+            <Image x:Name="imgPersonalID" Height="170" Width=" 229" 
+        		Margin="0,0,10,0" 
+                Source="/200px-Steve_Jobs_Headshot_2010-CROP.jpg" 
+        		Stretch="Fill"/>
+
         </StackPanel>
 
-        <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+        <StackPanel HorizontalAlignment="Right" Grid.Row="4" Width="246">
+            <Image x:Name="btnSelectPerIDImg" Height="50" Width="50"
+        		Margin="17,10,175,10" 
+        		Source="Assets/ic_folder.png" 
+        		Stretch="Fill" Tap="btnSelectPerIDImg_Tap"/>
+            <Image x:Name="btnCapturePerIDImg" Height="50" Width="50"
+        		Margin="17,19,175,0" 
+        		Source="Assets/ic_uploadimage.png" 
+        		Stretch="Fill" Tap="btnCapturePerIDImg_Tap"/>
+        </StackPanel>
 
+        <!-- Grid row 0-->
+        <Grid Grid.Row="0" RenderTransformOrigin="0.5,0.5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width ="*"/>
+                <ColumnDefinition Width ="*"/>
+
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0" Grid.ColumnSpan="2" Margin="0,0,205,0">
+                <Image x:Name="btnCaptureAvaImg" Margin="156,63,50,10" Height="50" Width="50"
+                       Source="Assets/ic_uploadimage.png" 
+                       Stretch="Fill" 
+                       RenderTransformOrigin="2.309,1.016" Tap="btnCaptureAvaImg_Tap"/>
+                <Image x:Name="imgAvatar" Margin="10,0,0,0" 
+                       HorizontalAlignment="Left"
+                       Source="/200px-Steve_Jobs_Headshot_2010-CROP.jpg"
+                       Width="130"
+                       Height="120"/>
+
+
+                <Image x:Name="btnSelectAvaImg" Margin="156,0,50,72" Height="50" Width="50"
+                       Source="Assets/ic_folder.png" 
+                       Stretch="Fill" 
+                       RenderTransformOrigin="3.716,0.67" Tap="btnSelectAvaImg_Tap"/>
+            </Grid>
+            <Grid Grid.Column="1">
+                <Image x:Name="btnUpdateProfile" Margin="104,63,86,17" Height="50" Width="50" 
+                       Source="Assets/ic_edit.png" 
+                       Stretch="Fill"/>
+                <TextBlock x:Name="txtblockFullName" Grid.Column="1" 
+                           HorizontalAlignment="Left" 
+                           Margin="10,0,0,0" 
+                           TextWrapping="Wrap" 
+                           Text="TextBlock" 
+                           VerticalAlignment="Top" 
+                           Width="206" Height="50"/>
+            </Grid>
         </Grid>
     </Grid>
 

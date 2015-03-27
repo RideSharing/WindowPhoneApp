@@ -133,7 +133,7 @@ namespace PhoneApp2
             myLocationOverlay.PositionOrigin = new Point(0.5, 0.5);
             myLocationOverlay.GeoCoordinate = myGeoCoordinate;
 
-            MarkerTxt.MouseLeftButtonDown += marker_MouseLeftButtonDown;
+            //MarkerTxt.MouseLeftButtonDown += marker_MouseLeftButtonDown;
 
             // Create a MapLayer to contain the MapOverlay.
             MapLayer myLocationLayer = new MapLayer();
@@ -154,7 +154,7 @@ namespace PhoneApp2
             //Mygeocodequery.QueryAsync();
 
             
-            var result = await RequestToServer.sendGetRequest("12 le loi hue");
+            var result = await RequestToServer.sendGetRequest("12 le duan da nang");
 
             //handle json return to get lat & long
             JObject jsonObject = JObject.Parse(result);
@@ -289,6 +289,8 @@ namespace PhoneApp2
                 MapRoute MyMapRoute = new MapRoute(MyRoute);
                 //MyMap.AddRoute(MyMapRoute);
                 MyQuery.Dispose();
+
+
             }
         }
 

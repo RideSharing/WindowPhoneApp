@@ -3,6 +3,15 @@
   <XAPFiles>
     <File>resources.pri</File>
     <File>RideSharingWPApp.dll</File>
+    <File>Assets\ic_edit.png</File>
+    <File>Assets\ic_folder.png</File>
+    <File>Assets\ic_uploadimage.png</File>
+    <File>README_FIRST.txt</File>
+    <File>Toolkit.Content\ApplicationBar.Add.png</File>
+    <File>Toolkit.Content\ApplicationBar.Cancel.png</File>
+    <File>Toolkit.Content\ApplicationBar.Check.png</File>
+    <File>Toolkit.Content\ApplicationBar.Delete.png</File>
+    <File>Toolkit.Content\ApplicationBar.Select.png</File>
     <File>Assets\AlignmentGrid.png</File>
     <File>Assets\BadgeLogo.png</File>
     <File>Assets\Logo.png</File>
@@ -18,7 +27,8 @@
     <File>AppManifest.xaml</File>
     <File>Assets\ApplicationIcon.png</File>
     <File>Assets\Tiles\FlipCycleTileMedium.png</File>
-    <File>BingGeocoder.dll</File>
+    <File>Microsoft.Phone.Controls.dll</File>
+    <File>Microsoft.Phone.Controls.Toolkit.dll</File>
     <File Type="PCL">Newtonsoft.Json.dll</File>
     <File>Newtonsoft.Json.xml</File>
     <File>WMAppManifest.xml</File>

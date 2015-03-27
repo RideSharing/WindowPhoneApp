@@ -46,9 +46,9 @@ namespace RideSharingWPApp
         private async void btnLogin_Click(object sender, RoutedEventArgs e)
         {
 
-            BingGeocoder.BingGeocoderClient b = new BingGeocoder.BingGeocoderClient("Ajze-B_0BaOUYxiJ0Hizj6wnyAnyRDPI5jfvDa1J7zkrCQZz2GNZkIigjLhi__nM");
+            //BingGeocoder.BingGeocoderClient b = new BingGeocoder.BingGeocoderClient("Ajze-B_0BaOUYxiJ0Hizj6wnyAnyRDPI5jfvDa1J7zkrCQZz2GNZkIigjLhi__nM");
 
-            b.Geocode("sdfsd");
+            //b.Geocode("sdfsd");
 
             Dictionary<string, string> postData = new Dictionary<string, string>();
             postData.Add("email", txtbEmail.Text.Trim());

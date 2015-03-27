@@ -1,6 +1,9 @@
 Assets\AlignmentGrid.png
 Assets\ApplicationIcon.png
 Assets\BadgeLogo.png
+Assets\ic_edit.png
+Assets\ic_folder.png
+Assets\ic_uploadimage.png
 Assets\Logo.png
 Assets\SplashScreen.png
 Assets\SquareTile150x150.png
@@ -12,3 +15,9 @@ Assets\Tiles\FlipCycleTileSmall.png
 Assets\Tiles\IconicTileMediumLarge.png
 Assets\Tiles\IconicTileSmall.png
 Assets\WideLogo.png
+README_FIRST.txt
+Toolkit.Content\ApplicationBar.Add.png
+Toolkit.Content\ApplicationBar.Cancel.png
+Toolkit.Content\ApplicationBar.Check.png
+Toolkit.Content\ApplicationBar.Delete.png
+Toolkit.Content\ApplicationBar.Select.png
