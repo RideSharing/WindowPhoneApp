@@ -6,6 +6,9 @@
     <File>Assets\ic_edit.png</File>
     <File>Assets\ic_folder.png</File>
     <File>Assets\ic_uploadimage.png</File>
+    <File>Assets\Marker_Img\ic_marker_driver.png</File>
+    <File>Assets\Marker_Img\ic_marker_end.png</File>
+    <File>Assets\Marker_Img\ic_marker_start.png</File>
     <File>README_FIRST.txt</File>
     <File>Toolkit.Content\ApplicationBar.Add.png</File>
     <File>Toolkit.Content\ApplicationBar.Cancel.png</File>

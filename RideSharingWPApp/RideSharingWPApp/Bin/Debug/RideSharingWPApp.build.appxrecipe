@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>WIN-09FP1FJSA5E</Machine>
-    <WindowsUser>Nguyen</WindowsUser>
+    <Machine>WIN-U3BM6UOCLVQ</Machine>
+    <WindowsUser>Truman Nguyen</WindowsUser>
     <TargetPlatformIdentifier>Windows Phone</TargetPlatformIdentifier>
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
@@ -189,6 +189,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\ic_uploadimage.png">
       <PackagePath>Assets\ic_uploadimage.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\Marker_Img\ic_marker_driver.png">
+      <PackagePath>Assets\Marker_Img\ic_marker_driver.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\Marker_Img\ic_marker_end.png">
+      <PackagePath>Assets\Marker_Img\ic_marker_end.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\Marker_Img\ic_marker_start.png">
+      <PackagePath>Assets\Marker_Img\ic_marker_start.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Toolkit.Content\ApplicationBar.Add.png">
       <PackagePath>Toolkit.Content\ApplicationBar.Add.png</PackagePath>

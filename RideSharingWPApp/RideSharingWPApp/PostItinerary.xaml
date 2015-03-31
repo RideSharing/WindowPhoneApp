@@ -1,0 +1,65 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="RideSharingWPApp.PostItinerary"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:maps="clr-namespace:Microsoft.Phone.Maps.Controls;assembly=Microsoft.Phone.Maps"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <Grid x:Name="LayoutRoot" Background="#FF7B9D97">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+     
+        </Grid.RowDefinitions>
+
+        <StackPanel Height="Auto" Grid.Row="0" Margin="0,0,0,0" Background="#FF20E017">
+            <TextBlock Margin="9,0,0,0" Style="{StaticResource PhoneTextTitle1Style}" FontSize="22" Text="Đăng ký hành trình"/>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="0,0,0,0" Background="{StaticResource PhoneForegroundBrush}">
+            <maps:Map x:Name="mapPostItinerary"/>
+        </Grid>
+        <Grid Grid.Row="2" HorizontalAlignment="Center" Width="480">
+            <toolkit:PhoneTextBox x:Name="txtboxStart"    
+                 HorizontalAlignment="Center" 
+                 Height="Auto" Margin="0,0,0,0" 
+                 TextWrapping="Wrap" 
+                 Hint="Nơi bắt đầu" VerticalAlignment="Top" 
+                 Width="480"/>
+        </Grid>
+        
+        <Grid Grid.Row="3" HorizontalAlignment="Center" Width="480">
+            <toolkit:PhoneTextBox x:Name="txtboxEnd"    
+                HorizontalAlignment="Center" 
+                Height="Auto" Margin="0,0,0,0" 
+                TextWrapping="Wrap" 
+                Hint="Nơi đến" VerticalAlignment="Top" 
+                Width="480"/>
+        </Grid>
+        <Grid Grid.Row="4">
+            <Button x:Name="btnXn"
+                    Content="Xác nhận" HorizontalAlignment="Center"
+                    Margin="0,0,0,0" 
+                    VerticalAlignment="Top" 
+                    Background="#FF2D90F5" 
+                    BorderThickness="0" Width="160" 
+                    RenderTransformOrigin="0.5,0.5" Height="72"/>
+        </Grid>
+
+    </Grid>
+
+</phone:PhoneApplicationPage>
