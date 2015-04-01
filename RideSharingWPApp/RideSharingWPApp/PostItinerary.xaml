@@ -14,8 +14,9 @@
     SupportedOrientations="Portrait" Orientation="Portrait"
     mc:Ignorable="d"
     shell:SystemTray.IsVisible="True">
-
+    
     <Grid x:Name="LayoutRoot" Background="#FF7B9D97">
+        
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="7*"/>
@@ -26,12 +27,13 @@
         </Grid.RowDefinitions>
 
         <StackPanel Height="Auto" Grid.Row="0" Margin="0,0,0,0" Background="#FF20E017">
+            
             <TextBlock Margin="9,0,0,0" Style="{StaticResource PhoneTextTitle1Style}" FontSize="22" Text="Đăng ký hành trình"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="0,0,0,0" Background="{StaticResource PhoneForegroundBrush}">
-            <maps:Map x:Name="mapPostItinerary"/>
+            <maps:Map x:Name="mapPostItinerary" Tap="mapPostItinerary_Tap"/>
         </Grid>
         <Grid Grid.Row="2" HorizontalAlignment="Center" Width="480">
             <toolkit:PhoneTextBox x:Name="txtboxStart"    
@@ -39,7 +41,7 @@
                  Height="Auto" Margin="0,0,0,0" 
                  TextWrapping="Wrap" 
                  Hint="Nơi bắt đầu" VerticalAlignment="Top" 
-                 Width="480"/>
+                 Width="480" KeyDown="txtboxStart_KeyDown"/>
         </Grid>
         
         <Grid Grid.Row="3" HorizontalAlignment="Center" Width="480">
@@ -48,7 +50,7 @@
                 Height="Auto" Margin="0,0,0,0" 
                 TextWrapping="Wrap" 
                 Hint="Nơi đến" VerticalAlignment="Top" 
-                Width="480"/>
+                Width="480" KeyDown="txtboxEnd_KeyDown"/>
         </Grid>
         <Grid Grid.Row="4">
             <Button x:Name="btnXn"
@@ -57,9 +59,8 @@
                     VerticalAlignment="Top" 
                     Background="#FF2D90F5" 
                     BorderThickness="0" Width="160" 
-                    RenderTransformOrigin="0.5,0.5" Height="72"/>
+                    RenderTransformOrigin="0.5,0.5" Height="72" Click="btnXn_Click"/>
         </Grid>
-
     </Grid>
 
 </phone:PhoneApplicationPage>

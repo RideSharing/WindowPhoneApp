@@ -36,6 +36,10 @@ namespace PhoneApp2
         public MainPage()
         {
             InitializeComponent();
+            WaitCursor x = new WaitCursor();
+            x = WaitCursorService.WaitCursor;
+            x.IsVisible = true;
+            //x.Background = this.Background.
             System.Windows.Input.Touch.FrameReported += Touch_FrameReported;
             ShowMyLocationOnTheMap();
 
