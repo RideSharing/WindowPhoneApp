@@ -42,7 +42,7 @@ namespace RideSharingWPApp
         public PostItinerary()
         {
             InitializeComponent();
-
+            mapPostItinerary.IsEnabled = false;
             //this.Cursor = Cursors.Wait;
             //RevCode for current Location and show on Start TextBox
             geoQ = new ReverseGeocodeQuery();
@@ -164,6 +164,7 @@ namespace RideSharingWPApp
             }
             //this.Cursor = Cursors.None;
             //return "null";
+            mapPostItinerary.IsEnabled = true;
         }
 
         private void mapPostItinerary_Tap(object sender, System.Windows.Input.GestureEventArgs e)
@@ -232,17 +233,13 @@ namespace RideSharingWPApp
             }
         }
 
-        private async void btnXn_Click(object sender, RoutedEventArgs e)
+        private void btnXn_Click(object sender, RoutedEventArgs e)
         {
-            //send info to server
-            Dictionary<string, string> postData = new Dictionary<string, string>();
-            //postData.Add("email", txtbEmail.Text.Trim());
-            //postData.Add("password", txtbPassword.Password);
-            HttpFormUrlEncodedContent content =
-                new HttpFormUrlEncodedContent(postData);
-
-            //var result = await RequestToServer.sendGetRequest("itinerary/2", content);
-            var result = await RequestToServer.sendPostRequest("user/login", content);
+            NavigationService.Navigate(new Uri("/AdvancePostItinerary.xaml?start=" + txtboxStart.Text 
+                + "&end=" + txtboxEnd.Text + "&s_lat=" + myCurentLocationOverlay.GeoCoordinate.Latitude
+                + "&s_long=" + myCurentLocationOverlay.GeoCoordinate.Longitude
+                + "&e_lat=" + endPointOverlay.GeoCoordinate.Latitude
+                + "&e_long=" + endPointOverlay.GeoCoordinate.Longitude, UriKind.Relative));
         }
 
 

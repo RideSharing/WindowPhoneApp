@@ -3,6 +3,10 @@
   <XAPFiles>
     <File>resources.pri</File>
     <File>RideSharingWPApp.dll</File>
+    <File>Assets\AppBar\ic_home.png</File>
+    <File>Assets\AppBar\ic_map.png</File>
+    <File>Assets\AppBar\ic_router.png</File>
+    <File>Assets\AppBar\ic_search.png</File>
     <File>Assets\ic_edit.png</File>
     <File>Assets\ic_folder.png</File>
     <File>Assets\ic_uploadimage.png</File>
