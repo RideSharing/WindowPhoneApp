@@ -12,11 +12,11 @@
 
     <StackPanel  HorizontalAlignment="Center" VerticalAlignment="Center">
 
-        <Image Tag="{Binding id}" Source="/Assets/Marker_Img/ic_marker_start.png" Stretch="None"  x:Name="imgmarker" HorizontalAlignment="Left" >
+        <Image Tag="{Binding itinerary_id}" Source="/Assets/Marker_Img/ic_marker_start.png" Stretch="None"  x:Name="imgmarker" HorizontalAlignment="Left" >
             <Toolkit:ContextMenuService.ContextMenu>
                 <Toolkit:ContextMenu  IsZoomEnabled="True" 
                                       Style="{StaticResource MenuStyle}" >
-                    <Toolkit:MenuItem Tag="{Binding id}" Name="Menuitem"
+                    <Toolkit:MenuItem Tag="{Binding itinerary_id}" Name="Menuitem"
                                Style="{StaticResource MenuItemStyle}" />
                 </Toolkit:ContextMenu>
             </Toolkit:ContextMenuService.ContextMenu>

@@ -9,12 +9,18 @@ using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using Microsoft.Phone.Maps.Controls;
+using RideSharingWPApp.UserControls;
+using System.Device.Location;
 
 namespace RideSharingWPApp
 {
     public partial class MainMap : PhoneApplicationPage
     {
-
+        MapLayer mainMapLayer = new MapLayer();
+        List<MapOverlay> listMainMapOvelay = new List<MapOverlay>();
+        RootObject root = null;
+        List<Itinerary> itineraries = null;
         public MainMap()
         {
             InitializeComponent();
@@ -49,17 +55,123 @@ namespace RideSharingWPApp
             JArray jsonVal = (JArray)jsonObject.SelectToken("itineraries");
             var kk = jsonVal;
 
-            var root =
+            root =
             JsonConvert.DeserializeObject<RootObject>(result);
-
+            
+            
             string z = root.error.ToString();
-            foreach (var k in kk)
+            itineraries = root.itineraries;
+            foreach (Itinerary i in root.itineraries)
             {
-                //k.
-                string yy = "";
-                
-                
+                MapOverlay overlay = new MapOverlay();
+                overlay = DrawItineraryMarker(new GeoCoordinate(Convert.ToDouble(i.start_address_lat), 
+                    Convert.ToDouble(i.start_address_long)),i);
+                //chua su dung
+                listMainMapOvelay.Add(overlay);
+
+                mainMapLayer.Add(overlay);
             }
+
+            mapRecent.Layers.Add(mainMapLayer);
+
+            longlistItineraries.ItemsSource = itineraries;
+            
+        }
+
+
+        public MapOverlay DrawItineraryMarker(GeoCoordinate point, Itinerary i)
+        {
+            //MapVieMode.Layers.Clear();
+            //MapLayer mapLayer = new MapLayer();
+            // Draw marker for current position       
+
+            // Draw markers for location(s) / destination(s)
+
+
+            //DrawMapMarker(MyCoordinates[i], Colors.Red, mapLayer, parklist.parking_details[i].DestinationName);
+            UCCustomPushPin _tooltip = new UCCustomPushPin();
+            _tooltip.Description = "";
+            _tooltip.DataContext = itineraries;
+            _tooltip.Menuitem.Click += Menuitem_Click;
+            _tooltip.imgmarker.Tap += _tooltip_Tapimg;
+            MapOverlay overlay = new MapOverlay();
+            overlay.Content = _tooltip;
+            overlay.GeoCoordinate = point;
+            overlay.PositionOrigin = new Point(0.0, 1.0);
+
+            return overlay;
+            //mapLayer.Add(overlay);
+
+            //MapVieMode.Layers.Add(mapLayer);
+        }
+
+        private void Menuitem_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                MenuItem item = (MenuItem)sender;
+                string selecteditem = item.Tag.ToString().Trim();
+                var selectedparkdata = itineraries.Where(s => s.itinerary_id.ToString().Equals(selecteditem)).ToList();
+                if (selectedparkdata.Count > 0)
+                {
+                    foreach (var items in selectedparkdata)
+                    {
+                        //storage data
+                        /*if (Settings.FileExists("LocationDetailItem"))
+                        {
+                            Settings.DeleteFile("LocationDetailItem");
+                        }
+                        using (IsolatedStorageFileStream fileStream = Settings.OpenFile("LocationDetailItem", FileMode.Create))
+                        {
+                            DataContractSerializer serializer = new DataContractSerializer(typeof(LocationDetail));
+                            serializer.WriteObject(fileStream, items);
+
+                        }*/
+
+                        //navigate to Detail page
+                        NavigationService.Navigate(new Uri("/ItineraryDetails.xaml", UriKind.Relative));
+                        break;
+                    }
+                }
+            }
+            catch
+            {
+            }
+        }
+
+        private void _tooltip_Tapimg(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            try
+            {
+                Image item = (Image)sender;
+                string selecteditem = item.Tag.ToString();
+                var selectedparkdata = itineraries.Where(s => s.itinerary_id.ToString().Equals(selecteditem)).ToList();
+
+
+                if (selectedparkdata.Count > 0)
+                {
+                    foreach (var items in selectedparkdata)
+                    {
+                        ContextMenu contextMenu =
+                    ContextMenuService.GetContextMenu(item);
+                        contextMenu.DataContext = items;
+                        if (contextMenu.Parent == null)
+                        {
+                            contextMenu.IsOpen = true;
+
+                        }
+                        break;
+                    }
+                }
+            }
+            catch
+            {
+            }
+        }
+
+        private void longlistItineraries_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 

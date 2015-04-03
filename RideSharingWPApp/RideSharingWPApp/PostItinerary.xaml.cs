@@ -87,7 +87,7 @@ namespace RideSharingWPApp
 
 
             // Create a MapOverlay to contain the circle.
-            myCurentLocationOverlay = DrawMapMarker(myGeoCoordinate);
+            myCurentLocationOverlay = MarkerDraw.DrawMapMarker(myGeoCoordinate);
 
             // Create a MapLayer to contain the MapOverlay.
             myLocationLayer = new MapLayer();
@@ -104,31 +104,7 @@ namespace RideSharingWPApp
 
         }
 
-        private MapOverlay DrawMapMarker(GeoCoordinate point)
-        {
-            //MapVieMode.Layers.Clear();
-            //MapLayer mapLayer = new MapLayer();
-            // Draw marker for current position       
-
-            // Draw markers for location(s) / destination(s)
-            
-
-            //DrawMapMarker(MyCoordinates[i], Colors.Red, mapLayer, parklist.parking_details[i].DestinationName);
-            UCCustomPushPin _tooltip = new UCCustomPushPin();
-            _tooltip.Description = "";
-            _tooltip.DataContext = "";
-            //_tooltip.Menuitem.Click += Menuitem_Click;
-            //_tooltip.imgmarker.Tap += _tooltip_Tapimg;
-            MapOverlay overlay = new MapOverlay();
-            overlay.Content = _tooltip;
-            overlay.GeoCoordinate = point;
-            overlay.PositionOrigin = new Point(0.0, 1.0);
-
-            return overlay;
-            //mapLayer.Add(overlay);
-            
-            //MapVieMode.Layers.Add(mapLayer);
-        }
+        
 
         void geoQ_QueryCompleted(object sender, QueryCompletedEventArgs<IList<MapLocation>> e)
         {
@@ -178,7 +154,7 @@ namespace RideSharingWPApp
             //MessageBox.Show("lat: " + asd.Latitude + "; long: " + asd.Longitude);
 
             //dat pushpin
-            endPointOverlay = DrawMapMarker(asd);
+            endPointOverlay = MarkerDraw.DrawMapMarker(asd);
             // Create a MapLayer to contain the MapOverlay.
             myLocationLayer.Add(endPointOverlay);
 
@@ -221,7 +197,7 @@ namespace RideSharingWPApp
                     myLocationLayer.Remove(endPointOverlay);
                 }
                 //dat pushpin
-                endPointOverlay = DrawMapMarker(new GeoCoordinate(Convert.ToDouble(xlat),Convert.ToDouble(xlong)));
+                endPointOverlay = MarkerDraw.DrawMapMarker(new GeoCoordinate(Convert.ToDouble(xlat), Convert.ToDouble(xlong)));
                 // Create a MapLayer to contain the MapOverlay.
                 myLocationLayer.Add(endPointOverlay);
 
