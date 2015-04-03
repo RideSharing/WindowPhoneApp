@@ -23,12 +23,9 @@ namespace RideSharingWPApp
         public ManageAccount()
         {
             InitializeComponent();
-
             //get user infomation from server
             getUserInformation();
             //
-
-
         }
 
         public async void getUserInformation()
@@ -42,11 +39,9 @@ namespace RideSharingWPApp
             txtboxPhone.Text = jsonObject.Value<string>("phone");
             txtboxPersionalId.Text = jsonObject.Value<string>("personalID");
             txtblockFullName.Text = jsonObject.Value<string>("fullname");
-
             //set Image
             imgAvatar.Source = ImageConvert.ImageConvert.convertBase64ToImage(jsonObject.Value<string>("link_avatar").Trim());
             imgPersonalID.Source = ImageConvert.ImageConvert.convertBase64ToImage(jsonObject.Value<string>("personalID_img").Trim());
-
         }
 
         public async void getDriverInformation()
@@ -55,7 +50,6 @@ namespace RideSharingWPApp
             var result = await RequestToServer.sendGetRequest(methodName);
             JObject jsonObject = JObject.Parse(result);
             //set information to view
-            
         }
 
         public async void updateUserInfomation()
@@ -141,7 +135,7 @@ namespace RideSharingWPApp
                         {
                             MessageBox.Show("Password not match");
                         }
-                        
+
                         break;
                     case CustomMessageBoxResult.RightButton:
                         //add the task you wish to perform when user clicks on no button here

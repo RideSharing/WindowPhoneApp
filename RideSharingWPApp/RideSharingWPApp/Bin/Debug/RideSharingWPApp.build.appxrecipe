@@ -193,6 +193,27 @@
     <AppxPackagedFile Include="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\AppBar\ic_search.png">
       <PackagePath>Assets\AppBar\ic_search.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\avatar\ic_author_cody.png">
+      <PackagePath>Assets\avatar\ic_author_cody.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\avatar\ic_author_hanley.png">
+      <PackagePath>Assets\avatar\ic_author_hanley.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\avatar\ic_author_harold.png">
+      <PackagePath>Assets\avatar\ic_author_harold.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\avatar\ic_author_terry.png">
+      <PackagePath>Assets\avatar\ic_author_terry.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\avatar\ic_author_truman.png">
+      <PackagePath>Assets\avatar\ic_author_truman.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\avatar\ic_author_vidal.png">
+      <PackagePath>Assets\avatar\ic_author_vidal.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\avatar\ic_logo.png">
+      <PackagePath>Assets\avatar\ic_logo.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\ic_edit.png">
       <PackagePath>Assets\ic_edit.png</PackagePath>
     </AppxPackagedFile>

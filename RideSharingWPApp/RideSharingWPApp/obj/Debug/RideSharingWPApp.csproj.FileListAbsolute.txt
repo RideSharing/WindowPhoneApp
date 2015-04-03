@@ -91,8 +91,10 @@ D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\uz-L
 D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\vi-VN\Microsoft.Phone.Controls.Toolkit.resources.dll
 D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\zh-CN\Microsoft.Phone.Controls.Toolkit.resources.dll
 D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\zh-TW\Microsoft.Phone.Controls.Toolkit.resources.dll
-D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\RideSharingWPApp.csprojResolveAssemblyReference.cache
 D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\PostItinerary.g.cs
 D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\UserControls\UCCustomPushPin.g.cs
 D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\AdvancePostItinerary.g.cs
 D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\MainMap.g.cs
+D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\ItineraryDetails.g.cs
+D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\ItineraryManagement.g.cs
+D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\AboutUs.g.cs

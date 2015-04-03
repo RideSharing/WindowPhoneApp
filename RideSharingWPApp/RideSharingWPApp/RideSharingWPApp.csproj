@@ -91,14 +91,24 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="AboutUs.xaml.cs">
+      <DependentUpon>AboutUs.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AdvancePostItinerary.xaml.cs">
       <DependentUpon>AdvancePostItinerary.xaml</DependentUpon>
     </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Global\GlobalData.cs" />
     <Compile Include="ImageConvert\ImageConvert.cs" />
     <Compile Include="ImageConvert\PhotosPicker.cs" />
+    <Compile Include="ItineraryDetails.xaml.cs">
+      <DependentUpon>ItineraryDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ItineraryManagement.xaml.cs">
+      <DependentUpon>ItineraryManagement.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ListItemClass\MainMenuItem.cs" />
     <Compile Include="LocalizedStrings.cs" />
     <Compile Include="LoginPage.xaml.cs">
@@ -140,7 +150,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
+    <Page Include="AboutUs.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="AdvancePostItinerary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ItineraryDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ItineraryManagement.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -195,6 +217,13 @@
     <Content Include="Assets\AppBar\ic_map.png" />
     <Content Include="Assets\AppBar\ic_router.png" />
     <Content Include="Assets\AppBar\ic_search.png" />
+    <Content Include="Assets\avatar\ic_author_cody.png" />
+    <Content Include="Assets\avatar\ic_author_hanley.png" />
+    <Content Include="Assets\avatar\ic_author_harold.png" />
+    <Content Include="Assets\avatar\ic_author_terry.png" />
+    <Content Include="Assets\avatar\ic_author_truman.png" />
+    <Content Include="Assets\avatar\ic_author_vidal.png" />
+    <Content Include="Assets\avatar\ic_logo.png" />
     <Content Include="Assets\ic_edit.png" />
     <Content Include="Assets\ic_folder.png" />
     <Content Include="Assets\ic_uploadimage.png" />

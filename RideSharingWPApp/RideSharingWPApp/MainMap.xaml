@@ -15,7 +15,7 @@
     shell:SystemTray.IsVisible="True">
 
     <phone:PhoneApplicationPage.ApplicationBar>
-        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True" BackgroundColor="#FF7B9D97">
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True" BackgroundColor="#3DA5E1">
 
             <shell:ApplicationBar.MenuItems>
                 <shell:ApplicationBarMenuItem Text="Zoom In"/>
@@ -53,17 +53,17 @@
 				Margin="0,0,0,0"
 				HorizontalAlignment="Left"
 				Style="{StaticResource PhoneTextTitle1Style}"
-				Text="MY APPLICATION" FontSize="22"/>
+				Text="Ride Sharing Application" FontSize="22"/>
         </StackPanel>
         <!--Pivot Control-->
-        <phone:Pivot Grid.Row="1" Margin="0,-30,0,0" Background="#FF7B9D97">
+        <phone:Pivot Grid.Row="1" Margin="0,-30,0,0" Background="#3DA5E1">
             <!--Pivot item one-->
             <phone:PivotItem Header="Map" Margin="0,0,0,0">
-                <maps:Map x:Name="mapRecent"/>
+                <maps:Map x:Name="mapMain"/>
             </phone:PivotItem>
 
             <!--Pivot item two-->
-            <phone:PivotItem Header="List">     
+            <phone:PivotItem Header="List" >     
                 <!--Double line list with image placeholder and text wrapping using a floating header that scrolls with the content-->
                 <phone:LongListSelector x:Name="longlistItineraries" Margin="0,-38,-22,2" SelectionChanged="longlistItineraries_SelectionChanged">
                     <phone:LongListSelector.ListHeaderTemplate>
@@ -83,7 +83,10 @@
                         <DataTemplate>
                             <StackPanel Orientation="Horizontal" Margin="12,2,0,4" Height="105" Width="432">
                                 <!--Replace rectangle with image-->
-                                <Border BorderThickness="1" Width="99" Height="99" BorderBrush="#FFFFC700" Background="#FFFFC700"/>
+                                <Border BorderThickness="3" Width="99" Height="99" BorderBrush="#FFFFC700" >
+                                    <!-- Background="#FFFFC700"-->
+                                    <Image Source="{Binding link_avatar}"  Width="99" Height="99" MinWidth="99" MinHeight="99" />
+                                </Border>
                                 <StackPanel Width="311" Margin="8,-7,0,0">
                                     <TextBlock Text="{Binding start_address}" TextWrapping="Wrap" Margin="10,0" Style="{StaticResource PhoneTextExtraLargeStyle}" FontSize="{StaticResource PhoneFontSizeLarge}" />
                                     <TextBlock Text="{Binding end_address}" TextWrapping="Wrap" Margin="10,-2,10,0" Style="{StaticResource PhoneTextSubtleStyle}" />

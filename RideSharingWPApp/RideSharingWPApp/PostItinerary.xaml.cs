@@ -55,7 +55,7 @@ namespace RideSharingWPApp
 
 
             InitCurrentLocationInfo();
-            
+
         }
 
         public async void InitCurrentLocationInfo()
@@ -104,7 +104,7 @@ namespace RideSharingWPApp
 
         }
 
-        
+
 
         void geoQ_QueryCompleted(object sender, QueryCompletedEventArgs<IList<MapLocation>> e)
         {
@@ -136,7 +136,7 @@ namespace RideSharingWPApp
                 }
                 //txtboxStart.Text = showString;
                 //return showString;
-                
+
             }
             //this.Cursor = Cursors.None;
             //return "null";
@@ -211,7 +211,7 @@ namespace RideSharingWPApp
 
         private void btnXn_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Uri("/AdvancePostItinerary.xaml?start=" + txtboxStart.Text 
+            NavigationService.Navigate(new Uri("/AdvancePostItinerary.xaml?start=" + txtboxStart.Text
                 + "&end=" + txtboxEnd.Text + "&s_lat=" + myCurentLocationOverlay.GeoCoordinate.Latitude
                 + "&s_long=" + myCurentLocationOverlay.GeoCoordinate.Longitude
                 + "&e_lat=" + endPointOverlay.GeoCoordinate.Latitude

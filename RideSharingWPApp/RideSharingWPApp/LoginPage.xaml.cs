@@ -24,10 +24,6 @@ namespace RideSharingWPApp
         public LoginPage()
         {
             InitializeComponent();
-
-            photoChooserTask = new PhotoChooserTask();
-            photoChooserTask.Completed += new EventHandler<PhotoResult>(photoChooserTask_Completed);
-
             Loaded += (s, e) =>
             {
 
@@ -36,65 +32,51 @@ namespace RideSharingWPApp
                 {
                     if (IsolatedStorageSettings.ApplicationSettings["isLogin"].Equals("True"))
                     {
-                        NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.RelativeOrAbsolute));
+                        Global.GlobalData.isDriver = (bool)IsolatedStorageSettings.ApplicationSettings["isDriver"];
+
+                        Global.GlobalData.APIkey = (string)IsolatedStorageSettings.ApplicationSettings["isDriver"];
+
+                        NavigationService.Navigate(new Uri("/MainMap.xaml", UriKind.RelativeOrAbsolute));
                     }
                 }
             };
-
         }
 
         private async void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-
-            //BingGeocoder.BingGeocoderClient b = new BingGeocoder.BingGeocoderClient("Ajze-B_0BaOUYxiJ0Hizj6wnyAnyRDPI5jfvDa1J7zkrCQZz2GNZkIigjLhi__nM");
-
-            //b.Geocode("sdfsd");
-
             Dictionary<string, string> postData = new Dictionary<string, string>();
             postData.Add("email", txtbEmail.Text.Trim());
             postData.Add("password", txtbPassword.Password);
             HttpFormUrlEncodedContent content =
                 new HttpFormUrlEncodedContent(postData);
 
-            //HttpClient client = new HttpClient();
-            //HttpResponseMessage response = await client.PostAsync(uri, formContent);
-
-            //Windows.Web.Http.IHttpContent content = (Windows.Web.Http.IHttpContent)postData;
-            //Windows.Web.Http.IHttpContent content = new Windows.Web.Http.IHttpContent.
-            
-             //var result = await RequestToServer.sendGetRequest("itinerary/2", content);
             var result = await RequestToServer.sendPostRequest("user/login", content);
-             //MessageBox.Show(result);
-             //MessageBox.Show(x);
 
             JObject jsonObject = JObject.Parse(result);
-            
+
             if (jsonObject.Value<string>("error").Equals("False"))
             {
                 //get API key
-                string APIkey = jsonObject.Value<string>("apiKey").Trim();
+                Global.GlobalData.APIkey = jsonObject.Value<string>("apiKey").Trim();
 
+                Global.GlobalData.isDriver = jsonObject.Value<bool>("driver");
                 //storage for the next login
                 IsolatedStorageSettings.ApplicationSettings["isLogin"] = "True";
-                IsolatedStorageSettings.ApplicationSettings["APIkey"] = APIkey;
+                IsolatedStorageSettings.ApplicationSettings["APIkey"] = Global.GlobalData.APIkey;
+                IsolatedStorageSettings.ApplicationSettings["isDriver"] = Global.GlobalData.isDriver;
                 IsolatedStorageSettings.ApplicationSettings.Save();
-
                 //Navigate to MainPage
-                NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.Relative));
+                NavigationService.Navigate(new Uri("/MainMap.xaml", UriKind.Relative));
             }
             else
             {
                 MessageBox.Show(jsonObject.Value<string>("message"));
             }
-
-            //string name = jsonObject.Value<string>("Name");
-            //var y = result.T
-             //await dialog.ShowAsync();
         }
 
         private async void btnRegister_Click(object sender, RoutedEventArgs e)
         {
-            /*Dictionary<string, string> postData = new Dictionary<string, string>();
+            Dictionary<string, string> postData = new Dictionary<string, string>();
             postData.Add("email", txtbEmail.Text.Trim());
             postData.Add("password", txtbPassword.Password);
             HttpFormUrlEncodedContent content =
@@ -102,30 +84,8 @@ namespace RideSharingWPApp
             var result = await RequestToServer.sendPostRequest("user", content);
 
             JObject jsonObject = JObject.Parse(result);
-            MessageBox.Show(jsonObject.Value<string>("message"));*/
+            MessageBox.Show(jsonObject.Value<string>("message"));
 
-            photoChooserTask.Show();
-
-        }
-
-        void photoChooserTask_Completed(object sender, PhotoResult e)
-        {
-            if (e.TaskResult == TaskResult.OK)
-            {
-                
-
-                //Code to display the photo on the page in an image control named myImage.
-                System.Windows.Media.Imaging.BitmapImage bmp = new System.Windows.Media.Imaging.BitmapImage();
-                bmp.SetSource(e.ChosenPhoto);
-
-                //MessageBox.Show(bmp.ToString());
-                Image myImgage = new Image();
-                myImgage.Source = bmp;
-                string str = ImageConvert.ImageConvert.convertImageToBase64(myImgage);
-
-                myImg.Source = ImageConvert.ImageConvert.convertBase64ToImage(str);
-                //MessageBox.Show(str);
-            }
         }
     }
 }
