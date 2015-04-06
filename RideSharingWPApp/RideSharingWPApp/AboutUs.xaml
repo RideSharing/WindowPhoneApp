@@ -42,11 +42,11 @@
         <TextBlock/>
         <StackPanel Grid.Row="1" Background="#FF3DA5E1">
             <Image Source="Assets/avatar/ic_logo.png" Height="100"/>
-            <TextBlock HorizontalAlignment="Center" Text="RIDE SHARING" Height="50"/>
+            <TextBlock HorizontalAlignment="Center" Text="RIDE SHARING" Height="50" FontWeight="Bold"/>
         </StackPanel>
 
         <StackPanel Grid.Row="2" Height="Auto" Background="White" Margin="0,0,0,3">
-            <TextBlock HorizontalAlignment="Center" Text="Thông tin cả bản" Foreground="#FF0C0B0B" />
+            <TextBlock HorizontalAlignment="Center" Text="Thông tin cả bản" Foreground="#FF0C0B0B" FontWeight="Bold" />
             <TextBlock Text="hghfgh" Foreground="#FF0C0B0B" />
             <TextBlock Text="TTY" Foreground="#FF0C0B0B" />
             <TextBlock Text="TTY" Foreground="#FF0C0B0B" />
@@ -54,7 +54,10 @@
         </StackPanel>
 
         <StackPanel Grid.Row="3" Height="Auto" Background="White" Margin="0,0,0,7">
-            <TextBlock HorizontalAlignment="Center" Text="Liên hệ" Foreground="#FF0C0B0B" />
+            <TextBlock HorizontalAlignment="Center" Foreground="#FF0C0B0B" FontWeight="Bold" >
+            	<Run Text="Liên "/>
+            	<Run Text="hệ"/>
+            </TextBlock>
             <TextBlock Text="hghfgh" Foreground="#FF0C0B0B" />
             <TextBlock Text="TTY" Foreground="#FF0C0B0B" />
             <TextBlock Text="TTY" Foreground="#FF0C0B0B" />
@@ -66,7 +69,7 @@
                 <ColumnDefinition Width="11*"/>
                 <ColumnDefinition Width="5*"/>
             </Grid.ColumnDefinitions>
-            <TextBlock  HorizontalAlignment="Center" Text="Thông tin nhóm tác giả" Foreground="White" Grid.ColumnSpan="2" Margin="137,0,136,0"/>
+            <TextBlock  HorizontalAlignment="Center" Text="Thông tin nhóm tác giả" Foreground="White" Grid.ColumnSpan="2" Margin="0,0,0,0" FontWeight="Bold"/>
         </Grid>
 
         <Grid Grid.Row="5">
