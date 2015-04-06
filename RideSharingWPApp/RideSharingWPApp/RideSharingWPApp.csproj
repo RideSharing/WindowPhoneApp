@@ -100,13 +100,16 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Driver\DriverItineraryDetails.xaml.cs">
+      <DependentUpon>DriverItineraryDetails.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Global\GlobalData.cs" />
     <Compile Include="ImageConvert\ImageConvert.cs" />
     <Compile Include="ImageConvert\PhotosPicker.cs" />
     <Compile Include="ItineraryDetails.xaml.cs">
       <DependentUpon>ItineraryDetails.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ItineraryManagement.xaml.cs">
+    <Compile Include="Driver\ItineraryManagement.xaml.cs">
       <DependentUpon>ItineraryManagement.xaml</DependentUpon>
     </Compile>
     <Compile Include="ListItemClass\MainMenuItem.cs" />
@@ -158,11 +161,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Driver\DriverItineraryDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ItineraryDetails.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ItineraryManagement.xaml">
+    <Page Include="Driver\ItineraryManagement.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -272,6 +279,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets\MainMenuImg\" />
+    <Folder Include="Customer\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

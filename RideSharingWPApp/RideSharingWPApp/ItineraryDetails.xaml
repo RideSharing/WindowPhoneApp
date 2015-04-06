@@ -62,12 +62,12 @@
                         <RowDefinition Height="7*"/>
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
-                    <maps:Map x:Name="mapMain"/>
-                    <Button Content="Button" Grid.Row="1"/>
+                    <maps:Map x:Name="mapItineraryDetails"/>
+                    <Button x:Name="btnAccept1"  Content="Button" Grid.Row="1" Click="btnAccept1_Click"/>
                 </Grid>
             </phone:PivotItem>
             <!--Pivot item two-->
-            <phone:PivotItem Header="List" >
+            <phone:PivotItem Header="List" Margin="0,0,0,0">
                 <Grid Margin="0,0,0,0">
 
                     <Grid.RowDefinitions>
@@ -75,51 +75,51 @@
                         <RowDefinition Height="1.25*"/>
                     </Grid.RowDefinitions>
                     <ListBox Grid.Row="0" Margin="0,0,0,0">
-                        <ListBoxItem Background="White">
+                        <ListBoxItem Background="White" Margin="0,1,0,1">
                             <StackPanel>
                                 <TextBlock Text="Mô tả hành trinh:" Foreground="Black" FontSize="24" FontWeight="Bold"/>
                                 <TextBlock x:Name="txtDescription" Foreground="Black" FontSize="20" FontWeight="Bold" />
                             </StackPanel>
                         </ListBoxItem>
-                        <ListBoxItem Background="White">
+                        <ListBoxItem Background="White" Margin="0,1,0,1">
                             <StackPanel>
                                 <TextBlock Text="Điểm xuất phát:" Foreground="Black" FontSize="24" FontWeight="Bold"/>
                                 <TextBlock x:Name="txtStartAddress" Foreground="Black" FontSize="20" FontWeight="Bold" />
                             </StackPanel>
                         </ListBoxItem>
-                        <ListBoxItem Background="White">
+                        <ListBoxItem Background="White" Margin="0,1,0,1">
                             <StackPanel>
                                 <TextBlock Text="Nơi đến:" Foreground="Black" FontSize="24" FontWeight="Bold"/>
                                 <TextBlock x:Name="txtEndAddress" Foreground="Black" FontSize="20" FontWeight="Bold" />
 
                             </StackPanel>
                         </ListBoxItem>
-                        <ListBoxItem Background="White">
+                        <ListBoxItem Background="White" Margin="0,1,0,1">
                             <StackPanel>
                                 <TextBlock Text="Thời gian hoàn thành dự trù:" Foreground="Black" FontSize="24" FontWeight="Bold"/>
                                 <TextBlock x:Name="txtDuration" Foreground="Black" FontSize="20" FontWeight="Bold" />
                             </StackPanel>
                         </ListBoxItem>
-                        <ListBoxItem Background="White">
+                        <ListBoxItem Background="White" Margin="0,1,0,1">
                             <StackPanel>
                                 <TextBlock Text="Khoảng cách:" Foreground="Black" FontSize="24" FontWeight="Bold"/>
                                 <TextBlock x:Name="txtDistance" Foreground="Black" FontSize="20" FontWeight="Bold" />
                             </StackPanel>
                         </ListBoxItem>
-                        <ListBoxItem Background="White">
+                        <ListBoxItem Background="White" Margin="0,1,0,1">
                             <StackPanel>
                                 <TextBlock Text="Ngày đi:" Foreground="Black" FontSize="24" FontWeight="Bold"/>
                                 <TextBlock x:Name="txtLeaveDay" Foreground="Black" FontSize="20" FontWeight="Bold" />
                             </StackPanel>
                         </ListBoxItem>
-                        <ListBoxItem Background="White">
+                        <ListBoxItem Background="White" Margin="0,1,0,1">
                             <StackPanel>
                                 <TextBlock Text="Giá tiền:" Foreground="Black" FontSize="24" FontWeight="Bold"/>
                                 <TextBlock x:Name="txtCost" Foreground="Black" FontSize="20" FontWeight="Bold" />
 
                             </StackPanel>
                         </ListBoxItem>
-                        <ListBoxItem Background="White">
+                        <ListBoxItem Background="White" Margin="0,1,0,1">
                             <StackPanel>
                                 <TextBlock Text="Điện thoại liên lạc" Foreground="Black" FontSize="24" FontWeight="Bold" />
                                 <TextBlock x:Name="txtPhone" Foreground="Black" FontSize="20" FontWeight="Bold" />
@@ -173,7 +173,7 @@
                             </StackPanel>
                         </Grid>
                     </ScrollViewer>-->
-                    <Button Background="#3DA5E1" Grid.Row="1" Content="Xác Nhận" />
+                    <Button x:Name="btnAccept2"  Background="#3DA5E1" Grid.Row="1" Content="Xác Nhận" Click="btnAccept2_Click" />
 
                 </Grid>
             </phone:PivotItem>

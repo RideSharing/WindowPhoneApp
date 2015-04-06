@@ -195,9 +195,7 @@ namespace RideSharingWPApp
 
                         }*/
                         //luu tru tam thoi
-
-                        Global.GlobalData.slectedItinerary = item;
-
+                        Global.GlobalData.selectedItinerary = item;
                         //navigate to Detail page
                         NavigationService.Navigate(new Uri("/ItineraryDetails.xaml", UriKind.Relative));
                         break;
@@ -243,7 +241,7 @@ namespace RideSharingWPApp
             Itinerary2 selectedItem = (Itinerary2)longlistItineraries.SelectedItem;
             MessageBox.Show("ss: " + selectedItem.itinerary_id);
             //luu tru tam thoi
-            Global.GlobalData.slectedItinerary = selectedItem;
+            Global.GlobalData.selectedItinerary = selectedItem;
             //navigate sang details
             NavigationService.Navigate(new Uri("/ItineraryDetails.xaml", UriKind.Relative));
         }
