@@ -196,7 +196,7 @@ namespace RideSharingWPApp
                         }*/
                         //luu tru tam thoi
                         Global.GlobalData.selectedItinerary = item;
-                        //navigate to Detail page
+                        //navigate to Details page
                         NavigationService.Navigate(new Uri("/ItineraryDetails.xaml", UriKind.Relative));
                         break;
                     }

@@ -14,19 +14,17 @@ using System.IO.IsolatedStorage;
 using Microsoft.Phone.Tasks;
 using System.IO;
 using System.Windows.Media.Imaging;
+using RideSharingWPApp.Global;
 
 namespace RideSharingWPApp
 {
     public partial class LoginPage : PhoneApplicationPage
     {
-        PhotoChooserTask photoChooserTask;
-
         public LoginPage()
         {
             InitializeComponent();
             Loaded += (s, e) =>
             {
-
                 // Some login-password check condition
                 if (IsolatedStorageSettings.ApplicationSettings.Contains("isLogin"))
                 {
@@ -34,7 +32,10 @@ namespace RideSharingWPApp
                     {
                         Global.GlobalData.isDriver = (bool)IsolatedStorageSettings.ApplicationSettings["isDriver"];
 
-                        Global.GlobalData.APIkey = (string)IsolatedStorageSettings.ApplicationSettings["isDriver"];
+                        Global.GlobalData.APIkey = (string)IsolatedStorageSettings.ApplicationSettings["APIkey"];
+
+                        Global.GlobalData.customer_status = (int)IsolatedStorageSettings.ApplicationSettings["customer_status"];
+                        Global.GlobalData.driver_status = (int)IsolatedStorageSettings.ApplicationSettings["driver_status"];
 
                         NavigationService.Navigate(new Uri("/MainMap.xaml", UriKind.RelativeOrAbsolute));
                     }
@@ -46,7 +47,7 @@ namespace RideSharingWPApp
         {
             Dictionary<string, string> postData = new Dictionary<string, string>();
             postData.Add("email", txtbEmail.Text.Trim());
-            postData.Add("password", txtbPassword.Password);
+            postData.Add("password", txtbPassword.Text);
             HttpFormUrlEncodedContent content =
                 new HttpFormUrlEncodedContent(postData);
 
@@ -60,13 +61,27 @@ namespace RideSharingWPApp
                 Global.GlobalData.APIkey = jsonObject.Value<string>("apiKey").Trim();
 
                 Global.GlobalData.isDriver = jsonObject.Value<bool>("driver");
+
+                Global.GlobalData.customer_status = jsonObject.Value<int>("customer_status");
+                Global.GlobalData.driver_status = jsonObject.Value<int>("driver_staus");
+
                 //storage for the next login
                 IsolatedStorageSettings.ApplicationSettings["isLogin"] = "True";
                 IsolatedStorageSettings.ApplicationSettings["APIkey"] = Global.GlobalData.APIkey;
                 IsolatedStorageSettings.ApplicationSettings["isDriver"] = Global.GlobalData.isDriver;
+                IsolatedStorageSettings.ApplicationSettings["customer_status"] = Global.GlobalData.customer_status;
+                IsolatedStorageSettings.ApplicationSettings["driver_status"] = Global.GlobalData.driver_status;
                 IsolatedStorageSettings.ApplicationSettings.Save();
                 //Navigate to MainPage
-                NavigationService.Navigate(new Uri("/MainMap.xaml", UriKind.Relative));
+                if (GlobalData.isDriver)
+                {
+                    NavigationService.Navigate(new Uri("Customer/MainMap.xaml", UriKind.Relative));
+                }
+                else
+                {
+                    NavigationService.Navigate(new Uri("Driver/DriverMainMap.xaml", UriKind.Relative));
+                }
+                
             }
             else
             {
@@ -78,7 +93,7 @@ namespace RideSharingWPApp
         {
             Dictionary<string, string> postData = new Dictionary<string, string>();
             postData.Add("email", txtbEmail.Text.Trim());
-            postData.Add("password", txtbPassword.Password);
+            postData.Add("password", txtbPassword.Text);
             HttpFormUrlEncodedContent content =
                 new HttpFormUrlEncodedContent(postData);
             var result = await RequestToServer.sendPostRequest("user", content);
@@ -86,6 +101,11 @@ namespace RideSharingWPApp
             JObject jsonObject = JObject.Parse(result);
             MessageBox.Show(jsonObject.Value<string>("message"));
 
+        }
+
+        private void linkForgotPass_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/ForgotPass.xaml", UriKind.Relative));
         }
     }
 }

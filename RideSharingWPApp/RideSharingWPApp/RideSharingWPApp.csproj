@@ -94,19 +94,31 @@
     <Compile Include="AboutUs.xaml.cs">
       <DependentUpon>AboutUs.xaml</DependentUpon>
     </Compile>
-    <Compile Include="AdvancePostItinerary.xaml.cs">
+    <Compile Include="Customer\CustomerItineraryManagement.xaml.cs">
+      <DependentUpon>CustomerItineraryManagement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Driver\AdvancePostItinerary.xaml.cs">
       <DependentUpon>AdvancePostItinerary.xaml</DependentUpon>
     </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Driver\DriverItineraryDetails.xaml.cs">
+      <DependentUpon>DriverItineraryDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Driver\DriverMainMap.xaml.cs">
+      <DependentUpon>DriverMainMap.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotPass.xaml.cs">
+      <DependentUpon>ForgotPass.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Global\GlobalData.cs" />
     <Compile Include="ImageConvert\ImageConvert.cs" />
     <Compile Include="ImageConvert\PhotosPicker.cs" />
-    <Compile Include="ItineraryDetails.xaml.cs">
+    <Compile Include="Customer\ItineraryDetails.xaml.cs">
       <DependentUpon>ItineraryDetails.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ItineraryManagement.xaml.cs">
+    <Compile Include="Driver\ItineraryManagement.xaml.cs">
       <DependentUpon>ItineraryManagement.xaml</DependentUpon>
     </Compile>
     <Compile Include="ListItemClass\MainMenuItem.cs" />
@@ -114,7 +126,7 @@
     <Compile Include="LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MainMap.xaml.cs">
+    <Compile Include="Customer\MainMap.xaml.cs">
       <DependentUpon>MainMap.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainPage.xaml.cs">
@@ -124,13 +136,10 @@
       <DependentUpon>ManageAccount.xaml</DependentUpon>
     </Compile>
     <Compile Include="Map\CoordinateConverter.cs" />
-    <Compile Include="PostItinerary.xaml.cs">
+    <Compile Include="Driver\PostItinerary.xaml.cs">
       <DependentUpon>PostItinerary.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RegisterPage.xaml.cs">
-      <DependentUpon>RegisterPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Request\RequestToBingMap.cs" />
     <Compile Include="Request\RequestToServer.cs" />
     <Compile Include="Resources\AppResources.Designer.cs">
@@ -154,15 +163,31 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="AdvancePostItinerary.xaml">
+    <Page Include="Customer\CustomerItineraryManagement.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ItineraryDetails.xaml">
+    <Page Include="Driver\AdvancePostItinerary.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ItineraryManagement.xaml">
+    <Page Include="Driver\DriverItineraryDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Customer\ItineraryDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Driver\DriverMainMap.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Driver\ItineraryManagement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ForgotPass.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -170,7 +195,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainMap.xaml">
+    <Page Include="Customer\MainMap.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -186,11 +211,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PostItinerary.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="RegisterPage.xaml">
+    <Page Include="Driver\PostItinerary.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

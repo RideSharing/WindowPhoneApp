@@ -10,16 +10,16 @@ using Microsoft.Phone.Shell;
 
 namespace RideSharingWPApp
 {
-    public partial class AboutUs : PhoneApplicationPage
+    public partial class ForgotPass : PhoneApplicationPage
     {
-        public AboutUs()
+        public ForgotPass()
         {
             InitializeComponent();
         }
 
-        private void btnSendFeedback_Click(object sender, RoutedEventArgs e)
+        private void btnForgotPass_Click(object sender, RoutedEventArgs e)
         {
-
+            //send request to server
         }
     }
 }

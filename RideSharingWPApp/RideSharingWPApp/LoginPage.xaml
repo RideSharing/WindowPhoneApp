@@ -6,6 +6,7 @@
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
@@ -14,35 +15,58 @@
     shell:SystemTray.IsVisible="True">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
-    <Grid x:Name="LayoutRoot" Background="White">
+    <Grid x:Name="LayoutRoot" Background="#FF3DA5E1">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="1.5*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="4*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Image Grid.Row="0" Source="Assets/avatar/ic_logo.png"/>
+            <TextBlock Grid.Row="1" HorizontalAlignment="Center" Text="Đăng ký để tiết kiệm chi phí! " FontWeight="Bold" FontFamily="MV Boli" />
+        </Grid>
+        <toolkit:PhoneTextBox x:Name="txtbEmail" Hint="Nhập Email:" Grid.Row="1" Background="White" Width="Auto" Height="Auto" />
+        <toolkit:PhoneTextBox  x:Name="txtbPassword" Hint="Nhập PassWord:" Grid.Row="2" Background="White" Width="Auto" />
+        <Button x:Name="btnLogin" Grid.Row="3" Content="Đăng Nhập"  Width="Auto" FontWeight="Bold" BorderThickness="5" Background="#FF3DA5E1" Click="btnLogin_Click"/>
+        <Button x:Name="btnRegister" Grid.Row="4" Content="Đăng ký"  Width="Auto" FontWeight="Bold" BorderThickness="5" Background="#FF3DA5E1" Click="btnRegister_Click"/>
+        <HyperlinkButton x:Name="linkForgotPass"  Grid.Row="5" Content="Quên mật khẩu" Click="linkForgotPass_Click"/>
+    </Grid>
+    <!--<Grid x:Name="LayoutRoot" Background="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
-            <!--Title-->
+            
             <TextBlock Text="Login Page" Foreground="Black" FontSize="40"/>
 
-            <!--Email-->
+            
             <TextBlock Text=" Email:" Foreground="Black" FontSize="30"/>
             <TextBox  BorderBrush="LightGray" 
                       x:Name="txtbEmail"/>
 
-            <!--Password-->
+            
             <TextBlock  Foreground="Black" Text="Password:" Margin="9,-7,0,0" FontSize="30"/>
             <PasswordBox BorderBrush="LightGray" 
                          x:Name="txtbPassword"/>
 
-            <!--Login Button-->
+            
             <Button Content="Login" Background="#FF30DABB" 
                     x:Name="btnLogin" Click="btnLogin_Click" Margin="4,0,0,0" />
 
-            <!--  Registration Button-->
+            
             <Button Content="Registration" Background="#FF30DABB" x:Name="btnRegister" Click="btnRegister_Click"/>
             
         </StackPanel>
         <Image x:Name="myImg" Grid.Row="1">
             
         </Image>
-    </Grid>
+    </Grid>-->
 </phone:PhoneApplicationPage>

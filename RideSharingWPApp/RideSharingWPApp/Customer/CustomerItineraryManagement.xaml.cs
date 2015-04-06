@@ -8,18 +8,13 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 
-namespace RideSharingWPApp
+namespace RideSharingWPApp.Customer
 {
-    public partial class AboutUs : PhoneApplicationPage
+    public partial class CustomerItineraryManagement : PhoneApplicationPage
     {
-        public AboutUs()
+        public CustomerItineraryManagement()
         {
             InitializeComponent();
-        }
-
-        private void btnSendFeedback_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

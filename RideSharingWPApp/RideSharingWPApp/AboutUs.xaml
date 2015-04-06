@@ -102,7 +102,7 @@
         </Grid>
 
         <Grid x:Name="ContentPanel" Grid.Row="6" Margin="0,0,0,0" Background="White"/>
-        <Button Width="250" Height="70" Content="Feedback" HorizontalAlignment="Center" Margin="0,0,0,0" Grid.Row="6" VerticalAlignment="Center" Background="#FF3DA5E1"/>
+        <Button x:Name="btnSendFeedback"  Width="250" Height="70" Content="Feedback" HorizontalAlignment="Center" Margin="0,0,0,0" Grid.Row="6" VerticalAlignment="Center" Background="#FF3DA5E1" Click="btnSendFeedback_Click"/>
 
     </Grid>
 
