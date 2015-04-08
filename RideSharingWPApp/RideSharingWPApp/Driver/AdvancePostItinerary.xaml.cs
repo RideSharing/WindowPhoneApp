@@ -9,6 +9,7 @@ using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using Windows.Web.Http;
 using RideSharingWPApp.Request;
+using Newtonsoft.Json.Linq;
 
 namespace RideSharingWPApp
 {
@@ -64,11 +65,16 @@ namespace RideSharingWPApp
             postData.Add("start_address_long", start_long.Trim());
             postData.Add("end_address_lat", end_lat.Trim());
             postData.Add("end_address_long", end_long.Trim());
+            postData.Add("leave_date", "09/09/2015");
+            postData.Add("duration", txtbCost.Text.Trim());
             HttpFormUrlEncodedContent content =
                 new HttpFormUrlEncodedContent(postData);
 
             //var result = await RequestToServer.sendGetRequest("itinerary/2", content);
             var result = await RequestToServer.sendPostRequest("itinerary", content);
+
+            JObject jsonObject = JObject.Parse(result);
+            MessageBox.Show(jsonObject.Value<string>("message"));
         }
     }
 }

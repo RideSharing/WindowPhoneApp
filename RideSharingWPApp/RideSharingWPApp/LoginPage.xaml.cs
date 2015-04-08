@@ -23,6 +23,8 @@ namespace RideSharingWPApp
         public LoginPage()
         {
             InitializeComponent();
+            txtbEmail.Text = "cody@enclave.vn";
+            txtbPassword.Text = "12341234";
             Loaded += (s, e) =>
             {
                 // Some login-password check condition
@@ -37,7 +39,7 @@ namespace RideSharingWPApp
                         Global.GlobalData.customer_status = (int)IsolatedStorageSettings.ApplicationSettings["customer_status"];
                         Global.GlobalData.driver_status = (int)IsolatedStorageSettings.ApplicationSettings["driver_status"];
 
-                        NavigationService.Navigate(new Uri("/MainMap.xaml", UriKind.RelativeOrAbsolute));
+                        NavigationService.Navigate(new Uri("/Customer/MainMap.xaml", UriKind.RelativeOrAbsolute));
                     }
                 }
             };
@@ -75,7 +77,7 @@ namespace RideSharingWPApp
                 //Navigate to MainPage
                 if (GlobalData.isDriver)
                 {
-                    NavigationService.Navigate(new Uri("Customer/MainMap.xaml", UriKind.Relative));
+                    NavigationService.Navigate(new Uri("/Customer/MainMap.xaml", UriKind.RelativeOrAbsolute));
                 }
                 else
                 {

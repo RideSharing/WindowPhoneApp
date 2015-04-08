@@ -154,7 +154,6 @@ namespace RideSharingWPApp
 
             // Draw markers for location(s) / destination(s)
 
-
             //DrawMapMarker(MyCoordinates[i], Colors.Red, mapLayer, parklist.parking_details[i].DestinationName);
             UCCustomPushPin _tooltip = new UCCustomPushPin();
             _tooltip.Description = "";
@@ -197,7 +196,7 @@ namespace RideSharingWPApp
                         //luu tru tam thoi
                         Global.GlobalData.selectedItinerary = item;
                         //navigate to Details page
-                        NavigationService.Navigate(new Uri("/ItineraryDetails.xaml", UriKind.Relative));
+                        NavigationService.Navigate(new Uri("Customer/ItineraryDetails.xaml", UriKind.RelativeOrAbsolute));
                         break;
                     }
                 }
@@ -243,7 +242,7 @@ namespace RideSharingWPApp
             //luu tru tam thoi
             Global.GlobalData.selectedItinerary = selectedItem;
             //navigate sang details
-            NavigationService.Navigate(new Uri("/ItineraryDetails.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/Customer/ItineraryDetails.xaml", UriKind.Relative));
         }
     }
 

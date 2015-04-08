@@ -36,12 +36,37 @@ namespace RideSharingWPApp.Driver
             //hanh trinh chua ai dang ki
             if (GlobalData.selectedItinerary.status.Equals(1))
             {
+                //create button update hanh trinh
+                Button btnUpdate = new Button();
+                btnUpdate.Content = "Cập Nhật";
+                btnUpdate.Click += btnUpdate_Click;
+                gridInfo.Children.Add(btnUpdate);
+                Grid.SetRow(btnUpdate, 5);
+
                 //create button huy hanh trinh
+                Button btnDelete = new Button();
+                btnDelete.Content = "Xóa";
+                btnDelete.Click += btnDelete_Click;
+                gridInfo.Children.Add(btnDelete);
+                Grid.SetRow(btnDelete, 6);
             }
             //dang doi driver accept
             else if (GlobalData.selectedItinerary.status.Equals(2))
             {
                 //tao button accept va button huy customer accept
+                //create button accept hanh trinh
+                Button btnAccept = new Button();
+                btnAccept.Content = "Chấp Nhận";
+                btnAccept.Click += btnAccept_Click;
+                gridInfo.Children.Add(btnAccept);
+                Grid.SetRow(btnAccept, 5);
+
+                //create button reject hanh trinh
+                Button btnReject = new Button();
+                btnReject.Content = "Từ Chối";
+                btnReject.Click += btnReject_Click;
+                gridInfo.Children.Add(btnReject);
+                Grid.SetRow(btnReject, 6);
             }
             //driver da accepted
             else if (GlobalData.selectedItinerary.status.Equals(3))
@@ -166,13 +191,38 @@ namespace RideSharingWPApp.Driver
             }
         }
 
+        private async void btnReject_Click(object sender, RoutedEventArgs e)
+        {
+            Dictionary<string, string> postData = new Dictionary<string, string>();
+            HttpFormUrlEncodedContent content =
+                new HttpFormUrlEncodedContent(postData);
+            var result = await Request.RequestToServer.sendPutRequest("driver_reject_itinerary/" + GlobalData.selectedItinerary.itinerary_id, content);
+
+            //do something
+
+
+        }
+
+        private async void btnAccept_Click(object sender, RoutedEventArgs e)
+        {
+            Dictionary<string, string> postData = new Dictionary<string, string>();
+            HttpFormUrlEncodedContent content =
+                new HttpFormUrlEncodedContent(postData);
+            var result = await Request.RequestToServer.sendPutRequest("driver_accept_itinerary/" +GlobalData.selectedItinerary.itinerary_id, content);
+
+            //do something
+
+        }
+
         private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
             //delete itinerary
             var result = Request.RequestToServer.sendDeleteRequest("itinerary/"+ GlobalData.selectedItinerary.itinerary_id);
+
+            NavigationService.Navigate(new Uri("/Driver/ItineraryManagement.xaml", UriKind.RelativeOrAbsolute));
         }
 
-        private void btnUpdate_Click(object sender, RoutedEventArgs e)
+        private async void btnUpdate_Click(object sender, RoutedEventArgs e)
         {
             //update itinerary
             Dictionary<string, string> postData = new Dictionary<string, string>();
@@ -187,7 +237,9 @@ namespace RideSharingWPApp.Driver
             postData.Add("end_address_long", endPointOverlay.GeoCoordinate.Longitude.ToString().Trim());
             HttpFormUrlEncodedContent content =
                 new HttpFormUrlEncodedContent(postData);
-            Request.RequestToServer.sendPutRequest("itinerary/" + GlobalData.selectedItinerary.itinerary_id, content);
+            var result = await Request.RequestToServer.sendPutRequest("itinerary/" + GlobalData.selectedItinerary.itinerary_id, content);
+
+
         }
 
         private void mapItineraryDetails_Tap(object sender, System.Windows.Input.GestureEventArgs e)

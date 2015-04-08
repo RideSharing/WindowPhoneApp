@@ -25,7 +25,7 @@ namespace RideSharingWPApp
         public async void getItinerariesOfDriver()
         {
             //send get request
-            var result = await Request.RequestToServer.sendGetRequest("itineraries/driver");
+            var result = await Request.RequestToServer.sendGetRequest("itineraries/driver/itinerary_status");
 
             RootObject root = JsonConvert.DeserializeObject<RootObject>(result);
 
@@ -81,7 +81,7 @@ namespace RideSharingWPApp
             //luu tru tam thoi
             Global.GlobalData.selectedItinerary = selectedItem;
             //navigate sang details
-            NavigationService.Navigate(new Uri("/DriverItineraryDetails.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/Driver/DriverItineraryDetails.xaml", UriKind.RelativeOrAbsolute));
         }
     }
 

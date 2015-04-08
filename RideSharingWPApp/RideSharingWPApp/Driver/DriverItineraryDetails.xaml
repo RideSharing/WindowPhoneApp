@@ -92,8 +92,8 @@
             </phone:PivotItem>
 
             <!--Pivot item two-->
-            <phone:PivotItem Header="item2" Margin="0,0,0,0">
-                <Grid Background="#3DA5E1">
+            <phone:PivotItem Header="Info" Margin="0,0,0,0">
+                <Grid x:Name="gridInfo" Background="#3DA5E1">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="2*"/>
                         <RowDefinition Height="*"/>
@@ -141,7 +141,7 @@
                          Grid.Row="4" TextWrapping="Wrap" 
                          Hint=" Giá tiền..." VerticalAlignment="Center" 
                          Background="{StaticResource PhoneTextBoxSelectionForegroundBrush}"/>
-                    <Button x:Name="btnUpdate"
+                    <!--<Button x:Name="btnUpdate"
                         Height="70" 
                         Content="Cập Nhật" 
                         HorizontalAlignment="Center" 
@@ -156,7 +156,7 @@
                         Margin="0,0,0,0" Grid.Row="6" 
                         VerticalAlignment="Top" 
                         Width="480" 
-                        Background="#FF2D90F5" BorderThickness="0" Click="btnDelete_Click"/>
+                        Background="#FF2D90F5" BorderThickness="0" Click="btnDelete_Click"/>-->
                 </Grid>
             </phone:PivotItem>
         </phone:Pivot>

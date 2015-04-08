@@ -102,3 +102,211 @@ D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\XapC
 D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\ForgotPass.g.cs
 D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\Driver\DriverMainMap.g.cs
 D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\Customer\MainMap.g.cs
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\Assets\ApplicationIcon.png
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\Assets\Tiles\FlipCycleTileLarge.png
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\Assets\Tiles\FlipCycleTileMedium.png
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\Assets\Tiles\FlipCycleTileSmall.png
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\Assets\Tiles\IconicTileMediumLarge.png
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\Assets\Tiles\IconicTileSmall.png
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\RideSharingWPApp.dll.config
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\RideSharingWPApp.dll
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\RideSharingWPApp.pdb
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\resources.pri
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\AppxManifest.xml
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\RideSharingWPApp.build.appxrecipe
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\Properties\WMAppManifest.xml
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\AppManifest.xaml
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\RideSharingWPApp_Debug_AnyCPU.xap
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\Microsoft.Phone.Controls.dll
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\Microsoft.Phone.Controls.Toolkit.dll
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\Newtonsoft.Json.dll
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\Newtonsoft.Json.xml
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\ar-SA\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\az-Latn-AZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\be-BY\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\bg-BG\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\ca-ES\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\cs-CZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\da-DK\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\de-DE\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\el-GR\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\en-GB\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\es-ES\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\es-MX\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\et-EE\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\fa-IR\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\fi-FI\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\fil-PH\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\fr-CA\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\fr-FR\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\he-IL\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\hi-IN\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\hr-HR\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\hu-HU\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\id-ID\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\it-IT\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\ja-JP\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\kk-KZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\ko-KR\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\lt-LT\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\lv-LV\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\mk-MK\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\ms-MY\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\nb-NO\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\nl-NL\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\pl-PL\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\pt-BR\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\pt-PT\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\ro-RO\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\ru-RU\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\sk-SK\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\sl-SI\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\sq-AL\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\sr-Latn-CS\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\sv-SE\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\th-TH\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\tr-TR\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\uk-UA\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\uz-Latn-UZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\vi-VN\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\zh-CN\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\zh-TW\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\RideSharingWPApp.csprojResolveAssemblyReference.cache
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\App.g.cs
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\AboutUs.g.cs
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\Customer\CustomerItineraryManagement.g.cs
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\Driver\AdvancePostItinerary.g.cs
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\Driver\DriverItineraryDetails.g.cs
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\Customer\ItineraryDetails.g.cs
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\Driver\DriverMainMap.g.cs
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\Driver\ItineraryManagement.g.cs
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\ForgotPass.g.cs
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\LoginPage.g.cs
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\Customer\MainMap.g.cs
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\MainPage.g.cs
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\ManageAccount.g.cs
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\Driver\PostItinerary.g.cs
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\UserControls\UCCustomPushPin.g.cs
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\RideSharingWPApp.g.resources
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\RideSharingWPApp.Resources.AppResources.resources
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\RideSharingWPApp.csproj.GenerateResource.Cache
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\RideSharingWPApp.dll
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\RideSharingWPApp.pdb
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\priconfig.xml
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\priconfig.xml.intermediate
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\layout.resfiles
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\layout.resfiles.intermediate
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\resources.resfiles
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\resources.resfiles.intermediate
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\pri.resfiles
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\pri.resfiles.intermediate
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\qualifiers.txt
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\qualifiers.txt.intermediate
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\MultipleQualifiersPerDimensionFound.txt
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\ProjectArchitectures.txt
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\MDILProjectFiles.xml
+F:\xampp\htdocs\Senior Project\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\XapCacheFile.xml
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\Assets\ApplicationIcon.png
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\Assets\Tiles\FlipCycleTileLarge.png
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\Assets\Tiles\FlipCycleTileMedium.png
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\Assets\Tiles\FlipCycleTileSmall.png
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\Assets\Tiles\IconicTileMediumLarge.png
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\Assets\Tiles\IconicTileSmall.png
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\RideSharingWPApp.dll.config
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\RideSharingWPApp.dll
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\RideSharingWPApp.pdb
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\resources.pri
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\AppxManifest.xml
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\RideSharingWPApp.build.appxrecipe
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\Properties\WMAppManifest.xml
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\AppManifest.xaml
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\RideSharingWPApp_Debug_AnyCPU.xap
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\Microsoft.Phone.Controls.dll
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\Microsoft.Phone.Controls.Toolkit.dll
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\Newtonsoft.Json.dll
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\Newtonsoft.Json.xml
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\ar-SA\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\az-Latn-AZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\be-BY\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\bg-BG\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\ca-ES\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\cs-CZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\da-DK\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\de-DE\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\el-GR\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\en-GB\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\es-ES\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\es-MX\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\et-EE\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\fa-IR\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\fi-FI\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\fil-PH\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\fr-CA\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\fr-FR\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\he-IL\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\hi-IN\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\hr-HR\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\hu-HU\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\id-ID\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\it-IT\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\ja-JP\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\kk-KZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\ko-KR\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\lt-LT\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\lv-LV\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\mk-MK\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\ms-MY\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\nb-NO\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\nl-NL\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\pl-PL\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\pt-BR\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\pt-PT\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\ro-RO\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\ru-RU\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\sk-SK\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\sl-SI\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\sq-AL\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\sr-Latn-CS\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\sv-SE\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\th-TH\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\tr-TR\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\uk-UA\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\uz-Latn-UZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\vi-VN\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\zh-CN\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\zh-TW\Microsoft.Phone.Controls.Toolkit.resources.dll
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\RideSharingWPApp.csprojResolveAssemblyReference.cache
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\App.g.cs
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\AboutUs.g.cs
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\Customer\CustomerItineraryManagement.g.cs
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\Driver\AdvancePostItinerary.g.cs
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\Driver\DriverItineraryDetails.g.cs
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\Customer\ItineraryDetails.g.cs
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\Driver\DriverMainMap.g.cs
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\Driver\ItineraryManagement.g.cs
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\ForgotPass.g.cs
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\LoginPage.g.cs
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\Customer\MainMap.g.cs
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\MainPage.g.cs
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\ManageAccount.g.cs
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\Driver\PostItinerary.g.cs
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\UserControls\UCCustomPushPin.g.cs
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\RideSharingWPApp.g.resources
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\RideSharingWPApp.Resources.AppResources.resources
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\RideSharingWPApp.csproj.GenerateResource.Cache
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\RideSharingWPApp.dll
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\RideSharingWPApp.pdb
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\priconfig.xml
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\priconfig.xml.intermediate
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\layout.resfiles
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\layout.resfiles.intermediate
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\resources.resfiles
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\resources.resfiles.intermediate
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\pri.resfiles
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\pri.resfiles.intermediate
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\qualifiers.txt
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\qualifiers.txt.intermediate
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\MultipleQualifiersPerDimensionFound.txt
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\ProjectArchitectures.txt
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\MDILProjectFiles.xml
+F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\XapCacheFile.xml
