@@ -25,7 +25,7 @@ namespace RideSharingWPApp
             InitializeComponent();
             txtbEmail.Text = "cody@enclave.vn";
             txtbPassword.Text = "12341234";
-            Loaded += (s, e) =>
+            /*Loaded += (s, e) =>
             {
                 // Some login-password check condition
                 if (IsolatedStorageSettings.ApplicationSettings.Contains("isLogin"))
@@ -48,9 +48,9 @@ namespace RideSharingWPApp
                         {
                             NavigationService.Navigate(new Uri("/Customer/MainMap.xaml", UriKind.RelativeOrAbsolute));
                         }  
-                    }
+                     }
                 }
-            };
+            };*/
         }
 
         private async void btnLogin_Click(object sender, RoutedEventArgs e)

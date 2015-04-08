@@ -22,13 +22,24 @@ namespace RideSharingWPApp
             getItinerariesOfDriver();
         }
 
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            //(this.DataContext as ItineraryManagement).LoadData();
+            //NavigationService.RemoveBackEntry();
+            itinearyList = new ItineraryList();
+            longlistItineraries.ItemsSource = itinearyList;
+            getItinerariesOfDriver();
+
+        }
+
         public async void getItinerariesOfDriver()
         {
             //send get request
             var result = await Request.RequestToServer.sendGetRequest("itineraries/driver/itinerary_status");
 
             RootObject root = JsonConvert.DeserializeObject<RootObject>(result);
-
+            itinearyList = new ItineraryList();
             //xu ly json
             foreach (Itinerary i in root.itineraries)
             {
@@ -71,6 +82,7 @@ namespace RideSharingWPApp
                 
             }
             //binding vao list
+            longlistItineraries.ItemsSource = null;
             longlistItineraries.ItemsSource = itinearyList;
         }
 
@@ -88,6 +100,12 @@ namespace RideSharingWPApp
         {
             //navigate sang details
             NavigationService.Navigate(new Uri("/Driver/PostItinerary.xaml", UriKind.RelativeOrAbsolute));
+        }
+
+        private void menuCustomer_Click(object sender, EventArgs e)
+        {
+            //navigate sang details
+            NavigationService.Navigate(new Uri("/Customer/MainMap.xaml", UriKind.RelativeOrAbsolute));
         }
     }
 

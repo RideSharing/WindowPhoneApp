@@ -44,8 +44,7 @@ namespace RideSharingWPApp.Request
             else
             {
                 request.Headers.Authorization = Windows.Web.Http.Headers.HttpCredentialsHeaderValue.Parse(Global.GlobalData.APIkey);
-            }
-            
+            }            
 
             request.Content = content;
 

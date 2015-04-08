@@ -94,6 +94,7 @@ namespace RideSharingWPApp.Driver
 
             //draw route
 
+
             //set text 2 points
             txtboxStart.Text = GlobalData.selectedItinerary.start_address;
             txtboxEnd.Text = GlobalData.selectedItinerary.end_address;
@@ -108,6 +109,8 @@ namespace RideSharingWPApp.Driver
             //datePicker.Value = GlobalData.selectedItinerary.da
 
         }
+
+        
 
         void geoQ_QueryCompleted(object sender, QueryCompletedEventArgs<IList<MapLocation>> e)
         {
@@ -226,6 +229,7 @@ namespace RideSharingWPApp.Driver
             var result = await Request.RequestToServer.sendDeleteRequest("itinerary/"+ GlobalData.selectedItinerary.itinerary_id);
             JObject jsonObject = JObject.Parse(result);
             MessageBox.Show(jsonObject.Value<string>("message"));
+            NavigationService.RemoveBackEntry();
             NavigationService.Navigate(new Uri("/Driver/ItineraryManagement.xaml", UriKind.RelativeOrAbsolute));
         }
 

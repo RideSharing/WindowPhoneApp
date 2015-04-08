@@ -22,8 +22,10 @@
             </shell:ApplicationBar.MenuItems>
 
             <shell:ApplicationBarIconButton 
+                x:Name="menuCustomer"
                 IconUri="/Assets/AppBar/ic_home.png"  
-                Text="Home" 
+                Text="Home" Click="menuCustomer_Click" 
+                
                 />
 
             <shell:ApplicationBarIconButton 
