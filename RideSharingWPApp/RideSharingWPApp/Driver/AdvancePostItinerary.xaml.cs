@@ -65,7 +65,7 @@ namespace RideSharingWPApp
             postData.Add("start_address_long", start_long.Trim());
             postData.Add("end_address_lat", end_lat.Trim());
             postData.Add("end_address_long", end_long.Trim());
-            postData.Add("leave_date", "09/09/2015");
+            postData.Add("leave_date", "2011-07-07 04:04:04");
             postData.Add("duration", txtbCost.Text.Trim());
             HttpFormUrlEncodedContent content =
                 new HttpFormUrlEncodedContent(postData);
@@ -75,6 +75,9 @@ namespace RideSharingWPApp
 
             JObject jsonObject = JObject.Parse(result);
             MessageBox.Show(jsonObject.Value<string>("message"));
+
+            //back to trang dau tien
+
         }
     }
 }

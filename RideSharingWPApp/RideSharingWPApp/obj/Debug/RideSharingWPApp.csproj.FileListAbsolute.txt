@@ -67,7 +67,6 @@ D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\uz-L
 D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\vi-VN\Microsoft.Phone.Controls.Toolkit.resources.dll
 D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\zh-CN\Microsoft.Phone.Controls.Toolkit.resources.dll
 D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\zh-TW\Microsoft.Phone.Controls.Toolkit.resources.dll
-D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\RideSharingWPApp.csprojResolveAssemblyReference.cache
 D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\App.g.cs
 D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\AboutUs.g.cs
 D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\Customer\CustomerItineraryManagement.g.cs
@@ -310,3 +309,4 @@ F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\o
 F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\ProjectArchitectures.txt
 F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\MDILProjectFiles.xml
 F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\XapCacheFile.xml
+D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\AccountInfo.g.cs

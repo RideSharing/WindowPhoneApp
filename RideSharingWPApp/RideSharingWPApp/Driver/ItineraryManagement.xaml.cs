@@ -83,6 +83,12 @@ namespace RideSharingWPApp
             //navigate sang details
             NavigationService.Navigate(new Uri("/Driver/DriverItineraryDetails.xaml", UriKind.RelativeOrAbsolute));
         }
+
+        private void ApplicationBarIconButton_Click(object sender, EventArgs e)
+        {
+            //navigate sang details
+            NavigationService.Navigate(new Uri("/Driver/PostItinerary.xaml", UriKind.RelativeOrAbsolute));
+        }
     }
 
     

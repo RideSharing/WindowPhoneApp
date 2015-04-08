@@ -30,9 +30,11 @@
                 IconUri="/Assets/AppBar/ic_search.png"  
                 Text="Search" 
                 />
-            <shell:ApplicationBarIconButton 
+            <shell:ApplicationBarIconButton
+                x:FieldModifier="menuPostItinerary"
                 IconUri="/Assets/AppBar/ic_map.png" 
-                Text="StartPoint" />
+                Text="Itinerary"
+                Click="ApplicationBarIconButton_Click"/>
             <shell:ApplicationBarIconButton 
                 IconUri="/Assets/AppBar/ic_router.png" 
                 Text="EndPoint"/>

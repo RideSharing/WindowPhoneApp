@@ -39,7 +39,15 @@ namespace RideSharingWPApp
                         Global.GlobalData.customer_status = (int)IsolatedStorageSettings.ApplicationSettings["customer_status"];
                         Global.GlobalData.driver_status = (int)IsolatedStorageSettings.ApplicationSettings["driver_status"];
 
-                        NavigationService.Navigate(new Uri("/Customer/MainMap.xaml", UriKind.RelativeOrAbsolute));
+                        //Navigate to MainPage
+                        if (GlobalData.isDriver)
+                        {
+                            NavigationService.Navigate(new Uri("/Driver/ItineraryManagement.xaml", UriKind.Relative));
+                        }
+                        else
+                        {
+                            NavigationService.Navigate(new Uri("/Customer/MainMap.xaml", UriKind.RelativeOrAbsolute));
+                        }  
                     }
                 }
             };
@@ -77,13 +85,12 @@ namespace RideSharingWPApp
                 //Navigate to MainPage
                 if (GlobalData.isDriver)
                 {
-                    NavigationService.Navigate(new Uri("/Customer/MainMap.xaml", UriKind.RelativeOrAbsolute));
+                    NavigationService.Navigate(new Uri("/Driver/ItineraryManagement.xaml", UriKind.Relative));
                 }
                 else
                 {
-                    NavigationService.Navigate(new Uri("Driver/DriverMainMap.xaml", UriKind.Relative));
-                }
-                
+                    NavigationService.Navigate(new Uri("/Customer/MainMap.xaml", UriKind.RelativeOrAbsolute));
+                }               
             }
             else
             {
@@ -107,7 +114,7 @@ namespace RideSharingWPApp
 
         private void linkForgotPass_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Uri("/ForgotPass.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/ForgotPass.xaml", UriKind.RelativeOrAbsolute));
         }
     }
 }

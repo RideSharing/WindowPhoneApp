@@ -12,6 +12,7 @@ using RideSharingWPApp.Global;
 using Microsoft.Phone.Maps.Controls;
 using Microsoft.Phone.Maps.Services;
 using Windows.Web.Http;
+using Newtonsoft.Json.Linq;
 
 namespace RideSharingWPApp
 {
@@ -141,16 +142,21 @@ namespace RideSharingWPApp
             HttpFormUrlEncodedContent content =
                 new HttpFormUrlEncodedContent(postData);
             var result = await Request.RequestToServer.sendPutRequest("itinerary/" + GlobalData.selectedItinerary.itinerary_id, content);
+
+            JObject jsonObject = JObject.Parse(result);
+            MessageBox.Show(jsonObject.Value<string>("message"));
         }
 
         public async void cancelItinerary()
         {
             //accept itinerary
             Dictionary<string, string> postData = new Dictionary<string, string>();
-
             HttpFormUrlEncodedContent content =
                 new HttpFormUrlEncodedContent(postData);
             var result = await Request.RequestToServer.sendPutRequest("itinerary/" + GlobalData.selectedItinerary.itinerary_id, content);
+
+            JObject jsonObject = JObject.Parse(result);
+            MessageBox.Show(jsonObject.Value<string>("message"));
         }
     }
 }

@@ -130,7 +130,6 @@ namespace RideSharingWPApp
                     link_avatar = ImageConvert.ImageConvert.convertBase64ToImage(i.link_avatar),
                     average_rating = i.average_rating
                 });
-
                 MapOverlay overlay = new MapOverlay();
                 overlay = DrawItineraryMarker(new GeoCoordinate(Convert.ToDouble(i.start_address_lat),
                     Convert.ToDouble(i.start_address_long)), itinearyList.Last());
@@ -139,10 +138,8 @@ namespace RideSharingWPApp
 
                 mainMapLayer.Add(overlay);
             }
-
             mapMain.Layers.Add(mainMapLayer);
-            longlistItineraries.ItemsSource = itinearyList;
-         
+            longlistItineraries.ItemsSource = itinearyList;     
         }
 
 
@@ -196,7 +193,7 @@ namespace RideSharingWPApp
                         //luu tru tam thoi
                         Global.GlobalData.selectedItinerary = item;
                         //navigate to Details page
-                        NavigationService.Navigate(new Uri("Customer/ItineraryDetails.xaml", UriKind.RelativeOrAbsolute));
+                        NavigationService.Navigate(new Uri("/Customer/ItineraryDetails.xaml", UriKind.RelativeOrAbsolute));
                         break;
                     }
                 }

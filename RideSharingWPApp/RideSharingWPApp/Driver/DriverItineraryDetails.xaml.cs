@@ -82,9 +82,13 @@ namespace RideSharingWPApp.Driver
             //draw 2 points on map
             startPointOverlay = UserControls.MarkerDraw.DrawMapMarker(new GeoCoordinate(GlobalData.selectedItinerary.start_address_lat, GlobalData.selectedItinerary.start_address_long));
             mapLayer.Add(startPointOverlay);
-
+            
             endPointOverlay = UserControls.MarkerDraw.DrawMapMarker(new GeoCoordinate(GlobalData.selectedItinerary.end_address_lat, GlobalData.selectedItinerary.end_address_long));
             mapLayer.Add(endPointOverlay);
+            
+            //set zoom and center point
+            mapItineraryDetails.ZoomLevel = 14;
+            mapItineraryDetails.Center = startPointOverlay.GeoCoordinate;
 
             mapItineraryDetails.Layers.Add(mapLayer);
 
@@ -197,7 +201,8 @@ namespace RideSharingWPApp.Driver
             HttpFormUrlEncodedContent content =
                 new HttpFormUrlEncodedContent(postData);
             var result = await Request.RequestToServer.sendPutRequest("driver_reject_itinerary/" + GlobalData.selectedItinerary.itinerary_id, content);
-
+            JObject jsonObject = JObject.Parse(result);
+            MessageBox.Show(jsonObject.Value<string>("message"));
             //do something
 
 
@@ -209,16 +214,18 @@ namespace RideSharingWPApp.Driver
             HttpFormUrlEncodedContent content =
                 new HttpFormUrlEncodedContent(postData);
             var result = await Request.RequestToServer.sendPutRequest("driver_accept_itinerary/" +GlobalData.selectedItinerary.itinerary_id, content);
-
+            JObject jsonObject = JObject.Parse(result);
+            MessageBox.Show(jsonObject.Value<string>("message"));
             //do something
 
         }
 
-        private void btnDelete_Click(object sender, RoutedEventArgs e)
+        private async void btnDelete_Click(object sender, RoutedEventArgs e)
         {
             //delete itinerary
-            var result = Request.RequestToServer.sendDeleteRequest("itinerary/"+ GlobalData.selectedItinerary.itinerary_id);
-
+            var result = await Request.RequestToServer.sendDeleteRequest("itinerary/"+ GlobalData.selectedItinerary.itinerary_id);
+            JObject jsonObject = JObject.Parse(result);
+            MessageBox.Show(jsonObject.Value<string>("message"));
             NavigationService.Navigate(new Uri("/Driver/ItineraryManagement.xaml", UriKind.RelativeOrAbsolute));
         }
 
@@ -238,7 +245,8 @@ namespace RideSharingWPApp.Driver
             HttpFormUrlEncodedContent content =
                 new HttpFormUrlEncodedContent(postData);
             var result = await Request.RequestToServer.sendPutRequest("itinerary/" + GlobalData.selectedItinerary.itinerary_id, content);
-
+            JObject jsonObject = JObject.Parse(result);
+            MessageBox.Show(jsonObject.Value<string>("message"));
 
         }
 

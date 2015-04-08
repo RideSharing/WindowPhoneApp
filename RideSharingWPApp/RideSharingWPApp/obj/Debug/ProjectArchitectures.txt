@@ -1,1 +1,1 @@
-F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\RideSharingWPApp.csproj;neutral
+D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\RideSharingWPApp.csproj;neutral

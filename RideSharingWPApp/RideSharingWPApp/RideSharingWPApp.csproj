@@ -94,6 +94,9 @@
     <Compile Include="AboutUs.xaml.cs">
       <DependentUpon>AboutUs.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AccountInfo.xaml.cs">
+      <DependentUpon>AccountInfo.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Customer\CustomerItineraryManagement.xaml.cs">
       <DependentUpon>CustomerItineraryManagement.xaml</DependentUpon>
     </Compile>
@@ -160,6 +163,10 @@
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
     <Page Include="AboutUs.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AccountInfo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -245,6 +252,13 @@
     <Content Include="Assets\avatar\ic_author_truman.png" />
     <Content Include="Assets\avatar\ic_author_vidal.png" />
     <Content Include="Assets\avatar\ic_logo.png" />
+    <Content Include="Assets\ic_acc\email-blue-icon.png" />
+    <Content Include="Assets\ic_acc\ic_edit.png" />
+    <Content Include="Assets\ic_acc\ic_image2.png" />
+    <Content Include="Assets\ic_acc\ic_upload.png" />
+    <Content Include="Assets\ic_acc\Personal.png" />
+    <Content Include="Assets\ic_acc\phone.png" />
+    <Content Include="Assets\ic_acc\Postcard.png" />
     <Content Include="Assets\ic_edit.png" />
     <Content Include="Assets\ic_folder.png" />
     <Content Include="Assets\ic_uploadimage.png" />

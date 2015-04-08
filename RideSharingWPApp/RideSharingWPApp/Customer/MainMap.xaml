@@ -26,7 +26,7 @@
                 IconUri="/Assets/AppBar/ic_home.png"  
                 Text="Home" 
                 />
-
+            
             <shell:ApplicationBarIconButton 
                 IconUri="/Assets/AppBar/ic_search.png"  
                 Text="Search" 
