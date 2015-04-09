@@ -28,13 +28,16 @@ namespace RideSharingWPApp.Driver
         Geocoordinate myGeocoordinate = null;
         GeoCoordinate myGeoCoordinate = null;
         ReverseGeocodeQuery geoQ = null;
+
+        RouteQuery routeQuery = null;
+        List<GeoCoordinate> wayPoints = new List<GeoCoordinate>();
         string nameOfTxtbox = "Start";
         public DriverItineraryDetails()
         {
             InitializeComponent();
 
             //hanh trinh chua ai dang ki
-            if (GlobalData.selectedItinerary.status.Equals(1))
+            if (GlobalData.selectedItinerary.status.Equals(Global.GlobalData.ITINERARY_STATUS_CREATED))
             {
                 //create button update hanh trinh
                 Button btnUpdate = new Button();
@@ -51,7 +54,7 @@ namespace RideSharingWPApp.Driver
                 Grid.SetRow(btnDelete, 6);
             }
             //dang doi driver accept
-            else if (GlobalData.selectedItinerary.status.Equals(2))
+            else if (GlobalData.selectedItinerary.status.Equals(Global.GlobalData.ITINERARY_STATUS_CUSTOMER_ACCEPTED))
             {
                 //tao button accept va button huy customer accept
                 //create button accept hanh trinh
@@ -69,12 +72,12 @@ namespace RideSharingWPApp.Driver
                 Grid.SetRow(btnReject, 6);
             }
             //driver da accepted
-            else if (GlobalData.selectedItinerary.status.Equals(3))
+            else if (GlobalData.selectedItinerary.status.Equals(Global.GlobalData.ITINERARY_STATUS_DRIVER_ACCEPTED))
             {
                 // 
             }
             //hanh trinh da ket thuc
-            else if (GlobalData.selectedItinerary.status.Equals(4))
+            else if (GlobalData.selectedItinerary.status.Equals(Global.GlobalData.ITINERARY_STATUS_FINISHED))
             {
 
             }
@@ -93,7 +96,13 @@ namespace RideSharingWPApp.Driver
             mapItineraryDetails.Layers.Add(mapLayer);
 
             //draw route
-
+            routeQuery = new RouteQuery();
+            //GeocodeQuery Mygeocodequery = null;
+            routeQuery.QueryCompleted += routeQuery_QueryCompleted;
+            routeQuery.TravelMode = TravelMode.Driving;
+            routeQuery.RouteOptimization = RouteOptimization.MinimizeDistance;
+            routeQuery.Waypoints = wayPoints;
+            routeQuery.QueryAsync();
 
             //set text 2 points
             txtboxStart.Text = GlobalData.selectedItinerary.start_address;
@@ -110,7 +119,19 @@ namespace RideSharingWPApp.Driver
 
         }
 
-        
+        void routeQuery_QueryCompleted(object sender, QueryCompletedEventArgs<Route> e)
+        {
+            if (null == e.Error)
+            {
+                Route MyRoute = e.Result;
+                MapRoute MyMapRoute = new MapRoute(MyRoute);
+                mapItineraryDetails.AddRoute(MyMapRoute);
+                //length of route
+                //time = route / v trung binh(hang so)
+                //MessageBox.Show("Distance: " + MyMapRoute.Route.LengthInMeters.ToString());
+                routeQuery.Dispose();
+            }
+        }
 
         void geoQ_QueryCompleted(object sender, QueryCompletedEventArgs<IList<MapLocation>> e)
         {

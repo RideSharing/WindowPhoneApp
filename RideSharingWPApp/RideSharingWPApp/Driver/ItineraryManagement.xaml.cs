@@ -8,42 +8,40 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using Newtonsoft.Json;
+using Windows.Web.Http;
 
 namespace RideSharingWPApp
 {
     public partial class ItineraryManagement : PhoneApplicationPage
     {
-        ItineraryList itinearyList = new ItineraryList();
+        ItineraryList itinearyCreatedList = new ItineraryList();
+        ItineraryList itinearyCustomerAcceptedList = new ItineraryList();
+        ItineraryList itinearyDriverAcceptedList = new ItineraryList();
+        ItineraryList itinearyFinishedList = new ItineraryList();
 
         public ItineraryManagement()
         {
             InitializeComponent();
 
-            getItinerariesOfDriver();
+            //getItinerariesOfDriver();
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
-            //(this.DataContext as ItineraryManagement).LoadData();
-            //NavigationService.RemoveBackEntry();
-            itinearyList = new ItineraryList();
-            longlistItineraries.ItemsSource = itinearyList;
             getItinerariesOfDriver();
-
         }
 
         public async void getItinerariesOfDriver()
         {
             //send get request
-            var result = await Request.RequestToServer.sendGetRequest("itineraries/driver/itinerary_status");
-
+            string result = null;
+            result = await Request.RequestToServer.sendGetRequest("itineraries/driver/itinerary_status");
             RootObject root = JsonConvert.DeserializeObject<RootObject>(result);
-            itinearyList = new ItineraryList();
             //xu ly json
             foreach (Itinerary i in root.itineraries)
             {
-                itinearyList.Add(new Itinerary2
+                Itinerary2 i2 = new Itinerary2
                 {
                     itinerary_id = i.itinerary_id,
                     driver_id = i.driver_id,
@@ -77,23 +75,36 @@ namespace RideSharingWPApp
                     //convert base64 to image
                     link_avatar = ImageConvert.ImageConvert.convertBase64ToImage(i.link_avatar),
                     average_rating = i.average_rating
-                });
-
-                
+                };
+                //itinearyList.Add(i2);
+                if (i2.status == 1)
+                {
+                    itinearyCreatedList.Add(i2);
+                }
+                else if (i2.status == 2)
+                {
+                    itinearyCustomerAcceptedList.Add(i2);
+                }
+                else if (i2.status == 3)
+                {
+                    itinearyDriverAcceptedList.Add(i2);
+                }
+                else if (i2.status == 4)
+                {
+                    itinearyFinishedList.Add(i2);
+                }
+                else
+                {
+                    //null
+                }
             }
             //binding vao list
-            longlistItineraries.ItemsSource = null;
-            longlistItineraries.ItemsSource = itinearyList;
-        }
 
-        private void longlistItineraries_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            Itinerary2 selectedItem = (Itinerary2)longlistItineraries.SelectedItem;
-            MessageBox.Show("ss: " + selectedItem.itinerary_id);
-            //luu tru tam thoi
-            Global.GlobalData.selectedItinerary = selectedItem;
-            //navigate sang details
-            NavigationService.Navigate(new Uri("/Driver/DriverItineraryDetails.xaml", UriKind.RelativeOrAbsolute));
+            //longlistItineraries.ItemsSource = itinearyList;
+            longlistItinerariesCreated.ItemsSource = itinearyCreatedList;
+            longlistItinerariesCustomerAccepted.ItemsSource = itinearyCustomerAcceptedList;
+            longlistItinerariesDriverAccepted.ItemsSource = itinearyDriverAcceptedList;
+            longlistItinerariesFinished.ItemsSource = itinearyFinishedList;
         }
 
         private void ApplicationBarIconButton_Click(object sender, EventArgs e)
@@ -107,7 +118,47 @@ namespace RideSharingWPApp
             //navigate sang details
             NavigationService.Navigate(new Uri("/Customer/MainMap.xaml", UriKind.RelativeOrAbsolute));
         }
+
+        private void longlistItinerariesCreated_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Itinerary2 selectedItem = (Itinerary2)longlistItinerariesCreated.SelectedItem;
+            MessageBox.Show("ss: " + selectedItem.itinerary_id);
+            //luu tru tam thoi
+            Global.GlobalData.selectedItinerary = selectedItem;
+            //navigate sang details
+            NavigationService.Navigate(new Uri("/Driver/DriverItineraryDetails.xaml", UriKind.RelativeOrAbsolute));
+        }
+
+        private void longlistItinerariesCustomerAccepted_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Itinerary2 selectedItem = (Itinerary2)longlistItinerariesCustomerAccepted.SelectedItem;
+            MessageBox.Show("ss: " + selectedItem.itinerary_id);
+            //luu tru tam thoi
+            Global.GlobalData.selectedItinerary = selectedItem;
+            //navigate sang details
+            NavigationService.Navigate(new Uri("/Driver/DriverItineraryDetails.xaml", UriKind.RelativeOrAbsolute));
+        }
+
+        private void longlistItinerariesDriverAccepted_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Itinerary2 selectedItem = (Itinerary2)longlistItinerariesDriverAccepted.SelectedItem;
+            MessageBox.Show("ss: " + selectedItem.itinerary_id);
+            //luu tru tam thoi
+            Global.GlobalData.selectedItinerary = selectedItem;
+            //navigate sang details
+            NavigationService.Navigate(new Uri("/Driver/DriverItineraryDetails.xaml", UriKind.RelativeOrAbsolute));
+        }
+
+        private void longlistItinerariesFinished_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Itinerary2 selectedItem = (Itinerary2)longlistItinerariesFinished.SelectedItem;
+            MessageBox.Show("ss: " + selectedItem.itinerary_id);
+            //luu tru tam thoi
+            Global.GlobalData.selectedItinerary = selectedItem;
+            //navigate sang details
+            NavigationService.Navigate(new Uri("/Driver/DriverItineraryDetails.xaml", UriKind.RelativeOrAbsolute));
+        }
     }
 
-    
+
 }

@@ -25,5 +25,10 @@ namespace RideSharingWPApp.Global
         //public static int customer_status = 4;
 
         //public static int driver_status = 2;
+
+        public const int ITINERARY_STATUS_CREATED = 1;
+        public const int ITINERARY_STATUS_CUSTOMER_ACCEPTED = 2;
+        public const int ITINERARY_STATUS_DRIVER_ACCEPTED = 3;
+        public const int ITINERARY_STATUS_FINISHED = 4;
     }
 }

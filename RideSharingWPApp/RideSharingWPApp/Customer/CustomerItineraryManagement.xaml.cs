@@ -18,7 +18,12 @@ namespace RideSharingWPApp.Customer
         public CustomerItineraryManagement()
         {
             InitializeComponent();
+            getItinerariesOfCustomer();
+        }
 
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
             getItinerariesOfCustomer();
         }
 
@@ -67,8 +72,6 @@ namespace RideSharingWPApp.Customer
                     link_avatar = ImageConvert.ImageConvert.convertBase64ToImage(i.link_avatar),
                     average_rating = i.average_rating
                 });
-
-
             }
             //binding vao list
             longlistItineraries.ItemsSource = itinearyList;

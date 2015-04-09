@@ -136,12 +136,9 @@ namespace RideSharingWPApp
         {
             //accept itinerary
             Dictionary<string, string> postData = new Dictionary<string, string>();
-            postData.Add("status", "2");
-            postData.Add("customer_id", "2");
-            postData.Add("status", "2");
             HttpFormUrlEncodedContent content =
                 new HttpFormUrlEncodedContent(postData);
-            var result = await Request.RequestToServer.sendPutRequest("itinerary/" + GlobalData.selectedItinerary.itinerary_id, content);
+            var result = await Request.RequestToServer.sendPutRequest("customer_accept_itinerary/" + GlobalData.selectedItinerary.itinerary_id, content);
 
             JObject jsonObject = JObject.Parse(result);
             MessageBox.Show(jsonObject.Value<string>("message"));
@@ -149,12 +146,11 @@ namespace RideSharingWPApp
 
         public async void cancelItinerary()
         {
-            //accept itinerary
+            //rejec itinerary
             Dictionary<string, string> postData = new Dictionary<string, string>();
             HttpFormUrlEncodedContent content =
                 new HttpFormUrlEncodedContent(postData);
-            var result = await Request.RequestToServer.sendPutRequest("itinerary/" + GlobalData.selectedItinerary.itinerary_id, content);
-
+            var result = await Request.RequestToServer.sendPutRequest("customer_reject_itinerary/" + GlobalData.selectedItinerary.itinerary_id, content);
             JObject jsonObject = JObject.Parse(result);
             MessageBox.Show(jsonObject.Value<string>("message"));
         }

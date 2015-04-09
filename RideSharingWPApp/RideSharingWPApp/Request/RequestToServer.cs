@@ -11,13 +11,17 @@ namespace RideSharingWPApp.Request
     class RequestToServer
     {
         //public static string preServiceURI = "http://localhost/SeniorProject/RESTFul/v1/";
-        //public static string preServiceURI = "http://192.168.10.132/RESTFul/v1/";
-        public static string preServiceURI = "http://54.68.126.75/RESTFul/v1/";
+        public static string preServiceURI = "http://192.168.10.132/RESTFul/v1/";
+        //public static string preServiceURI = "http://54.68.126.75/RESTFul/v1/";
         
 
         public static async Task<string> sendGetRequest(string methodName)
         {
-            string ServiceURI = preServiceURI + methodName;
+            Random r = new Random();
+            int x = r.Next(-1000000, 1000000);
+            double y = r.NextDouble();
+            double randomNumber = x + y;
+            string ServiceURI = preServiceURI + methodName + "?xxx=" + randomNumber.ToString();
             HttpClient httpClient = new HttpClient();
             HttpRequestMessage request = new HttpRequestMessage();
             request.Method = HttpMethod.Get;
@@ -26,7 +30,11 @@ namespace RideSharingWPApp.Request
 
             HttpResponseMessage response = await httpClient.SendRequestAsync(request);
             string returnString = await response.Content.ReadAsStringAsync();
+            response.Dispose();
+            httpClient.Dispose();
+            request.Dispose();        
             return returnString;
+            
         }
 
         public static async Task<string> sendPostRequest(string methodName, Windows.Web.Http.IHttpContent content)
