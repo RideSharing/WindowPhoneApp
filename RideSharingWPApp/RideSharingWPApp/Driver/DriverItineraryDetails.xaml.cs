@@ -32,6 +32,7 @@ namespace RideSharingWPApp.Driver
         RouteQuery routeQuery = null;
         List<GeoCoordinate> wayPoints = new List<GeoCoordinate>();
         string nameOfTxtbox = "Start";
+
         public DriverItineraryDetails()
         {
             InitializeComponent();
@@ -83,10 +84,12 @@ namespace RideSharingWPApp.Driver
             }
 
             //draw 2 points on map
-            startPointOverlay = UserControls.MarkerDraw.DrawMapMarker(new GeoCoordinate(GlobalData.selectedItinerary.start_address_lat, GlobalData.selectedItinerary.start_address_long));
+            startPointOverlay = UserControls.MarkerDraw.DrawCurrentMapMarker(new GeoCoordinate(GlobalData.selectedItinerary.start_address_lat, GlobalData.selectedItinerary.start_address_long));
+            wayPoints.Add(new GeoCoordinate(GlobalData.selectedItinerary.start_address_lat, GlobalData.selectedItinerary.start_address_long));
             mapLayer.Add(startPointOverlay);
             
-            endPointOverlay = UserControls.MarkerDraw.DrawMapMarker(new GeoCoordinate(GlobalData.selectedItinerary.end_address_lat, GlobalData.selectedItinerary.end_address_long));
+            endPointOverlay = UserControls.MarkerDraw.DrawCurrentMapMarker(new GeoCoordinate(GlobalData.selectedItinerary.end_address_lat, GlobalData.selectedItinerary.end_address_long));
+            wayPoints.Add(new GeoCoordinate(GlobalData.selectedItinerary.end_address_lat, GlobalData.selectedItinerary.end_address_long));
             mapLayer.Add(endPointOverlay);
             
             //set zoom and center point
@@ -115,6 +118,13 @@ namespace RideSharingWPApp.Driver
             txtbCost.Text = GlobalData.selectedItinerary.cost;
 
             //xu ly ngay thang
+            string datetimeString = GlobalData.selectedItinerary.leave_date.Trim();
+
+            DateTime datetime = DateTimes.DatetimeConvert.convertDateTimeFromString(datetimeString);
+
+            datePicker.Value = datetime;
+            timePicker.Value = datetime;
+
             //datePicker.Value = GlobalData.selectedItinerary.da
 
         }
@@ -176,7 +186,7 @@ namespace RideSharingWPApp.Driver
                     mapLayer.Remove(endPointOverlay);
                 }
                 //dat pushpin
-                endPointOverlay = MarkerDraw.DrawMapMarker(new GeoCoordinate(Convert.ToDouble(xlat), Convert.ToDouble(xlong)));
+                endPointOverlay = MarkerDraw.DrawCurrentMapMarker(new GeoCoordinate(Convert.ToDouble(xlat), Convert.ToDouble(xlong)));
                 // Create a MapLayer to contain the MapOverlay.
                 mapLayer.Add(endPointOverlay);
 
@@ -207,7 +217,7 @@ namespace RideSharingWPApp.Driver
                     mapLayer.Remove(startPointOverlay);
                 }
                 //dat pushpin
-                startPointOverlay = MarkerDraw.DrawMapMarker(new GeoCoordinate(Convert.ToDouble(xlat), Convert.ToDouble(xlong)));
+                startPointOverlay = MarkerDraw.DrawCurrentMapMarker(new GeoCoordinate(Convert.ToDouble(xlat), Convert.ToDouble(xlong)));
                 // Create a MapLayer to contain the MapOverlay.
                 mapLayer.Add(startPointOverlay);
 
@@ -267,6 +277,16 @@ namespace RideSharingWPApp.Driver
             postData.Add("start_address_long", startPointOverlay.GeoCoordinate.Longitude.ToString().Trim());
             postData.Add("end_address_lat", endPointOverlay.GeoCoordinate.Latitude.ToString().Trim());
             postData.Add("end_address_long", endPointOverlay.GeoCoordinate.Longitude.ToString().Trim());
+
+            //string date = datePicker.Value.Value.ToString().Substring(0,10).Trim();
+            //string time = timePicker.Value.Value.ToUniversalTime().ToString();
+
+
+            string date2 = datePicker.Value.Value.Year + "-" + datePicker.Value.Value.Month + "-" + datePicker.Value.Value.Day;
+            string time2 = timePicker.Value.Value.Hour + ":" + timePicker.Value.Value.Minute +":00";
+
+            postData.Add("leave_date", date2.Trim() + " " + time2.Trim());
+            //datePicker.Value.Value.
             HttpFormUrlEncodedContent content =
                 new HttpFormUrlEncodedContent(postData);
             var result = await Request.RequestToServer.sendPutRequest("itinerary/" + GlobalData.selectedItinerary.itinerary_id, content);
@@ -285,7 +305,7 @@ namespace RideSharingWPApp.Driver
             //MessageBox.Show("lat: " + asd.Latitude + "; long: " + asd.Longitude);
 
             //dat pushpin
-            endPointOverlay = MarkerDraw.DrawMapMarker(asd);
+            endPointOverlay = MarkerDraw.DrawCurrentMapMarker(asd);
             // Create a MapLayer to contain the MapOverlay.
             mapLayer.Add(endPointOverlay);
 

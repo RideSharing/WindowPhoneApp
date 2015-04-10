@@ -87,7 +87,7 @@ namespace RideSharingWPApp
 
 
             // Create a MapOverlay to contain the circle.
-            startPointOverlay = MarkerDraw.DrawMapMarker(myGeoCoordinate);
+            startPointOverlay = MarkerDraw.DrawCurrentMapMarker(myGeoCoordinate);
 
             // Create a MapLayer to contain the MapOverlay.
             myLocationLayer = new MapLayer();
@@ -154,7 +154,7 @@ namespace RideSharingWPApp
             //MessageBox.Show("lat: " + asd.Latitude + "; long: " + asd.Longitude);
 
             //dat pushpin
-            endPointOverlay = MarkerDraw.DrawMapMarker(asd);
+            endPointOverlay = MarkerDraw.DrawCurrentMapMarker(asd);
             // Create a MapLayer to contain the MapOverlay.
             myLocationLayer.Add(endPointOverlay);
 
@@ -189,7 +189,7 @@ namespace RideSharingWPApp
                     myLocationLayer.Remove(startPointOverlay);
                 }
                 //dat pushpin
-                startPointOverlay = MarkerDraw.DrawMapMarker(new GeoCoordinate(Convert.ToDouble(xlat), Convert.ToDouble(xlong)));
+                startPointOverlay = MarkerDraw.DrawCurrentMapMarker(new GeoCoordinate(Convert.ToDouble(xlat), Convert.ToDouble(xlong)));
                 // Create a MapLayer to contain the MapOverlay.
                 myLocationLayer.Add(startPointOverlay);
 
@@ -220,7 +220,7 @@ namespace RideSharingWPApp
                     myLocationLayer.Remove(endPointOverlay);
                 }
                 //dat pushpin
-                endPointOverlay = MarkerDraw.DrawMapMarker(new GeoCoordinate(Convert.ToDouble(xlat), Convert.ToDouble(xlong)));
+                endPointOverlay = MarkerDraw.DrawCurrentMapMarker(new GeoCoordinate(Convert.ToDouble(xlat), Convert.ToDouble(xlong)));
                 // Create a MapLayer to contain the MapOverlay.
                 myLocationLayer.Add(endPointOverlay);
 

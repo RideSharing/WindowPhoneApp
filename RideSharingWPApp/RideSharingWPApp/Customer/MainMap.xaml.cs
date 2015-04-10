@@ -22,10 +22,10 @@ namespace RideSharingWPApp
     public partial class MainMap : PhoneApplicationPage
     {
         MapLayer mainMapLayer = new MapLayer();
-        List<MapOverlay> listMainMapOvelay = new List<MapOverlay>();
+        //List<MapOverlay> listMainMapOvelay = new List<MapOverlay>();
         RootObject root = null;
         List<Itinerary> itineraries = new List<Itinerary>();
-        ItineraryList itinearyList = new ItineraryList();
+        
 
         Geocoordinate myGeocoordinate = null;
         GeoCoordinate myGeoCoordinate = null;
@@ -33,18 +33,13 @@ namespace RideSharingWPApp
         {
             InitializeComponent();
 
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
             InitCurrentLocationInfo();
-            
-            //get itinerary
             getItinerary();
-            //send get request
-
-            //xu ly json
-
-            //hien thi tren map
-
-            //hien thi tren list
-            //
         }
 
         public async void InitCurrentLocationInfo()
@@ -68,7 +63,7 @@ namespace RideSharingWPApp
             this.mapMain.ZoomLevel = 16;
 
             // Create a MapOverlay to contain the circle.
-            MapOverlay myCurentLocationOverlay = MarkerDraw.DrawMapMarker(myGeoCoordinate);
+            MapOverlay myCurentLocationOverlay = MarkerDraw.DrawCurrentMapMarker(myGeoCoordinate);
 
             // Create a MapLayer to contain the MapOverlay.
             MapLayer myLocationLayer = new MapLayer();
@@ -82,6 +77,7 @@ namespace RideSharingWPApp
 
         public async void getItinerary()
         {
+            mainMapLayer = new MapLayer();
             var result = await Request.RequestToServer.sendGetRequest("itineraries");
 
             JObject jsonObject = JObject.Parse(result);
@@ -95,7 +91,7 @@ namespace RideSharingWPApp
 
             foreach (Itinerary i in root.itineraries)
             {
-                itinearyList.Add(new Itinerary2
+                Global.GlobalData.itinearyList.Add(new Itinerary2
                 {
                     itinerary_id = i.itinerary_id,
                     driver_id = i.driver_id,
@@ -131,105 +127,15 @@ namespace RideSharingWPApp
                     average_rating = i.average_rating
                 });
                 MapOverlay overlay = new MapOverlay();
-                overlay = DrawItineraryMarker(new GeoCoordinate(Convert.ToDouble(i.start_address_lat),
-                    Convert.ToDouble(i.start_address_long)), itinearyList.Last());
+                overlay = MarkerDraw.DrawItineraryMarker(new GeoCoordinate(Convert.ToDouble(i.start_address_lat),
+                    Convert.ToDouble(i.start_address_long)), Global.GlobalData.itinearyList.Last());
                 //chua su dung
-                listMainMapOvelay.Add(overlay);
+                //listMainMapOvelay.Add(overlay);
 
                 mainMapLayer.Add(overlay);
             }
             mapMain.Layers.Add(mainMapLayer);
-            longlistItineraries.ItemsSource = itinearyList;     
-        }
-
-
-        public MapOverlay DrawItineraryMarker(GeoCoordinate point, Itinerary2 i)
-        {
-            //MapVieMode.Layers.Clear();
-            //MapLayer mapLayer = new MapLayer();
-            // Draw marker for current position       
-
-            // Draw markers for location(s) / destination(s)
-
-            //DrawMapMarker(MyCoordinates[i], Colors.Red, mapLayer, parklist.parking_details[i].DestinationName);
-            UCCustomPushPin _tooltip = new UCCustomPushPin();
-            _tooltip.Description = "";
-            _tooltip.DataContext = i;
-            _tooltip.Menuitem.Click += Menuitem_Click;
-            _tooltip.imgmarker.Tap += _tooltip_Tapimg;
-            MapOverlay overlay = new MapOverlay();
-            overlay.Content = _tooltip;
-            overlay.GeoCoordinate = point;
-            overlay.PositionOrigin = new Point(0.0, 1.0);
-
-            return overlay;
-            //mapLayer.Add(overlay);
-
-            //MapVieMode.Layers.Add(mapLayer);
-        }
-
-        private void Menuitem_Click(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                MenuItem menuItem = (MenuItem)sender;
-                string selecteditem = menuItem.Tag.ToString().Trim();
-                var selectedparkdata = itinearyList.Where(s => s.itinerary_id.ToString().Equals(selecteditem)).ToList();
-                if (selectedparkdata.Count > 0)
-                {
-                    foreach (var item in selectedparkdata)
-                    {
-                        //storage data
-                        /*if (Settings.FileExists("LocationDetailItem"))
-                        {
-                            Settings.DeleteFile("LocationDetailItem");
-                        }
-                        using (IsolatedStorageFileStream fileStream = Settings.OpenFile("LocationDetailItem", FileMode.Create))
-                        {
-                            DataContractSerializer serializer = new DataContractSerializer(typeof(LocationDetail));
-                            serializer.WriteObject(fileStream, items);
-
-                        }*/
-                        //luu tru tam thoi
-                        Global.GlobalData.selectedItinerary = item;
-                        //navigate to Details page
-                        NavigationService.Navigate(new Uri("/Customer/ItineraryDetails.xaml", UriKind.RelativeOrAbsolute));
-                        break;
-                    }
-                }
-            }
-            catch
-            {
-            }
-        }
-
-        private void _tooltip_Tapimg(object sender, System.Windows.Input.GestureEventArgs e)
-        {
-            try
-            {
-                Image item = (Image)sender;
-                string selecteditem = item.Tag.ToString();
-                var selectedparkdata = itinearyList.Where(s => s.itinerary_id.ToString().Equals(selecteditem)).ToList();
-
-
-                if (selectedparkdata.Count > 0)
-                {
-                    foreach (var items in selectedparkdata)
-                    {
-                        ContextMenu contextMenu =
-                        ContextMenuService.GetContextMenu(item);
-                        contextMenu.DataContext = items;
-                        if (contextMenu.Parent == null)
-                        {
-                            contextMenu.IsOpen = true;
-                        }
-                        break;
-                    }
-                }
-            }
-            catch
-            {
-            }
+            longlistItineraries.ItemsSource = Global.GlobalData.itinearyList;     
         }
 
         private void longlistItineraries_SelectionChanged(object sender, SelectionChangedEventArgs e)

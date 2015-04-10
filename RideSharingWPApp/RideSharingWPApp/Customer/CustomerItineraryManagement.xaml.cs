@@ -13,7 +13,7 @@ namespace RideSharingWPApp.Customer
 {
     public partial class CustomerItineraryManagement : PhoneApplicationPage
     {
-        ItineraryList itinearyList = new ItineraryList();
+        //ItineraryList itinearyList = new ItineraryList();
 
         public CustomerItineraryManagement()
         {
@@ -29,15 +29,17 @@ namespace RideSharingWPApp.Customer
 
         public async void getItinerariesOfCustomer()
         {
+            //reset Itinerary
+            Global.GlobalData.itinearyList = new ItineraryList();
             //send get request
-            var result = await Request.RequestToServer.sendGetRequest("itineraries/driver/itinerary_status");
+            var result = await Request.RequestToServer.sendGetRequest("itineraries/customer/itinerary_status");
 
             RootObject root = JsonConvert.DeserializeObject<RootObject>(result);
 
             //xu ly json
             foreach (Itinerary i in root.itineraries)
             {
-                itinearyList.Add(new Itinerary2
+                Global.GlobalData.itinearyList.Add(new Itinerary2
                 {
                     itinerary_id = i.itinerary_id,
                     driver_id = i.driver_id,
@@ -74,7 +76,7 @@ namespace RideSharingWPApp.Customer
                 });
             }
             //binding vao list
-            longlistItineraries.ItemsSource = itinearyList;
+            longlistItineraries.ItemsSource = Global.GlobalData.itinearyList;
         }
 
         private void longlistItineraries_SelectionChanged(object sender, SelectionChangedEventArgs e)

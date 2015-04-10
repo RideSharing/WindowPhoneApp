@@ -71,14 +71,21 @@ namespace RideSharingWPApp
             MapOverlay overlay = new MapOverlay();
             //set point on map
             //draw start poit
-            overlay = UserControls.MarkerDraw.DrawMapMarker(new GeoCoordinate(GlobalData.selectedItinerary.start_address_lat, GlobalData.selectedItinerary.start_address_long));
+            overlay = UserControls.MarkerDraw.DrawCurrentMapMarker(new GeoCoordinate(GlobalData.selectedItinerary.start_address_lat, GlobalData.selectedItinerary.start_address_long));
+            
             wayPoints.Add(new GeoCoordinate(GlobalData.selectedItinerary.start_address_lat, GlobalData.selectedItinerary.start_address_long));
+
+            mapItineraryDetails.Center = overlay.GeoCoordinate;
             layer.Add(overlay);
             //draw end point
-            overlay = UserControls.MarkerDraw.DrawMapMarker(new GeoCoordinate(GlobalData.selectedItinerary.end_address_lat, GlobalData.selectedItinerary.end_address_long));
+            overlay = UserControls.MarkerDraw.DrawCurrentMapMarker(new GeoCoordinate(GlobalData.selectedItinerary.end_address_lat, GlobalData.selectedItinerary.end_address_long));
             wayPoints.Add(new GeoCoordinate(GlobalData.selectedItinerary.end_address_lat, GlobalData.selectedItinerary.end_address_long));
             layer.Add(overlay);
             mapItineraryDetails.Layers.Add(layer);
+
+            mapItineraryDetails.ZoomLevel = 14;
+            
+
             //driection
             routeQuery = new RouteQuery();
             //GeocodeQuery Mygeocodequery = null;

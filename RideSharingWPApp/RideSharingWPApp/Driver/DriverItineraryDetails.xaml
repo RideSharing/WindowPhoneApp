@@ -126,11 +126,13 @@
                          Background="{StaticResource PhoneTextBoxSelectionForegroundBrush}"/>
                     <toolkit:DatePicker x:Name="datePicker"
                         Header="Ngày đi"
+                        
                         ValueStringFormat="{}{0:dd-MM-yyyy}"
                         Margin="0,0,0,0"
                         VerticalAlignment="Center"
                         Grid.Row="2"/>
                     <toolkit:TimePicker x:Name="timePicker"
+                                        
                         Header="Thời gian đi"
                         Margin="0,0,0,0"
                         VerticalAlignment="Center"

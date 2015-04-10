@@ -100,6 +100,7 @@
     <Compile Include="Customer\CustomerItineraryManagement.xaml.cs">
       <DependentUpon>CustomerItineraryManagement.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DateTimes\DatetimeConvert.cs" />
     <Compile Include="Driver\AdvancePostItinerary.xaml.cs">
       <DependentUpon>AdvancePostItinerary.xaml</DependentUpon>
     </Compile>
@@ -265,6 +266,14 @@
     <Content Include="Assets\Marker_Img\ic_marker_driver.png" />
     <Content Include="Assets\Marker_Img\ic_marker_end.png" />
     <Content Include="Assets\Marker_Img\ic_marker_start.png" />
+    <Content Include="Assets\drawmap\Flag1.png" />
+    <Content Include="Assets\drawmap\Flag2.png" />
+    <Content Include="Assets\drawmap\Gnome-Zoom-In-48.png" />
+    <Content Include="Assets\drawmap\Gnome-Zoom-Out-48.png" />
+    <Content Include="Assets\drawmap\blackEnd.png" />
+    <Content Include="Assets\drawmap\whiteEnd.png" />
+    <Content Include="Assets\drawmap\blackStart.png" />
+    <Content Include="Assets\drawmap\whiteStart.png" />
     <Content Include="README_FIRST.txt" />
     <Content Include="Toolkit.Content\ApplicationBar.Add.png" />
     <Content Include="Toolkit.Content\ApplicationBar.Cancel.png" />

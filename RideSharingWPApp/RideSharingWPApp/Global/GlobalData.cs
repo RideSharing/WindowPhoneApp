@@ -8,9 +8,10 @@ namespace RideSharingWPApp.Global
 {
     class GlobalData
     {
+        public static ItineraryList itinearyList = new ItineraryList();
         public static Itinerary2 selectedItinerary = new Itinerary2();
 
-        public static bool isDriver = true;
+        public static bool isDriver = false;
 
         public static string APIkey = null;
 

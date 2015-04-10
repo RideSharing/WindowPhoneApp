@@ -253,6 +253,30 @@
     <AppxPackagedFile Include="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\Marker_Img\ic_marker_start.png">
       <PackagePath>Assets\Marker_Img\ic_marker_start.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\drawmap\Flag1.png">
+      <PackagePath>Assets\drawmap\Flag1.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\drawmap\Flag2.png">
+      <PackagePath>Assets\drawmap\Flag2.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\drawmap\Gnome-Zoom-In-48.png">
+      <PackagePath>Assets\drawmap\Gnome-Zoom-In-48.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\drawmap\Gnome-Zoom-Out-48.png">
+      <PackagePath>Assets\drawmap\Gnome-Zoom-Out-48.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\drawmap\blackEnd.png">
+      <PackagePath>Assets\drawmap\blackEnd.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\drawmap\whiteEnd.png">
+      <PackagePath>Assets\drawmap\whiteEnd.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\drawmap\blackStart.png">
+      <PackagePath>Assets\drawmap\blackStart.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\drawmap\whiteStart.png">
+      <PackagePath>Assets\drawmap\whiteStart.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Toolkit.Content\ApplicationBar.Add.png">
       <PackagePath>Toolkit.Content\ApplicationBar.Add.png</PackagePath>
     </AppxPackagedFile>
