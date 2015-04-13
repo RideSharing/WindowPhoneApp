@@ -18,9 +18,9 @@
     <Grid x:Name="LayoutRoot" Background="#FF3DA5E1">
         <Grid.RowDefinitions>
             <RowDefinition Height="5*"/>
-            <RowDefinition Height="1.25*"/>
+            <RowDefinition Height="1.1*"/>
 
-            <RowDefinition Height="1.25*"/>
+            <RowDefinition Height="1.1*"/>
             <RowDefinition Height="1.75*"/>
         </Grid.RowDefinitions>
         <Grid Grid.Row="0">

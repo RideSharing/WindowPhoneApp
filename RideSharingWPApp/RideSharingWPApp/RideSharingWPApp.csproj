@@ -152,6 +152,9 @@
       <DependentUpon>AppResources.resx</DependentUpon>
     </Compile>
     <Compile Include="UserControls\MarkerDraw.cs" />
+    <Compile Include="UserControls\UCCurrentPushPin.xaml.cs">
+      <DependentUpon>UCCurrentPushPin.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UCCustomPushPin.xaml.cs">
       <DependentUpon>UCCustomPushPin.xaml</DependentUpon>
     </Compile>
@@ -220,6 +223,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Driver\PostItinerary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\UCCurrentPushPin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
