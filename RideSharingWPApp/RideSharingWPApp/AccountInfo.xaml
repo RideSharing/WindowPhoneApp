@@ -53,18 +53,18 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <Button Grid.Row="0" Grid.Column="1" Width="90" Height="90" BorderThickness="0">
-                    <Image Source="Assets/ic_acc/ic_upload.png"/>
+                    <Image Source="/Assets/ic_acc/ic_upload.png"/>
                 </Button>
                 <Button Grid.Row="0" Grid.Column="0" Width="90" Height="90" BorderThickness="0">
-                    <Image Source="Assets/ic_acc/ic_upload.png"/>
+                    <Image Source="/Assets/ic_acc/ic_upload.png"/>
                 </Button>
                 <Button Grid.Row="1" Grid.Column="0" Width="90" Height="90" BorderThickness="0">
-                    <Image Source="Assets/ic_acc/ic_upload.png"/>
+                    <Image Source="/Assets/ic_acc/ic_upload.png"/>
                 </Button>
             </Grid>
 
 
-            <Image Source="Assets/avatar/ic_author_harold.png" Grid.Row="0"  >
+            <Image Source="/Assets/avatar/ic_author_harold.png" Grid.Row="0"  >
                 <Image.Clip>
                     <EllipseGeometry Center="80,80" RadiusX="80" RadiusY="80"/>
                 </Image.Clip>
@@ -82,11 +82,11 @@
                     <!--Replace rectangle with image-->
                     <Border BorderThickness="3" Width="99" Height="99" BorderBrush="#FFFFC700" >
                         <!-- Background="#FFFFC700"-->
-                        <Image Source="Assets/ic_acc/email-blue-icon.png"  Width="99" Height="99" MinWidth="99" MinHeight="99" />
+                        <Image Source="/Assets/ic_acc/email-blue-icon.png"  Width="99" Height="99" MinWidth="99" MinHeight="99" />
                     </Border>
                     <StackPanel Width="311" Margin="8,-7,0,0">
-                        <TextBlock Text="{Binding start_address}" TextWrapping="Wrap" Margin="10,0" Style="{StaticResource PhoneTextExtraLargeStyle}" FontSize="{StaticResource PhoneFontSizeLarge}" />
-                        <TextBlock Text="{Binding end_address}" TextWrapping="Wrap" Margin="10,-2,10,0" Style="{StaticResource PhoneTextSubtleStyle}" />
+                        <TextBlock Text="Email" Foreground="Blue" TextWrapping="Wrap" Margin="10,0" Style="{StaticResource PhoneTextExtraLargeStyle}" FontSize="{StaticResource PhoneFontSizeLarge}" />
+                        <TextBlock Text="{Binding end_address}" Foreground="Black" TextWrapping="Wrap" Margin="10,-2,10,0" Style="{StaticResource PhoneTextSubtleStyle}" />
                     </StackPanel>
                 </StackPanel>
             </ListBoxItem>
@@ -95,11 +95,11 @@
                     <!--Replace rectangle with image-->
                     <Border BorderThickness="3" Width="99" Height="99" BorderBrush="#FFFFC700" >
                         <!-- Background="#FFFFC700"-->
-                        <Image Source="Assets/ic_acc/Personal.png"  Width="99" Height="99" MinWidth="99" MinHeight="99" />
+                        <Image Source="/Assets/ic_acc/Personal.png"  Width="99" Height="99" MinWidth="99" MinHeight="99" />
                     </Border>
                     <StackPanel Width="311" Margin="8,-7,0,0">
-                        <TextBlock Text="{Binding start_address}" TextWrapping="Wrap" Margin="10,0" Style="{StaticResource PhoneTextExtraLargeStyle}" FontSize="{StaticResource PhoneFontSizeLarge}" />
-                        <TextBlock Text="{Binding end_address}" TextWrapping="Wrap" Margin="10,-2,10,0" Style="{StaticResource PhoneTextSubtleStyle}" />
+                        <TextBlock Text="Personal ID" Foreground="Blue" TextWrapping="Wrap" Margin="10,0" Style="{StaticResource PhoneTextExtraLargeStyle}" FontSize="{StaticResource PhoneFontSizeLarge}" />
+                        <TextBlock Text="{Binding end_address}" Foreground="Black" TextWrapping="Wrap" Margin="10,-2,10,0" Style="{StaticResource PhoneTextSubtleStyle}" />
                     </StackPanel>
                 </StackPanel>
             </ListBoxItem>
@@ -108,11 +108,11 @@
                     <!--Replace rectangle with image-->
                     <Border BorderThickness="3" Width="99" Height="99" BorderBrush="#FFFFC700" >
                         <!-- Background="#FFFFC700"-->
-                        <Image Source="Assets/ic_acc/phone.png"  Width="99" Height="99" MinWidth="99" MinHeight="99" />
+                        <Image Source="/Assets/ic_acc/phone.png"  Width="99" Height="99" MinWidth="99" MinHeight="99" />
                     </Border>
                     <StackPanel Width="311" Margin="8,-7,0,0">
-                        <TextBlock Text="{Binding start_address}" TextWrapping="Wrap" Margin="10,0" Style="{StaticResource PhoneTextExtraLargeStyle}" FontSize="{StaticResource PhoneFontSizeLarge}" />
-                        <TextBlock Text="{Binding end_address}" TextWrapping="Wrap" Margin="10,-2,10,0" Style="{StaticResource PhoneTextSubtleStyle}" />
+                        <TextBlock Text="Phone" Foreground="Blue" TextWrapping="Wrap" Margin="10,0" Style="{StaticResource PhoneTextExtraLargeStyle}" FontSize="{StaticResource PhoneFontSizeLarge}" />
+                        <TextBlock Text="{Binding end_address}" Foreground="Black" TextWrapping="Wrap" Margin="10,-2,10,0" Style="{StaticResource PhoneTextSubtleStyle}" />
                     </StackPanel>
                 </StackPanel>
             </ListBoxItem>
@@ -121,7 +121,7 @@
                     <!--Replace rectangle with image-->
                     <Border BorderThickness="3" Width="99" Height="99" BorderBrush="#FFFFC700" >
                         <!-- Background="#FFFFC700"-->
-                        <Image Source="Assets/ic_acc/Postcard.png"  Width="99" Height="99" MinWidth="99" MinHeight="99" />
+                        <Image Source="/Assets/ic_acc/Postcard.png"  Width="99" Height="99" MinWidth="99" MinHeight="99" />
                     </Border>
                     <StackPanel Orientation="Horizontal" Height="105" Width="auto" Margin="8,-7,0,0">
                         <!--1 picure and 2 button -->
@@ -130,7 +130,7 @@
                             <Image Source="Assets/ic_acc/ic_upload.png"/>
                         </Button>
                         <Button Width="90" Height="90">
-                            <Image Source="Assets/ic_acc/ic_upload.png"/>
+                            <Image Source="/Assets/ic_acc/ic_upload.png"/>
                         </Button>
                     </StackPanel>
                 </StackPanel>
