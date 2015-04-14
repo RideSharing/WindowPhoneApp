@@ -53,24 +53,24 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <Button Grid.Row="0" Grid.Column="1" Width="90" Height="90" BorderThickness="0">
-                    <Image Source="/Assets/ic_acc/ic_upload.png"/>
+                    <Image x:Name="btnUpdateProfile" Source="/Assets/ic_acc/ic_edit.png"/>
                 </Button>
                 <Button Grid.Row="0" Grid.Column="0" Width="90" Height="90" BorderThickness="0">
-                    <Image Source="/Assets/ic_acc/ic_upload.png"/>
+                    <Image x:Name="btnSelectAvaImg" Source="/Assets/ic_acc/ic_upload.png"/>
                 </Button>
                 <Button Grid.Row="1" Grid.Column="0" Width="90" Height="90" BorderThickness="0">
-                    <Image Source="/Assets/ic_acc/ic_upload.png"/>
+                    <Image x:Name="btnCaptureAvaImg" Source="/Assets/ic_acc/ic_image2.png"/>
                 </Button>
             </Grid>
 
 
-            <Image Source="/Assets/avatar/ic_author_harold.png" Grid.Row="0"  >
+            <Image x:Name="imgAvatar" Source="/Assets/avatar/ic_author_harold.png" Grid.Row="0"  >
                 <Image.Clip>
                     <EllipseGeometry Center="80,80" RadiusX="80" RadiusY="80"/>
                 </Image.Clip>
             </Image>
             <Grid Grid.Row="1">
-                <TextBlock Grid.Column="1" Text="HKUHKU" HorizontalAlignment="Center"/>
+                <TextBlock Grid.Column="1" x:Name="txtbFullname" Text="HKUHKU" HorizontalAlignment="Center"/>
             </Grid>
             <TextBlock HorizontalAlignment="Center"/>
 
@@ -86,7 +86,7 @@
                     </Border>
                     <StackPanel Width="311" Margin="8,-7,0,0">
                         <TextBlock Text="Email" Foreground="Blue" TextWrapping="Wrap" Margin="10,0" Style="{StaticResource PhoneTextExtraLargeStyle}" FontSize="{StaticResource PhoneFontSizeLarge}" />
-                        <TextBlock Text="{Binding end_address}" Foreground="Black" TextWrapping="Wrap" Margin="10,-2,10,0" Style="{StaticResource PhoneTextSubtleStyle}" />
+                        <TextBlock x:Name="txtbEmail" Text="{Binding end_address}" Foreground="Black" TextWrapping="Wrap" Margin="10,-2,10,0" Style="{StaticResource PhoneTextSubtleStyle}" />
                     </StackPanel>
                 </StackPanel>
             </ListBoxItem>
@@ -99,7 +99,7 @@
                     </Border>
                     <StackPanel Width="311" Margin="8,-7,0,0">
                         <TextBlock Text="Personal ID" Foreground="Blue" TextWrapping="Wrap" Margin="10,0" Style="{StaticResource PhoneTextExtraLargeStyle}" FontSize="{StaticResource PhoneFontSizeLarge}" />
-                        <TextBlock Text="{Binding end_address}" Foreground="Black" TextWrapping="Wrap" Margin="10,-2,10,0" Style="{StaticResource PhoneTextSubtleStyle}" />
+                        <TextBlock x:Name="txtbPersonalID" Text="{Binding end_address}" Foreground="Black" TextWrapping="Wrap" Margin="10,-2,10,0" Style="{StaticResource PhoneTextSubtleStyle}" />
                     </StackPanel>
                 </StackPanel>
             </ListBoxItem>
@@ -112,7 +112,7 @@
                     </Border>
                     <StackPanel Width="311" Margin="8,-7,0,0">
                         <TextBlock Text="Phone" Foreground="Blue" TextWrapping="Wrap" Margin="10,0" Style="{StaticResource PhoneTextExtraLargeStyle}" FontSize="{StaticResource PhoneFontSizeLarge}" />
-                        <TextBlock Text="{Binding end_address}" Foreground="Black" TextWrapping="Wrap" Margin="10,-2,10,0" Style="{StaticResource PhoneTextSubtleStyle}" />
+                        <TextBlock x:Name="txtbPhone" Text="{Binding end_address}" Foreground="Black" TextWrapping="Wrap" Margin="10,-2,10,0" Style="{StaticResource PhoneTextSubtleStyle}" />
                     </StackPanel>
                 </StackPanel>
             </ListBoxItem>
@@ -125,12 +125,12 @@
                     </Border>
                     <StackPanel Orientation="Horizontal" Height="105" Width="auto" Margin="8,-7,0,0">
                         <!--1 picure and 2 button -->
-                        <Image Height="105" Width="160" Stretch="None" Source="/Assets/avatar/ic_author_harold.png" Margin="0,0,0,10"/>
+                        <Image x:Name="imgPersonalID" Height="105" Width="160" Stretch="None" Source="/Assets/avatar/ic_author_harold.png" Margin="0,0,0,10"/>
                         <Button Width="90" Height="90" >
-                            <Image Source="Assets/ic_acc/ic_upload.png"/>
+                            <Image x:Name="btnSelectPerIDImg" Source="Assets/ic_acc/ic_upload.png"/>
                         </Button>
                         <Button Width="90" Height="90">
-                            <Image Source="/Assets/ic_acc/ic_upload.png"/>
+                            <Image x:Name="btnCapturePerIDImg" Source="/Assets/ic_acc/ic_image2.png"/>
                         </Button>
                     </StackPanel>
                 </StackPanel>
@@ -146,7 +146,7 @@
             </Button>
         </StackPanel>
         <StackPanel HorizontalAlignment="Left" Margin="0,5,0,0" Grid.Row="3" Width="229">
-            <Button x:Name="btnChangePassword" Height="68" Content="Change Password" Margin="-1,0,1,0"/>
+            <Button x:Name="btnChangePassword" Height="68" Content="Change Password" Margin="-1,0,1,0" Click="btnChangePassword_Click"/>
         </StackPanel>
     </Grid>
 
