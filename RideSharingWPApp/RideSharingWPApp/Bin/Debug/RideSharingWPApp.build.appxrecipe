@@ -184,6 +184,9 @@
     <AppxPackagedFile Include="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\AppBar\ic_home.png">
       <PackagePath>Assets\AppBar\ic_home.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\AppBar\ic_ItiMana.png">
+      <PackagePath>Assets\AppBar\ic_ItiMana.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\AppBar\ic_map.png">
       <PackagePath>Assets\AppBar\ic_map.png</PackagePath>
     </AppxPackagedFile>

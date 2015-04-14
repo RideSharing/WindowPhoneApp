@@ -21,25 +21,30 @@
                 <shell:ApplicationBarMenuItem Text="Zoom Out"/>
             </shell:ApplicationBar.MenuItems>
 
-            <shell:ApplicationBarIconButton 
-                x:Name="menuCustomer"
+            <shell:ApplicationBarIconButton
+                x:Name="menuHome"
                 IconUri="/Assets/AppBar/ic_home.png"  
-                Text="Home" Click="menuCustomer_Click" 
-                
-                />
+                Text="Home" 
+                Click="menuHome_Click"/>
 
             <shell:ApplicationBarIconButton 
+                x:Name="menuSearch"
                 IconUri="/Assets/AppBar/ic_search.png"  
                 Text="Search" 
-                />
+                Click="menuSearch_Click"/>
+
             <shell:ApplicationBarIconButton
-                x:FieldModifier="menuPostItinerary"
+                x:Name="menuPostItinerary"
                 IconUri="/Assets/AppBar/ic_map.png" 
-                Text="Itinerary"
-                Click="ApplicationBarIconButton_Click"/>
+                Text="Post" 
+                Click="menuPostItinerary_Click"/>
+
             <shell:ApplicationBarIconButton 
-                IconUri="/Assets/AppBar/ic_router.png" 
-                Text="EndPoint"/>
+                x:Name="menuItineraryManagement"
+                IconUri="/Assets/AppBar/ic_ItiMana.png" 
+                Text="Manage"
+                Click="menuItineraryManagement_Click"/>
+            
         </shell:ApplicationBar>
     </phone:PhoneApplicationPage.ApplicationBar>
     <!--LayoutRoot is the root grid where all page content is placed-->

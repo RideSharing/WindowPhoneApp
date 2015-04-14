@@ -88,5 +88,26 @@ namespace RideSharingWPApp.Customer
             //navigate sang details
             NavigationService.Navigate(new Uri("/Customer/DriverItineraryDetails.xaml", UriKind.RelativeOrAbsolute));
         }
+
+        private void menuHome_Click(object sender, EventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Customer/MainMap.xaml", UriKind.RelativeOrAbsolute));
+        }
+
+        private void menuPostItinerary_Click(object sender, EventArgs e)
+        {
+            //NavigationService.Navigate(new Uri("/Customer/....xaml", UriKind.RelativeOrAbsolute));
+        }
+
+        private void menuItineraryManagement_Click(object sender, EventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Customer/CustomerItineraryManagement.xaml", UriKind.RelativeOrAbsolute));
+        }
+
+        private void menuSearch_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

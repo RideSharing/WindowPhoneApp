@@ -250,6 +250,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\AppBar\ic_home.png" />
+    <Content Include="Assets\AppBar\ic_ItiMana.png" />
     <Content Include="Assets\AppBar\ic_map.png" />
     <Content Include="Assets\AppBar\ic_router.png" />
     <Content Include="Assets\AppBar\ic_search.png" />

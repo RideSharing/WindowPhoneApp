@@ -311,3 +311,4 @@ F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\o
 F:\xampp\htdocs\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\XapCacheFile.xml
 D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\AccountInfo.g.cs
 D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\RideSharingWPApp.csprojResolveAssemblyReference.cache
+D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\UserControls\UCCurrentPushPin.g.cs
