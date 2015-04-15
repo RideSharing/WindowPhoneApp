@@ -261,6 +261,12 @@
     <Content Include="Assets\avatar\ic_author_truman.png" />
     <Content Include="Assets\avatar\ic_author_vidal.png" />
     <Content Include="Assets\avatar\ic_logo.png" />
+    <Content Include="Assets\drawmap\blackend.png" />
+    <Content Include="Assets\drawmap\blueend.png" />
+    <Content Include="Assets\drawmap\blackstart.png" />
+    <Content Include="Assets\drawmap\whitestart.png" />
+    <Content Include="Assets\drawmap\ZoomIn.png" />
+    <Content Include="Assets\drawmap\ZoomOut.png" />
     <Content Include="Assets\ic_acc\email-blue-icon.png" />
     <Content Include="Assets\ic_acc\ic_edit.png" />
     <Content Include="Assets\ic_acc\ic_image2.png" />
@@ -274,14 +280,6 @@
     <Content Include="Assets\Marker_Img\ic_marker_driver.png" />
     <Content Include="Assets\Marker_Img\ic_marker_end.png" />
     <Content Include="Assets\Marker_Img\ic_marker_start.png" />
-    <Content Include="Assets\drawmap\Flag1.png" />
-    <Content Include="Assets\drawmap\Flag2.png" />
-    <Content Include="Assets\drawmap\Gnome-Zoom-In-48.png" />
-    <Content Include="Assets\drawmap\Gnome-Zoom-Out-48.png" />
-    <Content Include="Assets\drawmap\blackEnd.png" />
-    <Content Include="Assets\drawmap\whiteEnd.png" />
-    <Content Include="Assets\drawmap\blackStart.png" />
-    <Content Include="Assets\drawmap\whiteStart.png" />
     <Content Include="README_FIRST.txt" />
     <Content Include="Toolkit.Content\ApplicationBar.Add.png" />
     <Content Include="Toolkit.Content\ApplicationBar.Cancel.png" />

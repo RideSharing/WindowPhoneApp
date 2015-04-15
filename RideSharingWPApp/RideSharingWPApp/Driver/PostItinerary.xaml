@@ -33,14 +33,37 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="0,0,0,0" Background="{StaticResource PhoneForegroundBrush}">
-            <maps:Map x:Name="mapPostItinerary" Tap="mapPostItinerary_Tap"/>
+            <maps:Map x:Name="mapPostItinerary" Tap="mapPostItinerary_Tap" Margin="0,0,0,0"/>
             <Canvas>
-                <Button Background="Aqua" x:Name="btnStart" BorderThickness="5" Height="100" Width="100"  Canvas.Left="380" Canvas.Top="400">
-                    <Image Stretch="Fill" Source="Assets/drawmap/whiteStart.png"/>
-                </Button>
-                <Button Background="Aqua" x:Name="btnEnd" BorderThickness="5" Height="100" Width="100"  Canvas.Left="380" Canvas.Top="330">
-                    <Image Stretch="Fill" Source="Assets/drawmap/blackEnd.png"/>
-                </Button>
+                <Border Width="40" Height="40" Canvas.Left="0" Canvas.Top="0">
+                    <Image x:Name="btnZoomIn" KeyDown="btnZoomIn_KeyDown">
+                        <Image.Source>
+                            <BitmapImage UriSource="Assets/drawmap/ZoomIn.png"/>
+                        </Image.Source>
+                    </Image>
+                </Border>
+                <Border Width="40" Background="White" Height="40" Canvas.Left="0" Canvas.Top="50">
+                    <Image x:Name="btnZoomOut" KeyDown="btnZoomOut_KeyDown">
+                        <Image.Source>
+                            <BitmapImage UriSource="Assets/drawmap/ZoomOut.png"/>
+                        </Image.Source>
+                    </Image>
+                </Border>
+                <Border Width="40" Background="White" Height="40" Canvas.Left="430" Canvas.Top="0">
+                    <Image x:Name="btnStart" KeyDown="btnStart_KeyDown">
+                        <Image.Source>
+                            <BitmapImage UriSource="Assets/drawmap/blackstart.png"/>
+                        </Image.Source>
+                    </Image>
+                </Border>
+                <Border Width="40" Background="White" Height="40" Canvas.Left="430" Canvas.Top="50">
+                    <Image x:Name="btnEnd" KeyDown="btnEnd_KeyDown">
+                        <Image.Source>
+                            <BitmapImage UriSource="Assets/drawmap/blackend.png"/>
+                        </Image.Source>
+                    </Image>
+                </Border>
+
             </Canvas>    
         </Grid>
         <Grid Grid.Row="2" HorizontalAlignment="Center" Width="480">

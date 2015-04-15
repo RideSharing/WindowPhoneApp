@@ -241,6 +241,25 @@ namespace RideSharingWPApp
                 + "&e_long=" + endPointOverlay.GeoCoordinate.Longitude, UriKind.RelativeOrAbsolute));
         }
 
+        private void btnZoomIn_KeyDown(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnZoomOut_KeyDown(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnEnd_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void btnStart_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
 
     }
 }

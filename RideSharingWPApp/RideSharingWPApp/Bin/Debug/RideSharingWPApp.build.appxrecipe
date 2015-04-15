@@ -217,6 +217,24 @@
     <AppxPackagedFile Include="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\avatar\ic_logo.png">
       <PackagePath>Assets\avatar\ic_logo.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\drawmap\blackend.png">
+      <PackagePath>Assets\drawmap\blackend.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\drawmap\blueend.png">
+      <PackagePath>Assets\drawmap\blueend.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\drawmap\blackstart.png">
+      <PackagePath>Assets\drawmap\blackstart.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\drawmap\whitestart.png">
+      <PackagePath>Assets\drawmap\whitestart.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\drawmap\ZoomIn.png">
+      <PackagePath>Assets\drawmap\ZoomIn.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\drawmap\ZoomOut.png">
+      <PackagePath>Assets\drawmap\ZoomOut.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\ic_acc\email-blue-icon.png">
       <PackagePath>Assets\ic_acc\email-blue-icon.png</PackagePath>
     </AppxPackagedFile>
@@ -255,30 +273,6 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\Marker_Img\ic_marker_start.png">
       <PackagePath>Assets\Marker_Img\ic_marker_start.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\drawmap\Flag1.png">
-      <PackagePath>Assets\drawmap\Flag1.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\drawmap\Flag2.png">
-      <PackagePath>Assets\drawmap\Flag2.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\drawmap\Gnome-Zoom-In-48.png">
-      <PackagePath>Assets\drawmap\Gnome-Zoom-In-48.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\drawmap\Gnome-Zoom-Out-48.png">
-      <PackagePath>Assets\drawmap\Gnome-Zoom-Out-48.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\drawmap\blackEnd.png">
-      <PackagePath>Assets\drawmap\blackEnd.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\drawmap\whiteEnd.png">
-      <PackagePath>Assets\drawmap\whiteEnd.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\drawmap\blackStart.png">
-      <PackagePath>Assets\drawmap\blackStart.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\drawmap\whiteStart.png">
-      <PackagePath>Assets\drawmap\whiteStart.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Toolkit.Content\ApplicationBar.Add.png">
       <PackagePath>Toolkit.Content\ApplicationBar.Add.png</PackagePath>

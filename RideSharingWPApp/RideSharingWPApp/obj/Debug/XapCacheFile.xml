@@ -1,6 +1,6 @@
-﻿<xapCache source="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\RideSharingWPApp_Debug_AnyCPU.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="4/14/2015 4:53:00 PM">
-  <file source="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\resources.pri" archivePath="resources.pri" lastWriteTime="4/14/2015 4:47:20 PM" />
-  <file source="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\RideSharingWPApp.dll" archivePath="RideSharingWPApp.dll" lastWriteTime="4/14/2015 4:52:57 PM" />
+﻿<xapCache source="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\RideSharingWPApp_Debug_AnyCPU.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="4/15/2015 4:11:07 PM">
+  <file source="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\resources.pri" archivePath="resources.pri" lastWriteTime="4/15/2015 2:49:56 PM" />
+  <file source="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\RideSharingWPApp.dll" archivePath="RideSharingWPApp.dll" lastWriteTime="4/15/2015 4:11:06 PM" />
   <file source="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\AppBar\ic_home.png" archivePath="Assets\AppBar\ic_home.png" lastWriteTime="4/14/2015 4:16:02 PM" />
   <file source="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\AppBar\ic_ItiMana.png" archivePath="Assets\AppBar\ic_ItiMana.png" lastWriteTime="4/14/2015 4:38:32 PM" />
   <file source="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\AppBar\ic_map.png" archivePath="Assets\AppBar\ic_map.png" lastWriteTime="4/14/2015 4:16:02 PM" />
@@ -13,6 +13,12 @@
   <file source="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\avatar\ic_author_truman.png" archivePath="Assets\avatar\ic_author_truman.png" lastWriteTime="4/14/2015 4:16:02 PM" />
   <file source="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\avatar\ic_author_vidal.png" archivePath="Assets\avatar\ic_author_vidal.png" lastWriteTime="4/14/2015 4:16:02 PM" />
   <file source="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\avatar\ic_logo.png" archivePath="Assets\avatar\ic_logo.png" lastWriteTime="4/14/2015 4:16:02 PM" />
+  <file source="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\drawmap\blackend.png" archivePath="Assets\drawmap\blackend.png" lastWriteTime="4/15/2015 2:30:20 PM" />
+  <file source="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\drawmap\blueend.png" archivePath="Assets\drawmap\blueend.png" lastWriteTime="4/15/2015 2:30:20 PM" />
+  <file source="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\drawmap\blackstart.png" archivePath="Assets\drawmap\blackstart.png" lastWriteTime="4/15/2015 2:30:20 PM" />
+  <file source="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\drawmap\whitestart.png" archivePath="Assets\drawmap\whitestart.png" lastWriteTime="4/15/2015 2:30:20 PM" />
+  <file source="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\drawmap\ZoomIn.png" archivePath="Assets\drawmap\ZoomIn.png" lastWriteTime="4/15/2015 9:20:02 AM" />
+  <file source="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\drawmap\ZoomOut.png" archivePath="Assets\drawmap\ZoomOut.png" lastWriteTime="4/15/2015 9:20:02 AM" />
   <file source="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\ic_acc\email-blue-icon.png" archivePath="Assets\ic_acc\email-blue-icon.png" lastWriteTime="4/14/2015 4:16:02 PM" />
   <file source="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\ic_acc\ic_edit.png" archivePath="Assets\ic_acc\ic_edit.png" lastWriteTime="4/14/2015 4:16:02 PM" />
   <file source="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\ic_acc\ic_image2.png" archivePath="Assets\ic_acc\ic_image2.png" lastWriteTime="4/14/2015 4:16:02 PM" />
@@ -26,14 +32,6 @@
   <file source="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\Marker_Img\ic_marker_driver.png" archivePath="Assets\Marker_Img\ic_marker_driver.png" lastWriteTime="4/14/2015 4:16:02 PM" />
   <file source="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\Marker_Img\ic_marker_end.png" archivePath="Assets\Marker_Img\ic_marker_end.png" lastWriteTime="4/14/2015 4:16:02 PM" />
   <file source="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\Marker_Img\ic_marker_start.png" archivePath="Assets\Marker_Img\ic_marker_start.png" lastWriteTime="4/14/2015 4:16:02 PM" />
-  <file source="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\drawmap\Flag1.png" archivePath="Assets\drawmap\Flag1.png" lastWriteTime="4/14/2015 4:16:02 PM" />
-  <file source="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\drawmap\Flag2.png" archivePath="Assets\drawmap\Flag2.png" lastWriteTime="4/14/2015 4:16:02 PM" />
-  <file source="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\drawmap\Gnome-Zoom-In-48.png" archivePath="Assets\drawmap\Gnome-Zoom-In-48.png" lastWriteTime="4/14/2015 4:16:02 PM" />
-  <file source="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\drawmap\Gnome-Zoom-Out-48.png" archivePath="Assets\drawmap\Gnome-Zoom-Out-48.png" lastWriteTime="4/14/2015 4:16:02 PM" />
-  <file source="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\drawmap\blackEnd.png" archivePath="Assets\drawmap\blackEnd.png" lastWriteTime="4/14/2015 4:16:02 PM" />
-  <file source="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\drawmap\whiteEnd.png" archivePath="Assets\drawmap\whiteEnd.png" lastWriteTime="4/14/2015 4:16:02 PM" />
-  <file source="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\drawmap\blackStart.png" archivePath="Assets\drawmap\blackStart.png" lastWriteTime="4/14/2015 4:16:02 PM" />
-  <file source="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\drawmap\whiteStart.png" archivePath="Assets\drawmap\whiteStart.png" lastWriteTime="4/14/2015 4:16:02 PM" />
   <file source="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\README_FIRST.txt" archivePath="README_FIRST.txt" lastWriteTime="4/14/2015 4:16:02 PM" />
   <file source="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Toolkit.Content\ApplicationBar.Add.png" archivePath="Toolkit.Content\ApplicationBar.Add.png" lastWriteTime="4/14/2015 4:16:02 PM" />
   <file source="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Toolkit.Content\ApplicationBar.Cancel.png" archivePath="Toolkit.Content\ApplicationBar.Cancel.png" lastWriteTime="4/14/2015 4:16:02 PM" />
@@ -66,6 +64,6 @@
   <file source="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\ApplicationIcon.png" archivePath="Assets\ApplicationIcon.png" lastWriteTime="4/14/2015 4:16:02 PM" />
   <file source="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\Tiles\FlipCycleTileMedium.png" archivePath="Assets\Tiles\FlipCycleTileMedium.png" lastWriteTime="4/14/2015 4:16:02 PM" />
   <file source="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\Properties\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="4/14/2015 4:16:02 PM" />
-  <file source="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\MDILProjectFiles.xml" archivePath="MDILProjectFiles.xml" lastWriteTime="4/14/2015 4:52:59 PM" />
-  <file source="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\AppxManifest.xml" archivePath="AppxManifest.xml" lastWriteTime="4/14/2015 4:47:21 PM" />
+  <file source="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\MDILProjectFiles.xml" archivePath="MDILProjectFiles.xml" lastWriteTime="4/15/2015 4:11:07 PM" />
+  <file source="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\AppxManifest.xml" archivePath="AppxManifest.xml" lastWriteTime="4/15/2015 2:49:56 PM" />
 </xapCache>

@@ -17,8 +17,10 @@
         <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True" BackgroundColor="#3DA5E1">
 
             <shell:ApplicationBar.MenuItems>
-                <shell:ApplicationBarMenuItem Text="Zoom In"/>
-                <shell:ApplicationBarMenuItem Text="Zoom Out"/>
+                <shell:ApplicationBarMenuItem 
+                    x:Name="menuAccountInfo" 
+                    Text="Account Info"
+                    Click="menuAccountInfo_Click"/>
             </shell:ApplicationBar.MenuItems>
 
 

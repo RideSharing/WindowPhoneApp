@@ -16,8 +16,10 @@
     <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True" BackgroundColor="#3DA5E1">
             <shell:ApplicationBar.MenuItems>
-                <shell:ApplicationBarMenuItem Text="Zoom In"/>
-                <shell:ApplicationBarMenuItem Text="Zoom Out"/>
+                <shell:ApplicationBarMenuItem 
+                    x:Name="menuAccountInfo" 
+                    Text="Account Info"
+                    Click="menuAccountInfo_Click"/>
             </shell:ApplicationBar.MenuItems>
 
 
@@ -68,11 +70,31 @@
             <!--Pivot item one-->
             <phone:PivotItem Header="Map" Margin="0,0,0,0">
                 <Grid x:Name="gridMap">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="19*"/>
+                        <ColumnDefinition Width="61*"/>
+                    </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="7*"/>
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
-                    <maps:Map x:Name="mapItineraryDetails"/>
+                    <maps:Map x:Name="mapItineraryDetails" Grid.ColumnSpan="2"/>
+                    <Canvas Grid.ColumnSpan="2">
+                        <Border Width="40" Background="White" Height="40" Canvas.Left="0" Canvas.Top="0">
+                            <Image x:Name="btnZoomIn" KeyDown="btnZoomIn_KeyDown">
+                                <Image.Source>
+                                    <BitmapImage UriSource="Assets/drawmap/ZoomIn.png"/>
+                                </Image.Source>
+                            </Image>
+                        </Border>
+                        <Border Width="40" Background="White" Height="40" Canvas.Left="0" Canvas.Top="45">
+                            <Image x:Name="btnZoomOut" KeyDown="btnZoomOut_KeyDown">
+                                <Image.Source>
+                                    <BitmapImage UriSource="Assets/drawmap/ZoomOut.png"/>
+                                </Image.Source>
+                            </Image>
+                        </Border>
+                    </Canvas>
                     <!--<Button x:Name="btnAccept1"  Content="Button" Grid.Row="1" Click="btnAccept1_Click"/>-->
                 </Grid>
             </phone:PivotItem>

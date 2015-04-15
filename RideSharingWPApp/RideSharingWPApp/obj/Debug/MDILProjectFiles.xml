@@ -15,6 +15,12 @@
     <File>Assets\avatar\ic_author_truman.png</File>
     <File>Assets\avatar\ic_author_vidal.png</File>
     <File>Assets\avatar\ic_logo.png</File>
+    <File>Assets\drawmap\blackend.png</File>
+    <File>Assets\drawmap\blueend.png</File>
+    <File>Assets\drawmap\blackstart.png</File>
+    <File>Assets\drawmap\whitestart.png</File>
+    <File>Assets\drawmap\ZoomIn.png</File>
+    <File>Assets\drawmap\ZoomOut.png</File>
     <File>Assets\ic_acc\email-blue-icon.png</File>
     <File>Assets\ic_acc\ic_edit.png</File>
     <File>Assets\ic_acc\ic_image2.png</File>
@@ -28,14 +34,6 @@
     <File>Assets\Marker_Img\ic_marker_driver.png</File>
     <File>Assets\Marker_Img\ic_marker_end.png</File>
     <File>Assets\Marker_Img\ic_marker_start.png</File>
-    <File>Assets\drawmap\Flag1.png</File>
-    <File>Assets\drawmap\Flag2.png</File>
-    <File>Assets\drawmap\Gnome-Zoom-In-48.png</File>
-    <File>Assets\drawmap\Gnome-Zoom-Out-48.png</File>
-    <File>Assets\drawmap\blackEnd.png</File>
-    <File>Assets\drawmap\whiteEnd.png</File>
-    <File>Assets\drawmap\blackStart.png</File>
-    <File>Assets\drawmap\whiteStart.png</File>
     <File>README_FIRST.txt</File>
     <File>Toolkit.Content\ApplicationBar.Add.png</File>
     <File>Toolkit.Content\ApplicationBar.Cancel.png</File>

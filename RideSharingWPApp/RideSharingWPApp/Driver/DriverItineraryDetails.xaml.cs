@@ -338,5 +338,20 @@ namespace RideSharingWPApp.Driver
         {
             NavigationService.Navigate(new Uri("/Driver/ItineraryManagement.xaml", UriKind.RelativeOrAbsolute));
         }
+
+        private void menuAccountInfo_Click(object sender, EventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/AccountInfo.xaml", UriKind.RelativeOrAbsolute));
+        }
+
+        private void btnZoomIn_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void btnZoomOut_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
     }   
 }
