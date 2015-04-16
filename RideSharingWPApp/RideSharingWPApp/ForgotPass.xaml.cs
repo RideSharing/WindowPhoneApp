@@ -21,5 +21,10 @@ namespace RideSharingWPApp
         {
             //send request to server
         }
+
+        private void hplFogot_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/LoginPage.xaml", UriKind.RelativeOrAbsolute));
+        }
     }
 }

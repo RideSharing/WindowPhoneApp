@@ -106,18 +106,18 @@ namespace RideSharingWPApp
             longlistItinerariesDriverAccepted.ItemsSource = itinearyDriverAcceptedList;
             longlistItinerariesFinished.ItemsSource = itinearyFinishedList;
         }
-
+        /*
         private void ApplicationBarIconButton_Click(object sender, EventArgs e)
         {
             //navigate sang details
             NavigationService.Navigate(new Uri("/Driver/PostItinerary.xaml", UriKind.RelativeOrAbsolute));
-        }
+        }*/
 
-        private void menuCustomer_Click(object sender, EventArgs e)
+        /*private void menuCustomer_Click(object sender, EventArgs e)
         {
             //navigate sang details
             NavigationService.Navigate(new Uri("/Customer/MainMap.xaml", UriKind.RelativeOrAbsolute));
-        }
+        }*/
 
         private void longlistItinerariesCreated_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {

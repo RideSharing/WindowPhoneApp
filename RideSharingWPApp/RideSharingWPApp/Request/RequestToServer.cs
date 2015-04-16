@@ -11,7 +11,8 @@ namespace RideSharingWPApp.Request
     class RequestToServer
     {
         //public static string preServiceURI = "http://localhost/SeniorProject/RESTFul/v1/";
-        public static string preServiceURI = "http://192.168.10.132/RESTFul/v1/";
+        //public static string preServiceURI = "http://192.168.10.132/RESTFul/v1/";
+        public static string preServiceURI = "http://52.11.206.209/RESTFul/v1/";
         //public static string preServiceURI = "http://54.68.126.75/RESTFul/v1/";
         
 

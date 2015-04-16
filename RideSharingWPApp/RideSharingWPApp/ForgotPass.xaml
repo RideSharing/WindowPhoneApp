@@ -33,7 +33,7 @@
         </Grid>
         <toolkit:PhoneTextBox Hint="Nhập Email:" Grid.Row="1" Background="White" Width="Auto" />
         <Button Grid.Row="2" x:Name="btnForgotPass"  Content="Gửi mật khẩu cho email này"  Width="Auto" FontWeight="Bold" BorderThickness="0" Background="#FFDF0174" Click="btnForgotPass_Click"/>
-        <HyperlinkButton Content="Đã có mật khẩu.Đăng nhập ngay" Grid.Row="4"/>
+        <HyperlinkButton x:Name="hplFogot" Click="hplFogot_Click" Content="Đã có mật khẩu.Đăng nhập ngay" Grid.Row="4"/>
     </Grid>
 
 </phone:PhoneApplicationPage>

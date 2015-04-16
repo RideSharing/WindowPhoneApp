@@ -19,7 +19,7 @@ namespace RideSharingWPApp.UserControls
             //MapVieMode.Layers.Clear();
             //MapLayer mapLayer = new MapLayer();
             // Draw marker for current position       
-            UCCustomPushPin _tooltip = new UCCustomPushPin();
+            UCCurrentPushPin _tooltip = new UCCurrentPushPin();
             // Draw markers for location(s) / destination(s)
 
             //DrawMapMarker(MyCoordinates[i], Colors.Red, mapLayer, parklist.parking_details[i].DestinationName);

@@ -53,13 +53,21 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <Button Grid.Row="0" Grid.Column="1" Width="90" Height="90" BorderThickness="0">
-                    <Image x:Name="btnUpdateProfile" Source="/Assets/ic_acc/ic_edit.png"/>
+                    <Image x:Name="btnUpdateProfile" 
+                           Source="/Assets/ic_acc/ic_edit.png"
+                           Tap="btnUpdateProfile_Tap"/>
                 </Button>
+                <!-- select-->
                 <Button Grid.Row="0" Grid.Column="0" Width="90" Height="90" BorderThickness="0">
-                    <Image x:Name="btnSelectAvaImg" Source="/Assets/ic_acc/ic_upload.png"/>
+                    <Image x:Name="btnSelectAvaImg"
+                           Source="/Assets/ic_acc/ic_upload.png"
+                           Tap="btnSelectAvaImg_Tap" />
                 </Button>
+                <!--capture-->
                 <Button Grid.Row="1" Grid.Column="0" Width="90" Height="90" BorderThickness="0">
-                    <Image x:Name="btnCaptureAvaImg" Source="/Assets/ic_acc/ic_image2.png"/>
+                    <Image x:Name="btnCaptureAvaImg"
+                           Source="/Assets/ic_acc/ic_image2.png"
+                           Tap="btnCaptureAvaImg_Tap" />
                 </Button>
             </Grid>
 
@@ -127,10 +135,14 @@
                         <!--1 picure and 2 button -->
                         <Image x:Name="imgPersonalID" Height="105" Width="160" Stretch="None" Source="/Assets/avatar/ic_author_harold.png" Margin="0,0,0,10"/>
                         <Button Width="90" Height="90" >
-                            <Image x:Name="btnSelectPerIDImg" Source="Assets/ic_acc/ic_upload.png"/>
+                            <Image x:Name="btnSelectPerIDImg" 
+                                   Source="Assets/ic_acc/ic_upload.png"
+                                   Tap="btnSelectPerIDImg_Tap"/>
                         </Button>
                         <Button Width="90" Height="90">
-                            <Image x:Name="btnCapturePerIDImg" Source="/Assets/ic_acc/ic_image2.png"/>
+                            <Image x:Name="btnCapturePerIDImg" 
+                                   Source="/Assets/ic_acc/ic_image2.png"
+                                   Tap="btnCapturePerIDImg_Tap"/>
                         </Button>
                     </StackPanel>
                 </StackPanel>
@@ -139,7 +151,7 @@
         </ListBox>
 
         <StackPanel HorizontalAlignment="Right" Margin="0,5,0,0" Grid.Row="3" Width="246">
-            <Button x:Name="btnUpgrade" Height="68" Content="Upgrade" Margin="-1,0,1,0">
+            <Button Click="btnUpgrade_Click" x:Name="btnUpgrade" Height="68" Content="Upgrade" Margin="-1,0,1,0">
                 <Button.Background>
                     <ImageBrush Stretch="Fill"/>
                 </Button.Background>

@@ -16,6 +16,8 @@ namespace RideSharingWPApp
 {
     public partial class AccountInfo : PhoneApplicationPage
     {
+        PhotoChooserTask photoChooserTask;
+        CameraCaptureTask cameraCaptureTask;
         public AccountInfo()
         {
             InitializeComponent();
@@ -106,6 +108,9 @@ namespace RideSharingWPApp
             MessageBox.Show(jsonObject.Value<string>("message"));
         }
 
+        
+
+
         void photoAvatarChooserTask_Completed(object sender, PhotoResult e)
         {
             if (e.TaskResult == TaskResult.OK)
@@ -174,6 +179,44 @@ namespace RideSharingWPApp
 
                 imgPersonalID.Source = ImageConvert.ImageConvert.convertBase64ToImage(str);
             }
+        }
+
+        private void btnSelectPerIDImg_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            photoChooserTask = new PhotoChooserTask();
+            photoChooserTask.Completed += new EventHandler<PhotoResult>(photoPerIDChooserTask_Completed);
+            photoChooserTask.Show();
+        }
+
+        private void btnCapturePerIDImg_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            cameraCaptureTask = new CameraCaptureTask();
+            cameraCaptureTask.Completed += new EventHandler<PhotoResult>(cameraCapturePerIDTask_Completed);
+            cameraCaptureTask.Show();
+        }
+
+        private void btnSelectAvaImg_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            photoChooserTask = new PhotoChooserTask();
+            photoChooserTask.Completed += new EventHandler<PhotoResult>(photoAvatarChooserTask_Completed);
+            photoChooserTask.Show();
+        }
+
+        private void btnCaptureAvaImg_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            cameraCaptureTask = new CameraCaptureTask();
+            cameraCaptureTask.Completed += new EventHandler<PhotoResult>(cameraCaptureAvaTask_Completed);
+            cameraCaptureTask.Show();
+        }
+
+        private void btnUpdateProfile_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+
+        }
+
+        private void btnUpgrade_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
