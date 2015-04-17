@@ -22,7 +22,15 @@
                 <shell:ApplicationBarMenuItem 
                     x:Name="menuAccountInfo" 
                     Text="Account Info"
-                    Click="menuAccountInfo_Click"/>           
+                    Click="menuAccountInfo_Click"/>
+                <shell:ApplicationBarMenuItem 
+                    x:Name="menuAboutUs" 
+                    Text="About Us"
+                    Click="menuAboutUs_Click"/>
+                <shell:ApplicationBarMenuItem 
+                    x:Name="menuLogOut" 
+                    Text="Log Out"
+                    Click="menuLogOut_Click"/>
             </shell:ApplicationBar.MenuItems>
 
             <shell:ApplicationBarIconButton

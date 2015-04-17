@@ -22,9 +22,13 @@
                     Text="Account Info"
                     Click="menuAccountInfo_Click"/>
                 <shell:ApplicationBarMenuItem 
-                    x:Name="menuOtherProfile" 
-                    Text="View other Profile"
-                    Click="menuAccountInfo_Click"/>
+                    x:Name="menuAboutUs" 
+                    Text="About Us"
+                    Click="menuAboutUs_Click"/>
+                <shell:ApplicationBarMenuItem 
+                    x:Name="menuLogOut" 
+                    Text="Log Out"
+                    Click="menuLogOut_Click"/>
             </shell:ApplicationBar.MenuItems>
 
 

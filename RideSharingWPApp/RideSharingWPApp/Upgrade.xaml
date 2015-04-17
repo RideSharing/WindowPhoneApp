@@ -54,8 +54,8 @@
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
-                <TextBlock x:Name="txtbPersonalID" HorizontalAlignment="Center" FontWeight="Bold" FontSize="36" Foreground="#FF060606" Margin="10,10,10,10"/>
-                <TextBlock Grid.Row="1" HorizontalAlignment="Center" Text="Personal ID" Foreground="#FF060606" FontWeight="Bold"/>
+                <TextBlock x:Name="txtbDriverLicense" HorizontalAlignment="Center" FontWeight="Bold" FontSize="36" Foreground="#FF060606" Margin="10,10,10,10"/>
+                <TextBlock Grid.Row="1" HorizontalAlignment="Center" Text="Driver Lincense" Foreground="#FF060606" FontWeight="Bold"/>
             </Grid>
             <Button Grid.Column="2" Width="90" Height="90" BorderThickness="0">
                 <Image x:Name="btnUpdatePID" Tap="btnUpdatePID_Tap" Source="/Assets/ic_acc/ic_edit.png"/>
@@ -79,20 +79,20 @@
                     <RowDefinition Height="5*"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
-                <Image x:Name="imgPersonalID" Grid.Row="0" Margin="20,20,20,20">
+                <Image x:Name="imgDriverLicense" Grid.Row="0" Margin="20,20,20,20">
                     <Image.Source>
                         <BitmapImage />
                     </Image.Source>
                 </Image>
-                <TextBlock Grid.Row="1" HorizontalAlignment="Center" Text="Personal ID photo" Foreground="#FF060606" FontWeight="Bold"/>
+                <TextBlock Grid.Row="1" HorizontalAlignment="Center" Text="Driver Lincense photo" Foreground="#FF060606" FontWeight="Bold"/>
             </Grid>
             <Button Grid.Column="2" Width="90" Height="90" BorderThickness="0">
                 <Image x:Name="btnCaptureLicenseImg" Tap="btnCaptureLicenseImg_Tap" Source="/Assets/ic_acc/ic_image2.png"/>
             </Button>
         </Grid>
-        <Button x:Name="btnUpdate" Click="btnUpdate_Click" Grid.Row="4" Width="200" Height="100" Content="Upgrade" >
+        <!--<Button x:Name="btnUpdate" Click="btnUpdate_Click" Grid.Row="4" Width="200" Height="100" Content="Upgrade" >
 
-        </Button>
+        </Button>-->
     </Grid>
 
 </phone:PhoneApplicationPage>

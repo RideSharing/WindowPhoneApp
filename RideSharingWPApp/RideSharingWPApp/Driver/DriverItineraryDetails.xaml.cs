@@ -353,5 +353,15 @@ namespace RideSharingWPApp.Driver
         {
 
         }
+
+        private void menuAboutUs_Click(object sender, EventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/AboutUs.xaml", UriKind.RelativeOrAbsolute));
+        }
+
+        private void menuLogOut_Click(object sender, EventArgs e)
+        {
+
+        }
     }   
 }

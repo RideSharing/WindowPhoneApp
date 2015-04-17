@@ -46,22 +46,22 @@
         </StackPanel>
 
         <StackPanel Grid.Row="2" Height="Auto" Background="White" Margin="0,0,0,3">
-            <TextBlock HorizontalAlignment="Center" Text="Thông tin cả bản" Foreground="#FF0C0B0B" FontWeight="Bold" />
-            <TextBlock Text="hghfgh" Foreground="#FF0C0B0B" />
-            <TextBlock Text="TTY" Foreground="#FF0C0B0B" />
-            <TextBlock Text="TTY" Foreground="#FF0C0B0B" />
-            <TextBlock Text="TTY" Foreground="#FF0C0B0B" />
+            <TextBlock HorizontalAlignment="Center" Text="Thông tin cả bản:" Foreground="#FF0C0B0B" FontWeight="Bold" />
+            <TextBlock Text=" -Được phát triển bởi Halley Group" Foreground="#FFE80C0C" />
+            <TextBlock Text=" -" Foreground="#FF0C0B0B" />
+            <TextBlock Text=" -Office:455-457 Hoàng Diệu, Đà Nẵng" Foreground="#FFE80C0C" />
+            <TextBlock Text=" -DĐ:0975417597" Foreground="#FFE80C0C" />
         </StackPanel>
 
         <StackPanel Grid.Row="3" Height="Auto" Background="White" Margin="0,0,0,7">
             <TextBlock HorizontalAlignment="Center" Foreground="#FF0C0B0B" FontWeight="Bold" >
             	<Run Text="Liên "/>
-            	<Run Text="hệ"/>
+            	<Run Text="hệ:"/>
             </TextBlock>
-            <TextBlock Text="hghfgh" Foreground="#FF0C0B0B" />
-            <TextBlock Text="TTY" Foreground="#FF0C0B0B" />
-            <TextBlock Text="TTY" Foreground="#FF0C0B0B" />
-            <TextBlock Text="TTY" Foreground="#FF0C0B0B" />
+            <TextBlock Text="  -FaceBook: facebook.com/ridesharing" Foreground="#FF1546EE" FontWeight="Bold" />
+            <TextBlock Text="  -Gmail:ridesharing@gmail.com" Foreground="#FFAC0909" FontWeight="Bold" />
+            <TextBlock Text="  -Google Plus:googleplus.com/ridesharing" Foreground="#FF38AC0D" FontWeight="Bold" />
+            <TextBlock Text="  -YouTube:youtube.com/ridesharing" Foreground="#FFB40B0B" FontWeight="Bold" />
         </StackPanel>
 
         <Grid Grid.Row="4" Margin="0,0,0,9" Background="#FF3DA5E1">
@@ -69,7 +69,7 @@
                 <ColumnDefinition Width="11*"/>
                 <ColumnDefinition Width="5*"/>
             </Grid.ColumnDefinitions>
-            <TextBlock  HorizontalAlignment="Center" Text="Thông tin nhóm tác giả" Foreground="White" Grid.ColumnSpan="2" Margin="0,0,0,0" FontWeight="Bold"/>
+            <TextBlock  HorizontalAlignment="Center" Text="Thông tin nhóm tác giả:" Foreground="White" Grid.ColumnSpan="2" Margin="0,0,0,0" FontWeight="Bold"/>
         </Grid>
 
         <Grid Grid.Row="5">

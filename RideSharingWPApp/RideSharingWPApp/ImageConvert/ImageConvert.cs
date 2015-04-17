@@ -35,24 +35,34 @@ namespace RideSharingWPApp.ImageConvert
 
         public static string convertImageToBase64(Image image)
         {
-            byte[] bytearray = null;
-
-            using (MemoryStream ms = new MemoryStream())
+            try
             {
-                if (image.Source == null)
-                {
+                byte[] bytearray = null;
 
-                }
-                else
+                using (MemoryStream ms = new MemoryStream())
                 {
-                    WriteableBitmap wbitmp = new WriteableBitmap((BitmapImage)image.Source);
+                    if (image.Source == null)
+                    {
 
-                    wbitmp.SaveJpeg(ms, 46, 38, 0, 100);
-                    bytearray = ms.ToArray();
+                    }
+                    else
+                    {
+                        WriteableBitmap wbitmp = new WriteableBitmap((BitmapImage)image.Source);
+
+                        wbitmp.SaveJpeg(ms, 46, 38, 0, 100);
+                        bytearray = ms.ToArray();
+                    }
                 }
+
+                string str = Convert.ToBase64String(bytearray);
+                return str;
             }
-            string str = Convert.ToBase64String(bytearray);
-            return str;
+            catch (Exception)
+            {
+
+                return "";
+            }
+            
         }
     }
 }

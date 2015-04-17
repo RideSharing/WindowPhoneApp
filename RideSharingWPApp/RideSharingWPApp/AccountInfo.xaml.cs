@@ -22,7 +22,35 @@ namespace RideSharingWPApp
         {
             InitializeComponent();
 
+            
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            if (Global.GlobalData.isDriver)
+            {
+                Button btnDriverInfo = new Button();
+                btnDriverInfo.Content = "Driver Info";
+                btnDriverInfo.Click += btnDriverInfo_Click;
+                stackPanelDriver.Children.Add(btnDriverInfo);
+
+            }
+            else
+            {
+
+                Button btnUpgrade = new Button();
+                btnUpgrade.Content = "Upgrade";
+                btnUpgrade.Click += btnUpgrade_Click;
+                stackPanelDriver.Children.Add(btnUpgrade);
+            }
+
             getUserInfo();
+        }
+
+        private void btnDriverInfo_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Upgrade.xaml", UriKind.RelativeOrAbsolute));
         }
 
         public async void getUserInfo()
@@ -35,6 +63,10 @@ namespace RideSharingWPApp
             txtbFullname.Text = jsonObject.Value<string>("fullname");
             txtbPhone.Text = jsonObject.Value<string>("phone");
             txtbPersonalID.Text = jsonObject.Value<string>("personalID");
+
+            //get picture
+            imgAvatar.Source = ImageConvert.ImageConvert.convertBase64ToImage(jsonObject.Value<string>("link_avatar"));
+            imgPersonalID.Source = ImageConvert.ImageConvert.convertBase64ToImage(jsonObject.Value<string>("personalID_img"));
         }
 
         private void btnChangePassword_Click(object sender, RoutedEventArgs e)
@@ -56,7 +88,7 @@ namespace RideSharingWPApp
                 Caption = "Update your password",
                 Message = "",
                 LeftButtonContent = "Change",
-                RightButtonContent = "No"
+                RightButtonContent = "Cancel"
             };
 
             messageBox.Content = panel;
@@ -108,7 +140,34 @@ namespace RideSharingWPApp
             MessageBox.Show(jsonObject.Value<string>("message"));
         }
 
-        
+        public async void updateUserInfo(string fullname, string email, string personalID, string phone)
+        {
+            Dictionary<string, string> postData = new Dictionary<string, string>();
+            postData.Add("fullname", fullname);
+            postData.Add("email", email);
+            postData.Add("personalID", personalID);
+            postData.Add("phone", phone);
+
+            postData.Add("link_avatar", ImageConvert.ImageConvert.convertImageToBase64(imgAvatar));
+            postData.Add("personalID_img", ImageConvert.ImageConvert.convertImageToBase64(imgAvatar));
+
+            HttpFormUrlEncodedContent content =
+                new HttpFormUrlEncodedContent(postData);
+            var result = await RequestToServer.sendPutRequest("user", content);
+
+            JObject jsonObject = JObject.Parse(result);
+            if (jsonObject.Value<bool>("error"))
+            {
+                MessageBox.Show(jsonObject.Value<string>("message"));
+            }
+            else
+            {
+                //Global.GlobalData.isDriver = true;
+                MessageBox.Show(jsonObject.Value<string>("message"));
+                // refresh lai trang
+                NavigationService.Navigate(new Uri("/Refresh.xaml", UriKind.RelativeOrAbsolute));
+            }
+        }
 
 
         void photoAvatarChooserTask_Completed(object sender, PhotoResult e)
@@ -211,12 +270,73 @@ namespace RideSharingWPApp
 
         private void btnUpdateProfile_Tap(object sender, System.Windows.Input.GestureEventArgs e)
         {
+            StackPanel panel = new StackPanel();
 
+            TextBox txtbUpdateFullname = new TextBox();
+            TextBox txtbUpdateEmail = new TextBox();
+            TextBox txtbUpdatePhone = new TextBox();
+            TextBox txtbUpdatePersonalID= new TextBox();
+
+            txtbUpdateEmail.Text = txtbEmail.Text;
+            txtbUpdatePersonalID.Text = txtbPersonalID.Text;
+            txtbUpdatePhone.Text = txtbPhone.Text;
+            txtbUpdateFullname.Text = txtbFullname.Text;
+            TextBlock b0 = new TextBlock(); b0.Text = "Full Name: ";
+            TextBlock b1 = new TextBlock(); b1.Text = "Email: ";
+            TextBlock b2 = new TextBlock(); b2.Text = "Personal ID: ";
+            TextBlock b3 = new TextBlock(); b3.Text = "Phone: ";
+
+            panel.Children.Add(b0);
+            panel.Children.Add(txtbUpdateFullname);
+            panel.Children.Add(b1);
+            panel.Children.Add(txtbUpdateEmail);
+            panel.Children.Add(b2);
+            panel.Children.Add(txtbUpdatePersonalID);
+            panel.Children.Add(b3);
+            panel.Children.Add(txtbUpdatePhone);
+            CustomMessageBox messageBox = new CustomMessageBox()
+            {
+                //set the properties
+                Caption = "Update your profile",
+                Message = "",
+                LeftButtonContent = "Update",
+                RightButtonContent = "Cancel"
+            };
+
+            messageBox.Content = panel;
+            //messageBox.Content = b2;
+
+            //Add the dismissed event handler
+            messageBox.Dismissed += (s1, e1) =>
+            {
+                switch (e1.Result)
+                {
+                    case CustomMessageBoxResult.LeftButton:
+                        //add the task you wish to perform when user clicks on yes button here
+                        
+                        updateUserInfo(txtbUpdateFullname.Text.Trim(),txtbUpdateEmail.Text.Trim(), 
+                            txtbUpdatePersonalID.Text.Trim(), txtbUpdatePhone.Text.Trim());
+                                          
+                        break;
+                    case CustomMessageBoxResult.RightButton:
+                        //add the task you wish to perform when user clicks on no button here
+
+                        break;
+                    case CustomMessageBoxResult.None:
+                        // Do something.
+                        break;
+                    default:
+                        break;
+                }
+            };
+
+            //add the show method
+            messageBox.Show();
         }
 
         private void btnUpgrade_Click(object sender, RoutedEventArgs e)
         {
-
+            NavigationService.Navigate(new Uri("/Upgrade.xaml", UriKind.RelativeOrAbsolute));
         }
     }
 }

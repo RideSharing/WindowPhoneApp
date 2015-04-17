@@ -144,6 +144,9 @@
       <DependentUpon>PostItinerary.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Refresh.xaml.cs">
+      <DependentUpon>Refresh.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Request\RequestToBingMap.cs" />
     <Compile Include="Request\RequestToServer.cs" />
     <Compile Include="Resources\AppResources.Designer.cs">
@@ -232,6 +235,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Driver\PostItinerary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Refresh.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

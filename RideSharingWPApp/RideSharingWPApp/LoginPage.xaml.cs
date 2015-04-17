@@ -23,8 +23,8 @@ namespace RideSharingWPApp
         public LoginPage()
         {
             InitializeComponent();
-            txtbEmail.Text = "cody@enclave.vn";
-            txtbPassword.Text = "12341234";
+            txtbEmail.Text = "truman@enclave.vn";
+            txtbPassword.Text = "abc123";
             /*Loaded += (s, e) =>
             {
                 // Some login-password check condition
@@ -70,7 +70,7 @@ namespace RideSharingWPApp
                 //get API key
                 Global.GlobalData.APIkey = jsonObject.Value<string>("apiKey").Trim();
 
-                //Global.GlobalData.isDriver = jsonObject.Value<bool>("driver");
+                Global.GlobalData.isDriver = jsonObject.Value<bool>("driver");
 
                 Global.GlobalData.customer_status = jsonObject.Value<int>("customer_status");
                 Global.GlobalData.driver_status = jsonObject.Value<int>("driver_staus");
