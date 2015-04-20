@@ -142,6 +142,7 @@
 
                     <!--ContentPanel - place additional content here-->
                     <toolkit:PhoneTextBox x:Name="txtbDescription" 
+                                         VerticalScrollBarVisibility="Visible" 
                          HorizontalAlignment="Center" 
                          Margin="0,0,0,0"
                          Width="480" 
@@ -155,7 +156,7 @@
                          HorizontalAlignment="Center" 
                          Grid.Row="1" 
                          TextWrapping="Wrap" 
-                         Hint="Quãng đường đi..." 
+                         Hint="Quãng đường đi (km)..." 
                          VerticalAlignment="Center" 
                          Width="480" Height="72"
                          Background="{StaticResource PhoneTextBoxSelectionForegroundBrush}"/>
@@ -176,7 +177,7 @@
                          HorizontalAlignment="Center" 
                          Margin="0,0,0,0" 
                          Grid.Row="4" TextWrapping="Wrap" 
-                         Hint=" Giá tiền..." VerticalAlignment="Center" 
+                         Hint=" Giá tiền (VND)..." VerticalAlignment="Center" 
                          Background="{StaticResource PhoneTextBoxSelectionForegroundBrush}"/>
                     <!--<Button x:Name="btnUpdate"
                         Height="70" 

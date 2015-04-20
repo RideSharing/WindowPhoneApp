@@ -16,5 +16,56 @@ namespace RideSharingWPApp
         {
             InitializeComponent();
         }
+
+        private void longlistViewOtherUser_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void btnSubmitComment_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+
+        private void menuAccountInfo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuAboutUs_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuLogOut_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuHome_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuSearch_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuPostItinerary_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuItineraryManagement_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtbPhone_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

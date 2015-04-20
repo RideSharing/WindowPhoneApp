@@ -117,52 +117,52 @@
                     <ListBox Grid.Row="0" Margin="0,0,0,0">
                         <ListBoxItem Background="White" Margin="0,1,0,1">
                             <StackPanel Margin="10,0,0,0">
-                                <TextBlock Text="Mô tả hành trinh:" Foreground="Black" FontSize="24" FontWeight="Bold"/>
-                                <TextBlock x:Name="txtDescription" Foreground="Black" FontSize="20" FontWeight="Bold" />
+                                <TextBlock Text="Mô tả:" Foreground="Black" FontSize="24" FontWeight="Bold"/>
+                                <TextBlock x:Name="txtDescription" TextWrapping="Wrap" Foreground="Black" FontSize="20" FontWeight="Bold" Width="450" Height="70"/>
                             </StackPanel>
                         </ListBoxItem>
                         <ListBoxItem Background="White" Margin="0,1,0,1">
                             <StackPanel Margin="10,0,0,0">
                                 <TextBlock Text="Điểm xuất phát:" Foreground="Black" FontSize="24" FontWeight="Bold"/>
-                                <TextBlock x:Name="txtStartAddress" Foreground="Black" FontSize="20" FontWeight="Bold" />
+                                <TextBlock x:Name="txtStartAddress" TextWrapping="Wrap" Foreground="Black" FontSize="20" FontWeight="Bold" Width="450" Height="70" />
                             </StackPanel>
                         </ListBoxItem>
                         <ListBoxItem Background="White" Margin="0,1,0,1">
                             <StackPanel Margin="10,0,0,0">
                                 <TextBlock Text="Nơi đến:" Foreground="Black" FontSize="24" FontWeight="Bold"/>
-                                <TextBlock x:Name="txtEndAddress" Foreground="Black" FontSize="20" FontWeight="Bold" />
+                                <TextBlock x:Name="txtEndAddress" TextWrapping="Wrap" Foreground="Black" FontSize="20" FontWeight="Bold" Width="450" Height="70"/>
 
                             </StackPanel>
                         </ListBoxItem>
-                        <ListBoxItem Background="White" Margin="0,1,0,1">
+                        <ListBoxItem Background="White">
                             <StackPanel Margin="10,0,0,0">
                                 <TextBlock Text="Thời gian hoàn thành dự trù:" Foreground="Black" FontSize="24" FontWeight="Bold"/>
-                                <TextBlock x:Name="txtDuration" Foreground="Black" FontSize="20" FontWeight="Bold" />
+                                <TextBlock x:Name="txtDuration" TextWrapping="Wrap" Foreground="Black" FontSize="20" FontWeight="Bold" Width="450" Height="70"/>
                             </StackPanel>
                         </ListBoxItem>
                         <ListBoxItem Background="White" Margin="0,1,0,1">
                             <StackPanel Margin="10,0,0,0">
-                                <TextBlock Text="Khoảng cách:" Foreground="Black" FontSize="24" FontWeight="Bold"/>
-                                <TextBlock x:Name="txtDistance" Foreground="Black" FontSize="20" FontWeight="Bold" />
+                                <TextBlock Text="Khoảng cách (km):" Foreground="Black" FontSize="24" FontWeight="Bold"/>
+                                <TextBlock x:Name="txtDistance" TextWrapping="Wrap" Foreground="Black" FontSize="20" FontWeight="Bold" Width="450" Height="70"/>
                             </StackPanel>
                         </ListBoxItem>
                         <ListBoxItem Background="White" Margin="0,1,0,1">
                             <StackPanel Margin="10,0,0,0">
                                 <TextBlock Text="Ngày đi:" Foreground="Black" FontSize="24" FontWeight="Bold"/>
-                                <TextBlock x:Name="txtLeaveDay" Foreground="Black" FontSize="20" FontWeight="Bold" />
+                                <TextBlock x:Name="txtLeaveDay" TextWrapping="Wrap" Foreground="Black" FontSize="20" FontWeight="Bold" Width="450" Height="70" />
                             </StackPanel>
                         </ListBoxItem>
                         <ListBoxItem Background="White" Margin="0,1,0,1">
                             <StackPanel Margin="10,0,0,0">
-                                <TextBlock Text="Giá tiền:" Foreground="Black" FontSize="24" FontWeight="Bold"/>
-                                <TextBlock x:Name="txtCost" Foreground="Black" FontSize="20" FontWeight="Bold" />
+                                <TextBlock Text="Giá tiền (VND):" Foreground="Black" FontSize="24" FontWeight="Bold"/>
+                                <TextBlock x:Name="txtCost" TextWrapping="Wrap" Foreground="Black" FontSize="20" FontWeight="Bold" Width="450" Height="70"/>
 
                             </StackPanel>
                         </ListBoxItem>
                         <ListBoxItem Background="White" Margin="0,1,0,1">
                             <StackPanel Margin="10,0,0,0">
                                 <TextBlock Text="Điện thoại liên lạc" Foreground="Black" FontSize="24" FontWeight="Bold" />
-                                <TextBlock x:Name="txtPhone" Foreground="Black" FontSize="20" FontWeight="Bold" />
+                                <TextBlock x:Name="txtPhone" TextWrapping="Wrap" Foreground="Black" FontSize="20" FontWeight="Bold" Width="450" Height="70" />
                             </StackPanel>
                         </ListBoxItem>
                     </ListBox>

@@ -144,6 +144,9 @@
       <DependentUpon>PostItinerary.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RatingPage.xaml.cs">
+      <DependentUpon>RatingPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Refresh.xaml.cs">
       <DependentUpon>Refresh.xaml</DependentUpon>
     </Compile>
@@ -238,9 +241,9 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="RatingsControl.xaml">
-      <Generator>MSBuild:Compile</Generator>
+    <Page Include="RatingPage.xaml">
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Refresh.xaml">
       <SubType>Designer</SubType>

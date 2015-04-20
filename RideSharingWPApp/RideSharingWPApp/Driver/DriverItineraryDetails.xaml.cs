@@ -361,6 +361,9 @@ namespace RideSharingWPApp.Driver
 
         private void menuLogOut_Click(object sender, EventArgs e)
         {
+            //delete UserInfo Before Logout
+            Global.GlobalData.deleteUserInfoBeforeLogout();
+
             NavigationService.Navigate(new Uri("/LoginPage.xaml", UriKind.RelativeOrAbsolute));
         }
     }   

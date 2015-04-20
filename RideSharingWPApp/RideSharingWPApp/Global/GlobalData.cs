@@ -31,5 +31,10 @@ namespace RideSharingWPApp.Global
         public const int ITINERARY_STATUS_CUSTOMER_ACCEPTED = 2;
         public const int ITINERARY_STATUS_DRIVER_ACCEPTED = 3;
         public const int ITINERARY_STATUS_FINISHED = 4;
+
+        public static void deleteUserInfoBeforeLogout()
+        {
+
+        }
     }
 }
