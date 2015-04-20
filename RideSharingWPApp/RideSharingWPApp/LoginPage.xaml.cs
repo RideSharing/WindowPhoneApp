@@ -23,8 +23,8 @@ namespace RideSharingWPApp
         public LoginPage()
         {
             InitializeComponent();
-            txtbEmail.Text = "truman@enclave.vn";
-            txtbPassword.Text = "abc123";
+            txtbEmail.Text = "";
+            txtbPassword.Text = "";
             /*Loaded += (s, e) =>
             {
                 // Some login-password check condition

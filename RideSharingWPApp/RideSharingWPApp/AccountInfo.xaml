@@ -72,7 +72,7 @@
             </Grid>
 
 
-            <Image x:Name="imgAvatar" Grid.Row="0"  >
+            <Image x:Name="imgAvatar" Source="Assets/avatar/ic_author_truman.png" Grid.Row="0"  >
                 <Image.Clip>
                     <EllipseGeometry Center="80,80" RadiusX="80" RadiusY="80"/>
                 </Image.Clip>
@@ -133,7 +133,7 @@
                     </Border>
                     <StackPanel Orientation="Horizontal" Height="105" Width="auto" Margin="8,-7,0,0">
                         <!--1 picure and 2 button -->
-                        <Image x:Name="imgPersonalID" Height="105" Width="160" Stretch="None" Margin="0,0,0,10"/>
+                        <Image x:Name="imgPersonalID" Source="Assets/avatar/ic_personalID.jpg" Height="105" Width="160" Stretch="None" Margin="0,0,0,10"/>
                         <Button Width="90" Height="90" >
                             <Image x:Name="btnSelectPerIDImg" 
                                    Source="Assets/ic_acc/ic_upload.png"

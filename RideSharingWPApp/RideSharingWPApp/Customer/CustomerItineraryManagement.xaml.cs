@@ -177,7 +177,7 @@ namespace RideSharingWPApp.Customer
 
         private void menuLogOut_Click(object sender, EventArgs e)
         {
-
+            NavigationService.Navigate(new Uri("/LoginPage.xaml", UriKind.RelativeOrAbsolute));
         }
 
     }

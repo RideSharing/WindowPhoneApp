@@ -238,9 +238,17 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="RatingsControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Refresh.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Star.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Tracking.xaml">
       <SubType>Designer</SubType>
@@ -270,6 +278,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="MetroRate.pri" />
     <None Include="packages.config" />
     <None Include="Properties\AppManifest.xml" />
     <None Include="Properties\WMAppManifest.xml">
@@ -299,6 +308,7 @@
     <Content Include="Assets\ic_acc\ic_driver_license .jpg" />
     <Content Include="Assets\ic_acc\ic_edit.png" />
     <Content Include="Assets\ic_acc\ic_image2.png" />
+    <Content Include="Assets\avatar\ic_personalID.jpg" />
     <Content Include="Assets\ic_acc\ic_upload.png" />
     <Content Include="Assets\ic_acc\Personal.png" />
     <Content Include="Assets\ic_acc\phone.png" />

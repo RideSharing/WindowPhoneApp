@@ -8,15 +8,13 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 
-namespace RideSharingWPApp.Driver
+namespace RideSharingWPApp
 {
-    public partial class DriverMainMap : PhoneApplicationPage
+    public partial class ratingSample : PhoneApplicationPage
     {
-        public DriverMainMap()
+        public ratingSample()
         {
             InitializeComponent();
-
-            //MetroRate.RatingsControl x = new MetroRate.RatingsControl();
         }
     }
 }

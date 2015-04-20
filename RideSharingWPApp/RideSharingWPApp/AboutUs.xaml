@@ -47,20 +47,18 @@
 
         <StackPanel Grid.Row="2" Height="Auto" Background="White" Margin="0,0,0,3">
             <TextBlock HorizontalAlignment="Center" Text="Thông tin cả bản:" Foreground="#FF0C0B0B" FontWeight="Bold" />
-            <TextBlock Text=" -Được phát triển bởi Halley Group" Foreground="#FFE80C0C" />
-            <TextBlock Text=" -" Foreground="#FF0C0B0B" />
-            <TextBlock Text=" -Office:455-457 Hoàng Diệu, Đà Nẵng" Foreground="#FFE80C0C" />
-            <TextBlock Text=" -DĐ:0975417597" Foreground="#FFE80C0C" />
+            <TextBlock Text=" -Được phát triển bởi Ride Sharing team" Foreground="#FFE80C0C" FontWeight="Bold" />
+            <TextBlock Text=" -Chạy trên đa nền tảng Android OS, WP OS, Web" Foreground="#FFD11717" FontWeight="Bold" />
+            <TextBlock Text=" -Office:455-457 Hoàng Diệu, Đà Nẵng" Foreground="#FFE80C0C" FontWeight="Bold" />
+            <TextBlock Text=" -DĐ:0975417597" Foreground="#FFE80C0C" FontWeight="Bold" />
         </StackPanel>
 
         <StackPanel Grid.Row="3" Height="Auto" Background="White" Margin="0,0,0,7">
-            <TextBlock HorizontalAlignment="Center" Foreground="#FF0C0B0B" FontWeight="Bold" >
-            	<Run Text="Liên "/>
-            	<Run Text="hệ:"/>
+            <TextBlock Text="Liên hệ:" HorizontalAlignment="Center" Foreground="#FF0C0B0B" FontWeight="Bold" >  
             </TextBlock>
             <TextBlock Text="  -FaceBook: facebook.com/ridesharing" Foreground="#FF1546EE" FontWeight="Bold" />
             <TextBlock Text="  -Gmail:ridesharing@gmail.com" Foreground="#FFAC0909" FontWeight="Bold" />
-            <TextBlock Text="  -Google Plus:googleplus.com/ridesharing" Foreground="#FF38AC0D" FontWeight="Bold" />
+            <TextBlock Text="  -Google Plus:googleplus.com/ridesharing" Foreground="#FF094EE4" FontWeight="Bold" />
             <TextBlock Text="  -YouTube:youtube.com/ridesharing" Foreground="#FFB40B0B" FontWeight="Bold" />
         </StackPanel>
 

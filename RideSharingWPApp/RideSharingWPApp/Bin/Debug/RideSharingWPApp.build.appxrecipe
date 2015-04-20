@@ -363,6 +363,9 @@
     <AppxPackagedFile Include="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\ic_acc\ic_driver_license .jpg">
       <PackagePath>Assets\ic_acc\ic_driver_license .jpg</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\avatar\ic_personalID.jpg">
+      <PackagePath>Assets\avatar\ic_personalID.jpg</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\README_FIRST.txt">
       <PackagePath>README_FIRST.txt</PackagePath>
     </AppxPackagedFile>
