@@ -28,68 +28,57 @@
 
         <StackPanel Height="Auto" Grid.Row="0" Margin="0,0,0,0" Background="#FF20E017">
 
-            <TextBlock Margin="9,0,0,0" Style="{StaticResource PhoneTextTitle1Style}" FontSize="22" Text="Đăng ký hành trình"/>
+            <TextBlock Margin="9,0,0,0" Style="{StaticResource PhoneTextTitle1Style}" FontSize="22" Text="Itierary registration" FontWeight="Bold"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="0,0,0,0" Background="{StaticResource PhoneForegroundBrush}">
             <maps:Map x:Name="mapPostItinerary" Tap="mapPostItinerary_Tap" Margin="0,0,0,0"/>
             <Canvas>
-                <Border Width="40" Height="40" Canvas.Left="0" Canvas.Top="0">
-                    <Image x:Name="btnZoomIn" KeyDown="btnZoomIn_KeyDown">
+                <Button x:Name="btnZoomIn" Padding="5,5,5,5" BorderBrush="Black" Width="70" Height="70" Canvas.Left="410" Canvas.Top="250" Click="btnZoomIn_Click">
+                    <Image  Stretch="Fill">
                         <Image.Source>
-                            <BitmapImage UriSource="Assets/drawmap/ZoomIn.png"/>
+                            <BitmapImage UriSource="/Assets/drawmap/ZoomIn.png"/>
                         </Image.Source>
                     </Image>
-                </Border>
-                <Border Width="40" Background="White" Height="40" Canvas.Left="0" Canvas.Top="50">
-                    <Image x:Name="btnZoomOut" KeyDown="btnZoomOut_KeyDown">
+                </Button>
+                <Button x:Name="btnZoomOut" Padding="5,5,5,5" Width="70" BorderBrush="Black" BorderThickness="3" Height="70" Canvas.Left="410" Canvas.Top="200" Click="btnZoomOut_Click">
+                    <Image  Stretch="Fill">
                         <Image.Source>
-                            <BitmapImage UriSource="Assets/drawmap/ZoomOut.png"/>
+                            <BitmapImage UriSource="/Assets/drawmap/ZoomOut.png"/>
                         </Image.Source>
                     </Image>
-                </Border>
-                <Border Width="40" Background="White" Height="40" Canvas.Left="430" Canvas.Top="0">
-                    <Image x:Name="btnStart" KeyDown="btnStart_KeyDown">
-                        <Image.Source>
-                            <BitmapImage UriSource="Assets/drawmap/blackstart.png"/>
-                        </Image.Source>
-                    </Image>
-                </Border>
-                <Border Width="40" Background="White" Height="40" Canvas.Left="430" Canvas.Top="50">
-                    <Image x:Name="btnEnd" KeyDown="btnEnd_KeyDown">
-                        <Image.Source>
-                            <BitmapImage UriSource="Assets/drawmap/blackend.png"/>
-                        </Image.Source>
-                    </Image>
-                </Border>
-
-            </Canvas>    
+                </Button>
+            </Canvas>
         </Grid>
         <Grid Grid.Row="2" HorizontalAlignment="Center" Width="480">
-            <toolkit:PhoneTextBox x:Name="txtboxStart"    
-                 HorizontalAlignment="Center" 
-                 Height="Auto" Margin="0,0,0,0" 
-                 TextWrapping="Wrap" 
-                 Hint="Nơi bắt đầu" VerticalAlignment="Top" 
-                 Width="480" KeyDown="txtboxStart_KeyDown"/>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <toolkit:PhoneTextBox x:Name="txtboxStart" Grid.Column="0" Background="White" HorizontalAlignment="Center" Height="80" Margin="0,0,0,0" TextWrapping="Wrap" Hint="Departure..." VerticalAlignment="Top" Width="400" KeyDown="txtboxStart_KeyDown"/>
+            <Button Grid.Column="1" Background="White" x:Name="btnStart" BorderBrush="Black" BorderThickness="2" Height="80" Width="80"  Canvas.Left="380" Canvas.Top="400" Click="btnStart_Click">
+                <Image x:Name="imgStart" Stretch="Fill" Source="/Assets/drawmap/blackstart.png"/>
+            </Button>
         </Grid>
 
         <Grid Grid.Row="3" HorizontalAlignment="Center" Width="480">
-            <toolkit:PhoneTextBox x:Name="txtboxEnd"    
-                HorizontalAlignment="Center" 
-                Height="Auto" Margin="0,0,0,0" 
-                TextWrapping="Wrap" 
-                Hint="Nơi đến" VerticalAlignment="Top" 
-                Width="480" KeyDown="txtboxEnd_KeyDown"/>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <toolkit:PhoneTextBox x:Name="txtboxEnd" Background="White" Grid.Column="0" HorizontalAlignment="Center" Height="80" Margin="0,0,0,0" TextWrapping="Wrap" Hint="Destination..." VerticalAlignment="Top" Width="400" KeyDown="txtboxEnd_KeyDown"/>
+            <Button x:Name="btnEnd" Grid.Column="1" Background="White" BorderBrush="Black" BorderThickness="2" Height="80" Width="80"  Canvas.Left="380" Canvas.Top="400" Click="btnEnd_Click">
+                <Image x:Name="imgEnd" Stretch="Fill" Source="/Assets/drawmap/blackend.png" Width="22"/>
+            </Button>
         </Grid>
         <Grid Grid.Row="4">
             <Button x:Name="btnXn"
-                    Content="Xác nhận" HorizontalAlignment="Center"
+                    Content="Accept" HorizontalAlignment="Center"
                     Margin="0,0,0,0" 
                     VerticalAlignment="Top" 
-                    Background="#FF2D90F5" 
-                    BorderThickness="0" Width="160" 
+                    Background="#FF3DA5E1" 
+                    BorderThickness="5" Width="160" 
                     RenderTransformOrigin="0.5,0.5" Height="72" Click="btnXn_Click"/>
         </Grid>
     </Grid>

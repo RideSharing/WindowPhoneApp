@@ -32,6 +32,8 @@ namespace RideSharingWPApp.Global
         public const int ITINERARY_STATUS_DRIVER_ACCEPTED = 3;
         public const int ITINERARY_STATUS_FINISHED = 4;
 
+        public static bool isDisplayMessageBox = false;
+
         public static void deleteUserInfoBeforeLogout()
         {
 

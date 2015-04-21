@@ -90,20 +90,20 @@
                     <Grid x:Name="ContentPanel" Grid.Row="0" Margin="0,0,0,0" Background="{StaticResource PhoneForegroundBrush}">
                         <maps:Map x:Name="mapItineraryDetails" Tap="mapItineraryDetails_Tap"/>
                         <Canvas>
-                            <Border Width="40" Background="White" Height="40" Canvas.Left="0" Canvas.Top="0">
-                                <Image x:Name="btnZoomIn" KeyDown="btnZoomIn_KeyDown">
+                            <Button x:Name="btnZoomIn" Padding="5,5,5,5" BorderBrush="Black" Width="70" Height="70" Canvas.Left="410" Canvas.Top="250" Click="btnZoomIn_Click">
+                                <Image  Stretch="Fill">
                                     <Image.Source>
-                                        <BitmapImage UriSource="Assets/drawmap/ZoomIn.png"/>
+                                        <BitmapImage UriSource="/Assets/drawmap/ZoomIn.png"/>
                                     </Image.Source>
                                 </Image>
-                            </Border>
-                            <Border Width="40" Background="White" Height="40" Canvas.Left="0" Canvas.Top="40">
-                                <Image x:Name="btnZoomOut" KeyDown="btnZoomOut_KeyDown">
+                            </Button>
+                            <Button x:Name="btnZoomOut" Padding="5,5,5,5" Width="70" BorderBrush="Black" BorderThickness="3" Height="70" Canvas.Left="410" Canvas.Top="200" Click="btnZoomOut_Click">
+                                <Image  Stretch="Fill">
                                     <Image.Source>
-                                        <BitmapImage UriSource="Assets/drawmap/ZoomOut.png"/>
+                                        <BitmapImage UriSource="/Assets/drawmap/ZoomOut.png"/>
                                     </Image.Source>
                                 </Image>
-                            </Border>
+                            </Button>
                         </Canvas>
                     </Grid>
                     <Grid Grid.Row="1" HorizontalAlignment="Center" Width="480">

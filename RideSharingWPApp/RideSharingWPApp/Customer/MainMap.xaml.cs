@@ -16,6 +16,7 @@ using System.Threading.Tasks;
 using Windows.Devices.Geolocation;
 using RideSharingWPApp.Map;
 using System.Windows.Media.Imaging;
+using RideSharingWPApp.Global;
 
 namespace RideSharingWPApp
 {
@@ -32,15 +33,37 @@ namespace RideSharingWPApp
         public MainMap()
         {
             InitializeComponent();
-          // MessageBox.Show("rf", MessageBoxButton.OK);
-
+            
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
+            //set customer status tai trang Login va isDisplayMessageBox = false tai global data
+
+            // check neu customer status  < 3  va isDisplayMessageBox = false  ==> hien thi messagebox
+            // neu ko thi ko hien thi
+            if (GlobalData.customer_status < 3 && GlobalData.isDisplayMessageBox == false)
+            {
+                MessageBoxResult result =
+                MessageBox.Show("You need to update your information to use this app!",
+               "Update Account", MessageBoxButton.OKCancel);
+
+                if (result == MessageBoxResult.OK)
+                {
+                    GlobalData.isDisplayMessageBox = true;
+                    NavigationService.Navigate(new Uri("/AccountInfo.xaml", UriKind.Relative));
+                }
+                else
+                {
+                    GlobalData.isDisplayMessageBox = true;
+                }
+            }
+
             InitCurrentLocationInfo();
             getItinerary();
+
+           
         }
 
         public async void InitCurrentLocationInfo()
@@ -151,7 +174,55 @@ namespace RideSharingWPApp
         
         private void menuSearch_Click(object sender, EventArgs e)
         {
+            //display search
+            StackPanel panel = new StackPanel();
 
+            TextBox txtbSearch = new TextBox();
+
+            TextBlock b1 = new TextBlock(); b1.Text = "Password: ";
+
+
+            Button btnAdvanceSearch = new Button();
+            panel.Children.Add(b1);
+            panel.Children.Add(txtbSearch);
+            
+            CustomMessageBox messageBox = new CustomMessageBox()
+            {
+                //set the properties
+                Caption = "Search",
+                Message = "",
+                
+                LeftButtonContent = "Find",
+                RightButtonContent = "Andvance Search"
+            };
+
+            messageBox.Content = panel;
+            //messageBox.Content = b2;
+
+            //Add the dismissed event handler
+            messageBox.Dismissed += (s1, e1) =>
+            {
+                switch (e1.Result)
+                {
+                    case CustomMessageBoxResult.LeftButton:
+                        //add the task you wish to perform when user clicks on yes button here
+                        
+
+                        break;
+                    case CustomMessageBoxResult.RightButton:
+                        //add the task you wish to perform when user clicks on no button here
+
+                        break;
+                    case CustomMessageBoxResult.None:
+                        // Do something.
+                        break;
+                    default:
+                        break;
+                }
+            };
+
+            //add the show method
+            messageBox.Show();
         }
         private void menuHome_Click(object sender, EventArgs e)
         {
@@ -173,16 +244,6 @@ namespace RideSharingWPApp
             NavigationService.Navigate(new Uri("/AccountInfo.xaml", UriKind.RelativeOrAbsolute));
         }
 
-        private void btnZoomIn_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
-        {
-
-        }
-
-        private void btnZoomOut_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
-        {
-
-        }
-
         private void menuAboutUs_Click(object sender, EventArgs e)
         {
             NavigationService.Navigate(new Uri("/AboutUs.xaml", UriKind.RelativeOrAbsolute));
@@ -199,6 +260,16 @@ namespace RideSharingWPApp
             Global.GlobalData.deleteUserInfoBeforeLogout();
 
             NavigationService.Navigate(new Uri("/LoginPage.xaml", UriKind.RelativeOrAbsolute));
+        }
+
+        private void btnZoomOut_Click(object sender, RoutedEventArgs e)
+        {
+            mapMain.ZoomLevel = mapMain.ZoomLevel - 1;
+        }
+
+        private void btnZoomIn_Click(object sender, RoutedEventArgs e)
+        {
+            mapMain.ZoomLevel = mapMain.ZoomLevel + 1;
         }
     }
 

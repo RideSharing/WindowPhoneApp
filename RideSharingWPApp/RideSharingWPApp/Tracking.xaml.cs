@@ -47,7 +47,7 @@ namespace RideSharingWPApp
             con.Error += Connection_Error;
             HubProxy = con.CreateHubProxy("ChatHub");
             //Handle incoming event from server: use Invoke to write to console from SignalR's thread
-            HubProxy.On<string, string>("broadcastMessage", (name, message) =>
+            HubProxy.On<string>("getPos", (message) =>
                 Dispatcher.BeginInvoke(() => test(message))
             );
             try
@@ -63,6 +63,11 @@ namespace RideSharingWPApp
             {
                 txtFireBase.Text = "eror";
             }
+
+            Dispatcher.BeginInvoke(() =>
+            {
+                HubProxy.Invoke("Connect", "15");
+            });
         }
 
         private void test(string message)
@@ -151,7 +156,7 @@ namespace RideSharingWPApp
         {
             Dispatcher.BeginInvoke(() =>
             {
-                HubProxy.Invoke("Send", "WP1", args1.Position.Coordinate.Latitude.ToString() + "," + args1.Position.Coordinate.Longitude.ToString());
+                HubProxy.Invoke("SendPos", "14", args1.Position.Coordinate.Latitude.ToString() + "," + args1.Position.Coordinate.Longitude.ToString());
             });
         }
     }

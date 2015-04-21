@@ -209,5 +209,15 @@ namespace RideSharingWPApp
 
             NavigationService.Navigate(new Uri("/LoginPage.xaml", UriKind.RelativeOrAbsolute));
         }
+
+        private void btnZoomOut_Click(object sender, RoutedEventArgs e)
+        {
+            mapItineraryDetails.ZoomLevel = mapItineraryDetails.ZoomLevel - 1;
+        }
+
+        private void btnZoomIn_Click(object sender, RoutedEventArgs e)
+        {
+            mapItineraryDetails.ZoomLevel = mapItineraryDetails.ZoomLevel + 1;
+        }
     }
 }
