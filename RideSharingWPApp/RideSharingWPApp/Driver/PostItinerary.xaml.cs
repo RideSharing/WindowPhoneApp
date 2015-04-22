@@ -272,7 +272,11 @@ namespace RideSharingWPApp
 
         private void btnZoomOut_Click(object sender, RoutedEventArgs e)
         {
-            mapPostItinerary.ZoomLevel = mapPostItinerary.ZoomLevel - 1;
+            if (mapPostItinerary.ZoomLevel > 1)
+            {
+                mapPostItinerary.ZoomLevel = mapPostItinerary.ZoomLevel - 1;
+            }
+            
         }
 
         private void btnZoomIn_Click(object sender, RoutedEventArgs e)

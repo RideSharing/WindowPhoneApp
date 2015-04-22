@@ -167,7 +167,7 @@ namespace RideSharingWPApp
             Itinerary2 selectedItem = (Itinerary2)longlistItineraries.SelectedItem;
             MessageBox.Show("ss: " + selectedItem.itinerary_id);
             //luu tru tam thoi
-            Global.GlobalData.selectedItinerary = selectedItem;
+            //Global.GlobalData.selectedItinerary = selectedItem;
             //navigate sang details
             NavigationService.Navigate(new Uri("/Customer/ItineraryDetails.xaml", UriKind.Relative));
         }
@@ -177,15 +177,21 @@ namespace RideSharingWPApp
             //display search
             StackPanel panel = new StackPanel();
 
-            TextBox txtbSearch = new TextBox();
-
+            TextBox txtbStart = new TextBox();
             TextBlock b1 = new TextBlock(); b1.Text = "Password: ";
 
+            TextBox txtbEnd = new TextBox();
+            TextBlock b2 = new TextBlock(); b1.Text = "Password: ";
 
-            Button btnAdvanceSearch = new Button();
+            Button btnAdvanceSearch = new Button(); btnAdvanceSearch.Content = "Advance Search";
+            btnAdvanceSearch.Click += btnAdvanceSearch_Click;
+
             panel.Children.Add(b1);
-            panel.Children.Add(txtbSearch);
-            
+            panel.Children.Add(txtbStart);
+            panel.Children.Add(b2);
+            panel.Children.Add(txtbEnd);
+            panel.Children.Add(btnAdvanceSearch);
+
             CustomMessageBox messageBox = new CustomMessageBox()
             {
                 //set the properties
@@ -193,7 +199,7 @@ namespace RideSharingWPApp
                 Message = "",
                 
                 LeftButtonContent = "Find",
-                RightButtonContent = "Andvance Search"
+                RightButtonContent = "Cancel"
             };
 
             messageBox.Content = panel;
@@ -206,7 +212,10 @@ namespace RideSharingWPApp
                 {
                     case CustomMessageBoxResult.LeftButton:
                         //add the task you wish to perform when user clicks on yes button here
-                        
+                        //goi ham search
+                        //
+                        var result = Request.RequestToServer.sendGetRequest("");
+
 
                         break;
                     case CustomMessageBoxResult.RightButton:
@@ -223,6 +232,11 @@ namespace RideSharingWPApp
 
             //add the show method
             messageBox.Show();
+        }
+
+        void btnAdvanceSearch_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/AdvanceSearch.xamll", UriKind.RelativeOrAbsolute));
         }
         private void menuHome_Click(object sender, EventArgs e)
         {
@@ -264,12 +278,24 @@ namespace RideSharingWPApp
 
         private void btnZoomOut_Click(object sender, RoutedEventArgs e)
         {
-            mapMain.ZoomLevel = mapMain.ZoomLevel - 1;
+            if (mapMain.ZoomLevel > 1)
+            {
+                mapMain.ZoomLevel = mapMain.ZoomLevel - 1;
+            }
+            
         }
 
         private void btnZoomIn_Click(object sender, RoutedEventArgs e)
         {
-            mapMain.ZoomLevel = mapMain.ZoomLevel + 1;
+            try
+            {
+                mapMain.ZoomLevel = mapMain.ZoomLevel + 1;
+            }
+            catch (Exception)
+            {
+
+            }
+            
         }
     }
 
