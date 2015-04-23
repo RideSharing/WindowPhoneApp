@@ -68,7 +68,7 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <toolkit:PhoneTextBox x:Name="txtboxEnd" Background="White" Grid.Column="0" HorizontalAlignment="Center" Height="80" Margin="0,0,0,0" TextWrapping="Wrap" Hint="Destination..." VerticalAlignment="Top" Width="400" KeyDown="txtboxEnd_KeyDown"/>
-            <Button x:Name="btnEnd" Grid.Column="1" Background="White" BorderBrush="Black" BorderThickness="2" Height="80" Width="80"  Canvas.Left="380" Canvas.Top="400" Click="btnEnd_Click">
+            <Button x:Name="btnEnd" Grid.Column="1" Background="White" BorderBrush="Black" BorderThickness="2" Height="80" Width="80" Click="btnEnd_Click" Margin="0,0,0,0">
                 <Image x:Name="imgEnd" Stretch="Fill" Source="/Assets/drawmap/blackend.png" Width="22"/>
             </Button>
         </Grid>

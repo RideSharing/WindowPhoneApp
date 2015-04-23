@@ -23,7 +23,7 @@ namespace RideSharingWPApp.DateTimes
 
                 return datetime;
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 return new DateTime(1, 1, 1, 1, 1, 00);
             }

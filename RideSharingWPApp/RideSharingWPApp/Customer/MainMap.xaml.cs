@@ -43,7 +43,7 @@ namespace RideSharingWPApp
 
             // check neu customer status  < 3  va isDisplayMessageBox = false  ==> hien thi messagebox
             // neu ko thi ko hien thi
-            if (GlobalData.customer_status < 3 && GlobalData.isDisplayMessageBox == false)
+            if (GlobalData.customer_status < GlobalData.USER_ACCEPT_UPDATED_PROFILE && GlobalData.isDisplayMessageBox == false)
             {
                 MessageBoxResult result =
                 MessageBox.Show("You need to update your information to use this app!",
@@ -66,7 +66,7 @@ namespace RideSharingWPApp
            
         }
 
-        public async void InitCurrentLocationInfo()
+        public void InitCurrentLocationInfo()
         {
             Task<GeoCoordinate> x = ShowMyCurrentLocationOnTheMap();
         }
@@ -296,6 +296,11 @@ namespace RideSharingWPApp
 
             }
             
+        }
+
+        private void menuSwitchRole_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

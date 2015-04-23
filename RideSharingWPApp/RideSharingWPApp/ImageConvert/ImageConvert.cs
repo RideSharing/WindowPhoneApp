@@ -25,7 +25,7 @@ namespace RideSharingWPApp.ImageConvert
                     return bitmapImage;
                 }
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 BitmapImage bitmapImage = new BitmapImage();
                 return bitmapImage;

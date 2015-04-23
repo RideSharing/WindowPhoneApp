@@ -53,6 +53,9 @@ namespace RideSharingWPApp.Driver
                 btnDelete.Click += btnDelete_Click;
                 gridInfo.Children.Add(btnDelete);
                 Grid.SetRow(btnDelete, 6);
+
+                //cho phep sua doi dien di va diem den
+
             }
             //dang doi driver accept
             else if (GlobalData.selectedItinerary.status.Equals(Global.GlobalData.ITINERARY_STATUS_CUSTOMER_ACCEPTED))
@@ -238,7 +241,7 @@ namespace RideSharingWPApp.Driver
             JObject jsonObject = JObject.Parse(result);
             MessageBox.Show(jsonObject.Value<string>("message"));
             //do something
-
+            NavigationService.Navigate(new Uri("/Driver/ItineraryManagement.xaml", UriKind.RelativeOrAbsolute));
 
         }
 
@@ -251,7 +254,7 @@ namespace RideSharingWPApp.Driver
             JObject jsonObject = JObject.Parse(result);
             MessageBox.Show(jsonObject.Value<string>("message"));
             //do something
-
+            NavigationService.Navigate(new Uri("/Driver/ItineraryManagement.xaml", UriKind.RelativeOrAbsolute));
         }
 
         private async void btnDelete_Click(object sender, RoutedEventArgs e)
@@ -293,9 +296,11 @@ namespace RideSharingWPApp.Driver
             JObject jsonObject = JObject.Parse(result);
             MessageBox.Show(jsonObject.Value<string>("message"));
 
+            NavigationService.Navigate(new Uri("/Driver/ItineraryManagement.xaml", UriKind.RelativeOrAbsolute));
+
         }
 
-        private void mapItineraryDetails_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        /*private void mapItineraryDetails_Tap(object sender, System.Windows.Input.GestureEventArgs e)
         {
             if (endPointOverlay != null)
             {
@@ -318,7 +323,7 @@ namespace RideSharingWPApp.Driver
             geoQ.GeoCoordinate = asd;
 
             geoQ.QueryAsync();
-        }
+        }*/
 
         private void menuSearch_Click(object sender, EventArgs e)
         {
@@ -378,6 +383,37 @@ namespace RideSharingWPApp.Driver
         private void btnZoomIn_Click(object sender, RoutedEventArgs e)
         {
             mapItineraryDetails.ZoomLevel = mapItineraryDetails.ZoomLevel + 1;
+        }
+
+        private void txtboxEnd_KeyDown_1(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void txtboxStart_KeyDown_1(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void btnStart_Click(object sender, RoutedEventArgs e)
+        {
+            if (!(startPointOverlay == null))
+            {
+                mapItineraryDetails.Center = startPointOverlay.GeoCoordinate;
+            }
+        }
+
+        private void btnEnd_Click(object sender, RoutedEventArgs e)
+        {
+            if (!(endPointOverlay.GeoCoordinate == null))
+            {
+                mapItineraryDetails.Center = endPointOverlay.GeoCoordinate;
+            }
+        }
+
+        private void menuSwitchRole_Click(object sender, EventArgs e)
+        {
+
         }
     }   
 }

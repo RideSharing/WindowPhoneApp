@@ -291,7 +291,12 @@ namespace RideSharingWPApp
                 btnEnd.Background = new SolidColorBrush(Colors.Gray);
                 btnStart.Background = new SolidColorBrush(Colors.White);
                 isSetEndPoint = true;
-            } 
+            }
+
+            if(endPointOverlay.GeoCoordinate != null)
+            {
+                mapPostItinerary.Center = endPointOverlay.GeoCoordinate;
+            }
         }
 
         private void btnStart_Click(object sender, RoutedEventArgs e)
@@ -301,6 +306,11 @@ namespace RideSharingWPApp
                 btnEnd.Background = new SolidColorBrush(Colors.White);
                 btnStart.Background = new SolidColorBrush(Colors.Gray);
                 isSetEndPoint = false;
+            }
+
+            if (startPointOverlay != null)
+            {
+                mapPostItinerary.Center = startPointOverlay.GeoCoordinate;
             }
         }
 

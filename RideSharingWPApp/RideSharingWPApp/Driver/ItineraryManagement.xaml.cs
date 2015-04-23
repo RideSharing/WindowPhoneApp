@@ -196,6 +196,11 @@ namespace RideSharingWPApp
             NavigationService.Navigate(new Uri("/LoginPage.xaml", UriKind.RelativeOrAbsolute));
         }
 
+        private void menuSwitchRole_Click(object sender, EventArgs e)
+        {
+
+        }
+
 
 
     }
