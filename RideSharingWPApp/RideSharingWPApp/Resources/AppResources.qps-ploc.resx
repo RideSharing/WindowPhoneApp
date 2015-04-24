@@ -122,37 +122,7 @@
     <comment>Controls the FlowDirection for all elements in the RootFrame. Set to the traditional direction of this resource file's language</comment>
   </data>
   <data name="ResourceLanguage" xml:space="preserve">
-    <value>en-US</value>
+    <value>qps-ploc</value>
     <comment>Controls the Language and ensures that the font for all elements in the RootFrame aligns with the app's language. Set to the language code of this resource file's language.</comment>
-  </data>
-  <data name="ApplicationTitle" xml:space="preserve">
-    <value>my application</value>
-  </data>
-  <data name="SampleProperty" xml:space="preserve">
-    <value>Sample Runtime Property Value</value>
-  </data>
-  <data name="btnLogin" xml:space="preserve">
-    <value>Login</value>
-  </data>
-  <data name="btnRegister" xml:space="preserve">
-    <value>Register</value>
-  </data>
-  <data name="displayMessage" xml:space="preserve">
-    <value>This sample assumes that people above 18 years of age are eligible to vote.</value>
-  </data>
-  <data name="hintInputEmail" xml:space="preserve">
-    <value>Your email...</value>
-  </data>
-  <data name="hintInputPass" xml:space="preserve">
-    <value>Your password...</value>
-  </data>
-  <data name="hyperlinkForgotPass" xml:space="preserve">
-    <value>Forgot password</value>
-  </data>
-  <data name="slogan" xml:space="preserve">
-    <value>Ride Sharing- Your Happiness moment</value>
-  </data>
-  <data name="tracking" xml:space="preserve">
-    <value>Tracking</value>
   </data>
 </root>

@@ -30,13 +30,13 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Image Grid.Row="0" Source="Assets/avatar/ic_logo.png"/>
-            <TextBlock Grid.Row="1" HorizontalAlignment="Center" Text="Đăng ký để tiết kiệm chi phí! " FontWeight="Bold" FontFamily="MV Boli" />
+            <TextBlock x:Name="sologan" Grid.Row="1" HorizontalAlignment="Center" Text="{Binding Path=LocalizedResources.slogan, Source={StaticResource LocalizedStrings}}" FontWeight="Bold" FontFamily="MV Boli" />
         </Grid>
-        <toolkit:PhoneTextBox x:Name="txtbEmail" Hint="Nhập Email:" Grid.Row="1" Background="White" Width="Auto" Height="Auto" />
-        <toolkit:PhoneTextBox  x:Name="txtbPassword" Hint="Nhập PassWord:" Grid.Row="2" Background="White" Width="Auto" />
-        <Button x:Name="btnLogin" Grid.Row="3" Content="Đăng Nhập"  Width="Auto" FontWeight="Bold" BorderThickness="5" Background="#FF3DA5E1" Click="btnLogin_Click"/>
-        <Button x:Name="btnRegister" Grid.Row="4" Content="Đăng ký"  Width="Auto" FontWeight="Bold" BorderThickness="5" Background="#FF3DA5E1" Click="btnRegister_Click"/>
-        <HyperlinkButton x:Name="linkForgotPass"  Grid.Row="5" Content="Quên mật khẩu" Click="linkForgotPass_Click"/>
+        <toolkit:PhoneTextBox x:Name="txtbEmail" Hint="{Binding Path=LocalizedResources.hintInputEmail, Source={StaticResource LocalizedStrings}}" Grid.Row="1" Background="White" Width="Auto" Height="Auto" />
+        <toolkit:PhoneTextBox  x:Name="txtbPassword" Hint="{Binding Path=LocalizedResources.hintInputPass, Source={StaticResource LocalizedStrings}}" Grid.Row="2" Background="White" Width="Auto" />
+        <Button x:Name="btnLogin" Grid.Row="3" Content="{Binding Path=LocalizedResources.btnLogin, Source={StaticResource LocalizedStrings}}"  Width="Auto" FontWeight="Bold" BorderThickness="5" Background="#FF3DA5E1" Click="btnLogin_Click"/>
+        <Button x:Name="btnRegister" Grid.Row="4" Content="{Binding Path=LocalizedResources.btnRegister, Source={StaticResource LocalizedStrings}}"  Width="Auto" FontWeight="Bold" BorderThickness="5" Background="#FF3DA5E1" Click="btnRegister_Click"/>
+        <HyperlinkButton x:Name="linkForgotPass"  Grid.Row="5" Content="{Binding Path=LocalizedResources.hyperlinkForgotPass, Source={StaticResource LocalizedStrings}}" Click="linkForgotPass_Click"/>
     </Grid>
     <!--<Grid x:Name="LayoutRoot" Background="White">
         <Grid.RowDefinitions>

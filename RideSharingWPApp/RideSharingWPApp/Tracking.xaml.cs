@@ -35,9 +35,9 @@ namespace RideSharingWPApp
         {
             InitializeComponent();
 
-            InitCurrentLocationInfo();
+            //InitCurrentLocationInfo();
 
-            ConnectAsync();
+            //ConnectAsync();
         }
 
         private async void ConnectAsync()

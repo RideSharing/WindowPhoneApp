@@ -3,6 +3,9 @@
   <XAPFiles>
     <File>resources.pri</File>
     <File>RideSharingWPApp.dll</File>
+    <File>qps-ploc\RideSharingWPApp.resources.dll</File>
+    <File>vi-VN\RideSharingWPApp.resources.dll</File>
+    <File>vi-VN\Microsoft.Phone.Controls.Toolkit.resources.dll</File>
     <File>Assets\AppBar\ic_home.png</File>
     <File>Assets\AppBar\ic_ItiMana.png</File>
     <File>Assets\AppBar\ic_map.png</File>

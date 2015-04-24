@@ -117,42 +117,36 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="displayMessage" xml:space="preserve">
+    <value>Mẫu này giả định rằng người trên 18 tuổi có đủ điều kiện để bỏ phiếu.</value>
+  </data>
   <data name="ResourceFlowDirection" xml:space="preserve">
     <value>LeftToRight</value>
     <comment>Controls the FlowDirection for all elements in the RootFrame. Set to the traditional direction of this resource file's language</comment>
   </data>
   <data name="ResourceLanguage" xml:space="preserve">
-    <value>en-US</value>
+    <value>vi-VN</value>
     <comment>Controls the Language and ensures that the font for all elements in the RootFrame aligns with the app's language. Set to the language code of this resource file's language.</comment>
   </data>
-  <data name="ApplicationTitle" xml:space="preserve">
-    <value>my application</value>
-  </data>
-  <data name="SampleProperty" xml:space="preserve">
-    <value>Sample Runtime Property Value</value>
-  </data>
-  <data name="btnLogin" xml:space="preserve">
-    <value>Login</value>
+  <data name="tracking" xml:space="preserve">
+    <value>Theo dõi</value>
   </data>
   <data name="btnRegister" xml:space="preserve">
-    <value>Register</value>
+    <value>Đăng ký</value>
   </data>
-  <data name="displayMessage" xml:space="preserve">
-    <value>This sample assumes that people above 18 years of age are eligible to vote.</value>
-  </data>
-  <data name="hintInputEmail" xml:space="preserve">
-    <value>Your email...</value>
-  </data>
-  <data name="hintInputPass" xml:space="preserve">
-    <value>Your password...</value>
-  </data>
-  <data name="hyperlinkForgotPass" xml:space="preserve">
-    <value>Forgot password</value>
+  <data name="btnLogin" xml:space="preserve">
+    <value>Đăng nhập</value>
   </data>
   <data name="slogan" xml:space="preserve">
-    <value>Ride Sharing- Your Happiness moment</value>
+    <value>Đăng ký để tiết kiệm chi phí.</value>
   </data>
-  <data name="tracking" xml:space="preserve">
-    <value>Tracking</value>
+  <data name="hyperlinkForgotPass" xml:space="preserve">
+    <value>Quên mật khẩu</value>
+  </data>
+  <data name="hintInputPass" xml:space="preserve">
+    <value>Mật khẩu của bạn:</value>
+  </data>
+  <data name="hintInputEmail" xml:space="preserve">
+    <value>Email của bạn:</value>
   </data>
 </root>

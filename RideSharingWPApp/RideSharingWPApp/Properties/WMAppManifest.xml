@@ -1,6 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2014/deployment" AppPlatformVersion="8.1">
   <DefaultLanguage xmlns="" code="en-US" />
+  <Languages xmlns="">
+    <Language code="qps-ploc" />
+    <Language code="vi-VN" />
+  </Languages>
   <App xmlns="" ProductID="{624f8a38-a7df-469e-bdcc-52d4e00fc588}" Title="RideSharingWPApp" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="RideSharingWPApp author" Description="Sample description" SDOptOut="false" BackUpOptOut="false" Publisher="RideSharingWPApp" PublisherID="{d51fbb73-5585-4010-94d6-5e806095bcf0}">
     <IconPath IsRelative="true" IsResource="false">Assets\ApplicationIcon.png</IconPath>
     <Capabilities>

@@ -22,8 +22,8 @@
         </Grid.RowDefinitions>
 
         <maps:Map x:Name="mapMain" Grid.Row="0"/>
-        <Button Content="track" Grid.Row="1" x:Name="btntrack" Click="btntrack_Click" />
-        <TextBlock x:Name="txtFireBase" HorizontalAlignment="Left" Margin="49,656,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" RenderTransformOrigin="-3.366,1.167"/>
+        <Button Content="{Binding Path=LocalizedResources.tracking, Source={StaticResource LocalizedStrings}}" Grid.Row="1" x:Name="btntrack" Click="btntrack_Click" />
+        <TextBlock x:Name="txtFireBase" Text="{Binding Path=LocalizedResources.displayMessage, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Left" Margin="49,656,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="-3.366,1.167"/>
     </Grid>
 
 </phone:PhoneApplicationPage>
