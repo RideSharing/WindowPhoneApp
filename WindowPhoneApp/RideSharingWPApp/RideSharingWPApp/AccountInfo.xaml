@@ -1,0 +1,165 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="RideSharingWPApp.AccountInfo"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="#3DA5E1">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="2.5*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel Grid.Row="0" Canvas.ZIndex="999"
+			Margin="0,0,0,0" 
+			Background="#FF20E017"
+			Height="Auto">
+            <TextBlock 
+				Margin="0,0,0,0"
+				HorizontalAlignment="Left"
+				Style="{StaticResource PhoneTextTitle1Style}"
+				Text="Ride Sharing Application" FontSize="22"/>
+        </StackPanel>
+
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Row="0" Grid.Column="1" Width="90" Height="90" BorderThickness="0">
+                    <Image x:Name="btnUpdateProfile" 
+                           Source="/Assets/ic_acc/ic_edit.png"
+                           Tap="btnUpdateProfile_Tap"/>
+                </Button>
+                <!-- select-->
+                <Button Grid.Row="0" Grid.Column="0" Width="90" Height="90" BorderThickness="0">
+                    <Image x:Name="btnSelectAvaImg"
+                           Source="/Assets/ic_acc/ic_upload.png"
+                           Tap="btnSelectAvaImg_Tap" />
+                </Button>
+                <!--capture-->
+                <Button Grid.Row="1" Grid.Column="0" Width="90" Height="90" BorderThickness="0">
+                    <Image x:Name="btnCaptureAvaImg"
+                           Source="/Assets/ic_acc/ic_image2.png"
+                           Tap="btnCaptureAvaImg_Tap" />
+                </Button>
+            </Grid>
+
+
+            <Image x:Name="imgAvatar" Source="Assets/avatar/ic_author_truman.png" Grid.Row="0"  >
+                <Image.Clip>
+                    <EllipseGeometry Center="80,80" RadiusX="80" RadiusY="80"/>
+                </Image.Clip>
+            </Image>
+            <Grid Grid.Row="1">
+                <TextBlock Grid.Column="1" x:Name="txtbFullname" Text="HKUHKU" HorizontalAlignment="Center"/>
+            </Grid>
+            <TextBlock HorizontalAlignment="Center"/>
+
+        </Grid>
+
+        <ListBox Grid.Row="2" Margin="0,0,0,0">
+            <ListBoxItem Background="White" Margin="0,1,0,1">
+                <StackPanel Orientation="Horizontal" Margin="12,2,0,4" Height="105" Width="432">
+                    <!--Replace rectangle with image-->
+                    <Border BorderThickness="3" Width="99" Height="99" BorderBrush="#FFFFC700" >
+                        <!-- Background="#FFFFC700"-->
+                        <Image Source="/Assets/ic_acc/email-blue-icon.png"  Width="99" Height="99" MinWidth="99" MinHeight="99" />
+                    </Border>
+                    <StackPanel Width="311" Margin="8,-7,0,0">
+                        <TextBlock Text="{Binding Path=LocalizedResources.txtEmail, Source={StaticResource LocalizedStrings}}" Foreground="Blue" TextWrapping="Wrap" Margin="10,0" Style="{StaticResource PhoneTextExtraLargeStyle}" FontSize="{StaticResource PhoneFontSizeLarge}" />
+                        <TextBlock x:Name="txtbEmail" Text="{Binding end_address}" Foreground="Black" TextWrapping="Wrap" Margin="10,-2,10,0" Style="{StaticResource PhoneTextSubtleStyle}" />
+                    </StackPanel>
+                </StackPanel>
+            </ListBoxItem>
+            <ListBoxItem Background="White" Margin="0,1,0,1">
+                <StackPanel Orientation="Horizontal" Margin="12,2,0,4" Height="105" Width="432">
+                    <!--Replace rectangle with image-->
+                    <Border BorderThickness="3" Width="99" Height="99" BorderBrush="#FFFFC700" >
+                        <!-- Background="#FFFFC700"-->
+                        <Image Source="/Assets/ic_acc/Personal.png"  Width="99" Height="99" MinWidth="99" MinHeight="99" />
+                    </Border>
+                    <StackPanel Width="311" Margin="8,-7,0,0">
+                        <TextBlock Text="{Binding Path=LocalizedResources.txtPersonalID, Source={StaticResource LocalizedStrings}}" Foreground="Blue" TextWrapping="Wrap" Margin="10,0" Style="{StaticResource PhoneTextExtraLargeStyle}" FontSize="{StaticResource PhoneFontSizeLarge}" />
+                        <TextBlock x:Name="txtbPersonalID" Text="{Binding end_address}" Foreground="Black" TextWrapping="Wrap" Margin="10,-2,10,0" Style="{StaticResource PhoneTextSubtleStyle}" />
+                    </StackPanel>
+                </StackPanel>
+            </ListBoxItem>
+            <ListBoxItem Background="White" Margin="0,1,0,1">
+                <StackPanel Orientation="Horizontal" Margin="12,2,0,4" Height="105" Width="432">
+                    <!--Replace rectangle with image-->
+                    <Border BorderThickness="3" Width="99" Height="99" BorderBrush="#FFFFC700" >
+                        <!-- Background="#FFFFC700"-->
+                        <Image Source="/Assets/ic_acc/phone.png"  Width="99" Height="99" MinWidth="99" MinHeight="99" />
+                    </Border>
+                    <StackPanel Width="311" Margin="8,-7,0,0">
+                        <TextBlock Text="{Binding Path=LocalizedResources.txtPhone, Source={StaticResource LocalizedStrings}}" Foreground="Blue" TextWrapping="Wrap" Margin="10,0" Style="{StaticResource PhoneTextExtraLargeStyle}" FontSize="{StaticResource PhoneFontSizeLarge}" />
+                        <TextBlock x:Name="txtbPhone" Text="{Binding end_address}" Foreground="Black" TextWrapping="Wrap" Margin="10,-2,10,0" Style="{StaticResource PhoneTextSubtleStyle}" />
+                    </StackPanel>
+                </StackPanel>
+            </ListBoxItem>
+            <ListBoxItem Background="White" Margin="0,1,0,1">
+                <StackPanel Orientation="Horizontal" Margin="12,2,0,4" Height="105" Width="432">
+                    <!--Replace rectangle with image-->
+                    <Border BorderThickness="3" Width="99" Height="99" BorderBrush="#FFFFC700" >
+                        <!-- Background="#FFFFC700"-->
+                        <Image Source="/Assets/ic_acc/Postcard.png"  Width="99" Height="99" MinWidth="99" MinHeight="99" />
+                    </Border>
+                    <StackPanel Orientation="Horizontal" Height="105" Width="auto" Margin="8,-7,0,0">
+                        <!--1 picure and 2 button -->
+                        <Image x:Name="imgPersonalID" Source="Assets/avatar/ic_personalID.jpg" Height="105" Width="160" Stretch="None" Margin="0,0,0,10"/>
+                        <Button Width="90" Height="90" >
+                            <Image x:Name="btnSelectPerIDImg" 
+                                   Source="Assets/ic_acc/ic_upload.png"
+                                   Tap="btnSelectPerIDImg_Tap"/>
+                        </Button>
+                        <Button Width="90" Height="90">
+                            <Image x:Name="btnCapturePerIDImg" 
+                                   Source="/Assets/ic_acc/ic_image2.png"
+                                   Tap="btnCapturePerIDImg_Tap"/>
+                        </Button>
+                    </StackPanel>
+                </StackPanel>
+            </ListBoxItem>
+
+        </ListBox>
+
+        <StackPanel x:Name="stackPanelDriver" HorizontalAlignment="Right" Margin="0,5,0,0" Grid.Row="3" Width="246">
+            <!--<Button Click="btnUpgrade_Click" x:Name="btnUpgrade" Height="68" Content="Upgrade" Margin="-1,0,1,0">
+                <Button.Background>
+                    <ImageBrush Stretch="Fill"/>
+                </Button.Background>
+            </Button>-->
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" Margin="0,5,0,0" Grid.Row="3" Width="229">
+            <Button x:Name="btnChangePassword" Height="68" Content="{Binding Path=LocalizedResources.btnChangePass, Source={StaticResource LocalizedStrings}}" Margin="-1,0,1,0" Click="btnChangePassword_Click"/>
+        </StackPanel>
+    </Grid>
+
+</phone:PhoneApplicationPage>

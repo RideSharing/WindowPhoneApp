@@ -1,0 +1,160 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="RideSharingWPApp.ViewOtherProfile"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True" BackgroundColor="#3DA5E1">
+
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem 
+                    x:Name="menuAccountInfo" 
+                    Text="Account Info"
+                    Click="menuAccountInfo_Click"/>
+                <shell:ApplicationBarMenuItem 
+                    x:Name="menuAboutUs" 
+                    Text="About Us"
+                    Click="menuAboutUs_Click"/>
+                <shell:ApplicationBarMenuItem 
+                    x:Name="menuLogOut" 
+                    Text="Log Out"
+                    Click="menuLogOut_Click"/>
+            </shell:ApplicationBar.MenuItems>
+
+            <shell:ApplicationBarIconButton
+                x:Name="menuHome"
+                IconUri="/Assets/AppBar/ic_home.png"  
+                Text="Home" 
+                Click="menuHome_Click"/>
+
+            <shell:ApplicationBarIconButton 
+                x:Name="menuSearch"
+                IconUri="/Assets/AppBar/ic_search.png"  
+                Text="Search" 
+                Click="menuSearch_Click"/>
+
+            <shell:ApplicationBarIconButton
+                x:Name="menuPostItinerary"
+                IconUri="/Assets/AppBar/ic_map.png" 
+                Text="Post" 
+                Click="menuPostItinerary_Click"/>
+
+            <shell:ApplicationBarIconButton 
+                x:Name="menuItineraryManagement"
+                IconUri="/Assets/AppBar/ic_ItiMana.png" 
+                Text="Manage"
+                Click="menuItineraryManagement_Click"/>
+
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Canvas.ZIndex="999"
+			Margin="0,0,0,0" 
+			Background="#FF20E017"
+			Height="Auto">
+            <TextBlock 
+				Margin="0,0,0,0"
+				HorizontalAlignment="Left"
+				Style="{StaticResource PhoneTextTitle1Style}"
+				Text="Ride Sharing Application" FontSize="22"/>
+        </StackPanel>
+        <!--Pivot Control-->
+        <phone:Pivot Grid.Row="1" Margin="0,-30,0,0" Background="#3DA5E1">
+            <!--Pivot item one-->
+            <phone:PivotItem Header="Other">
+                <!--Double line list with image placeholder and text wrapping using a floating header that scrolls with the content-->
+                <phone:LongListSelector x:Name="longlistViewOtherUser" Margin="0,0,0,0" SelectionChanged="longlistViewOtherUser_SelectionChanged" >
+
+                    <phone:LongListSelector.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal" Margin="12,2,0,4" Height="105" Width="432">
+                                <!--Replace rectangle with image-->
+                                <Border BorderThickness="3" Width="99" Height="99" BorderBrush="#FFFFC700" >
+                                    <!-- Background="#FFFFC700"-->
+                                    <Image Source="{Binding link_avatar}"  Width="99" Height="99" MinWidth="99" MinHeight="99" />
+                                </Border>
+                                <StackPanel Width="311" Margin="8,-7,0,0">
+                                    <TextBlock Text="{Binding fullname}" TextWrapping="Wrap" Margin="10,0" Style="{StaticResource PhoneTextExtraLargeStyle}"/>
+                                    <TextBlock Text="{Binding personalID}" TextWrapping="Wrap" Margin="10,-2,10,0" Style="{StaticResource PhoneTextSubtleStyle}" />
+                                    <TextBlock Text="{Binding driver_license}" TextWrapping="Wrap" Margin="10,-2,10,0" Style="{StaticResource PhoneTextSubtleStyle}" />
+                                </StackPanel>
+                            </StackPanel>
+                        </DataTemplate>
+                    </phone:LongListSelector.ItemTemplate>
+                </phone:LongListSelector>
+            </phone:PivotItem>
+            <!--Pivot item two-->
+            <phone:PivotItem Header="View details">
+
+
+                <Grid Background="#FF3DA5E1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="0.5*"/>
+                        <RowDefinition Height="0.5*"/>
+                        <RowDefinition Height="0.5*"/>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="0.5*"/>
+                    </Grid.RowDefinitions>
+
+                    <!--TitlePanel contains the name of the application and page title-->
+                    <!--ContentPanel - place additional content here-->
+                    <Grid x:Name="ContentPanel" Grid.Row="0" Margin="0,0,0,0">
+                        <Image x:Name="imgAvatar" HorizontalAlignment="Center" Source="Assets/avatar/ic_author_truman.png">
+                            <Image.Clip>
+                                <EllipseGeometry Center="90,90" RadiusX="110" RadiusY="110"/>
+                            </Image.Clip>
+                        </Image>
+                    </Grid>
+
+                    <StackPanel Grid.Row="1">
+                        <toolkit:PhoneTextBox x:Name="txtbName" TextWrapping="Wrap" Hint="Name..." Height=" 80"/>
+                    </StackPanel>
+                    <Grid Grid.Row="2">
+                        <StackPanel>
+                            <toolkit:PhoneTextBox x:Name="txtbPhone" TextWrapping="Wrap" Hint="Email..." Height=" 80" TextChanged="txtbPhone_TextChanged"/>
+                        </StackPanel>
+                    </Grid>
+                    <Grid Grid.Row="3">
+                        <StackPanel>
+                            <toolkit:PhoneTextBox x:Name="txtbPersonalID" TextWrapping="Wrap" Hint="Personal ID..." Height=" 80" AcceptsReturn="True" VerticalScrollBarVisibility="Visible"/>
+                        </StackPanel>
+                    </Grid>
+                    <Grid Grid.Row="4">
+                        <StackPanel>
+                            <toolkit:PhoneTextBox Hint="Your comment..." Height="200"
+                                                  TextWrapping="Wrap"
+                                                  x:Name="txtbComment"
+                                                  AcceptsReturn="True"
+                                                  VerticalScrollBarVisibility="Visible"/>
+                        </StackPanel>
+
+                    </Grid>
+                    <Button x:Name="btnSubmitComment" Click="btnSubmitComment_Click" Grid.Row="4" Height="70" Foreground="White" Content="Submit comment" Margin="0,210,0,0" Grid.RowSpan="2"/>
+
+                </Grid>
+
+
+
+            </phone:PivotItem>
+
+        </phone:Pivot>
+    </Grid>
+
+</phone:PhoneApplicationPage>

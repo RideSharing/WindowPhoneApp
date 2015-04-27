@@ -1,0 +1,72 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="RideSharingWPApp.LoginPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="#FF3DA5E1">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="1.5*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="4*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Image Grid.Row="0" Source="Assets/avatar/ic_logo.png"/>
+            <TextBlock x:Name="sologan" Grid.Row="1" HorizontalAlignment="Center" Text="{Binding Path=LocalizedResources.slogan, Source={StaticResource LocalizedStrings}}" FontWeight="Bold" FontFamily="MV Boli" />
+        </Grid>
+        <toolkit:PhoneTextBox x:Name="txtbEmail" Hint="{Binding Path=LocalizedResources.hintInputEmail, Source={StaticResource LocalizedStrings}}" Grid.Row="1" Background="White" Width="Auto" Height="Auto" />
+        <toolkit:PhoneTextBox  x:Name="txtbPassword" Hint="{Binding Path=LocalizedResources.hintInputPass, Source={StaticResource LocalizedStrings}}" Grid.Row="2" Background="White" Width="Auto" />
+        <Button x:Name="btnLogin" Grid.Row="3" Content="{Binding Path=LocalizedResources.btnLogin, Source={StaticResource LocalizedStrings}}"  Width="Auto" FontWeight="Bold" BorderThickness="5" Background="#FF3DA5E1" Click="btnLogin_Click"/>
+        <Button x:Name="btnRegister" Grid.Row="4" Content="{Binding Path=LocalizedResources.btnRegister, Source={StaticResource LocalizedStrings}}"  Width="Auto" FontWeight="Bold" BorderThickness="5" Background="#FF3DA5E1" Click="btnRegister_Click"/>
+        <HyperlinkButton x:Name="linkForgotPass"  Grid.Row="5" Content="{Binding Path=LocalizedResources.hyperlinkForgotPass, Source={StaticResource LocalizedStrings}}" Click="linkForgotPass_Click"/>
+    </Grid>
+    <!--<Grid x:Name="LayoutRoot" Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            
+            <TextBlock Text="Login Page" Foreground="Black" FontSize="40"/>
+
+            
+            <TextBlock Text=" Email:" Foreground="Black" FontSize="30"/>
+            <TextBox  BorderBrush="LightGray" 
+                      x:Name="txtbEmail"/>
+
+            
+            <TextBlock  Foreground="Black" Text="Password:" Margin="9,-7,0,0" FontSize="30"/>
+            <PasswordBox BorderBrush="LightGray" 
+                         x:Name="txtbPassword"/>
+
+            
+            <Button Content="Login" Background="#FF30DABB" 
+                    x:Name="btnLogin" Click="btnLogin_Click" Margin="4,0,0,0" />
+
+            
+            <Button Content="Registration" Background="#FF30DABB" x:Name="btnRegister" Click="btnRegister_Click"/>
+            
+        </StackPanel>
+        <Image x:Name="myImg" Grid.Row="1">
+            
+        </Image>
+    </Grid>-->
+</phone:PhoneApplicationPage>

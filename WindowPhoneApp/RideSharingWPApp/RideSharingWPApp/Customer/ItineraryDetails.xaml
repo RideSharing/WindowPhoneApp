@@ -1,0 +1,175 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="RideSharingWPApp.ItineraryDetails"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:maps="clr-namespace:Microsoft.Phone.Maps.Controls;assembly=Microsoft.Phone.Maps"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True" BackgroundColor="#3DA5E1">
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem 
+                    x:Name="menuAccountInfo" 
+                    Text="Account Info"
+                    Click="menuAccountInfo_Click"/>
+                <shell:ApplicationBarMenuItem 
+                    x:Name="menuAboutUs" 
+                    Text="About Us"
+                    Click="menuAboutUs_Click"/>
+                <shell:ApplicationBarMenuItem 
+                    x:Name="menuLogOut" 
+                    Text="Log Out"
+                    Click="menuLogOut_Click"/>
+            </shell:ApplicationBar.MenuItems>
+
+
+            <shell:ApplicationBarIconButton
+                x:Name="menuHome"
+                IconUri="/Assets/AppBar/ic_home.png"  
+                Text="Home" 
+                Click="menuHome_Click"/>
+
+            <shell:ApplicationBarIconButton 
+                x:Name="menuSearch"
+                IconUri="/Assets/AppBar/ic_search.png"  
+                Text="Search" 
+                Click="menuSearch_Click"/>
+
+            <shell:ApplicationBarIconButton
+                x:Name="menuPostItinerary"
+                IconUri="/Assets/AppBar/ic_map.png" 
+                Text="Post" 
+                Click="menuPostItinerary_Click"/>
+
+            <shell:ApplicationBarIconButton 
+                x:Name="menuItineraryManagement"
+                IconUri="/Assets/AppBar/ic_ItiMana.png" 
+                Text="Manage"
+                Click="menuItineraryManagement_Click"/>
+
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Canvas.ZIndex="999"
+			Margin="0,0,0,0" 
+			Background="#FF20E017"
+			Height="Auto">
+            <TextBlock 
+				Margin="0,0,0,0"
+				HorizontalAlignment="Left"
+				Style="{StaticResource PhoneTextTitle1Style}"
+				Text="Ride Sharing Application" FontSize="22"/>
+        </StackPanel>
+        <!--Pivot Control-->
+        <phone:Pivot Grid.Row="1" Margin="0,-30,0,0" Background="#3DA5E1">
+            <!--Pivot item one-->
+            <phone:PivotItem Header="Map" Margin="0,0,0,0">
+                <Grid x:Name="gridMap">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="19*"/>
+                        <ColumnDefinition Width="61*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="7*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <maps:Map x:Name="mapItineraryDetails" Grid.ColumnSpan="2"/>
+                    <Canvas>
+                        <Button x:Name="btnZoomIn" Padding="5,5,5,5" BorderBrush="Black" Width="70" Height="70" Canvas.Left="410" Canvas.Top="250" Click="btnZoomIn_Click">
+                            <Image  Stretch="Fill">
+                                <Image.Source>
+                                    <BitmapImage UriSource="/Assets/drawmap/ZoomIn.png"/>
+                                </Image.Source>
+                            </Image>
+                        </Button>
+                        <Button x:Name="btnZoomOut" Padding="5,5,5,5" Width="70" BorderBrush="Black" BorderThickness="3" Height="70" Canvas.Left="410" Canvas.Top="200" Click="btnZoomOut_Click">
+                            <Image  Stretch="Fill">
+                                <Image.Source>
+                                    <BitmapImage UriSource="/Assets/drawmap/ZoomOut.png"/>
+                                </Image.Source>
+                            </Image>
+                        </Button>
+                    </Canvas>
+                    <!--<Button x:Name="btnAccept1"  Content="Button" Grid.Row="1" Click="btnAccept1_Click"/>-->
+                </Grid>
+            </phone:PivotItem>
+            <!--Pivot item two-->
+            <phone:PivotItem Header="Info" Margin="0,0,0,0">
+                <Grid x:Name="gridInfo" Margin="0,0,0,0">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="8*"/>
+                        <RowDefinition Height="1.25*"/>
+                    </Grid.RowDefinitions>
+                    <ListBox Grid.Row="0" Margin="0,0,0,0">
+                        <ListBoxItem Background="White" Margin="0,1,0,1">
+                            <StackPanel Margin="10,0,0,0">
+                                <TextBlock Text="Mô tả:" Foreground="Black" FontSize="24" FontWeight="Bold"/>
+                                <TextBlock x:Name="txtDescription" TextWrapping="Wrap" Foreground="Black" FontSize="20" FontWeight="Bold" Width="450" Height="70"/>
+                            </StackPanel>
+                        </ListBoxItem>
+                        <ListBoxItem Background="White" Margin="0,1,0,1">
+                            <StackPanel Margin="10,0,0,0">
+                                <TextBlock Text="Điểm xuất phát:" Foreground="Black" FontSize="24" FontWeight="Bold"/>
+                                <TextBlock x:Name="txtStartAddress" TextWrapping="Wrap" Foreground="Black" FontSize="20" FontWeight="Bold" Width="450" Height="70" />
+                            </StackPanel>
+                        </ListBoxItem>
+                        <ListBoxItem Background="White" Margin="0,1,0,1">
+                            <StackPanel Margin="10,0,0,0">
+                                <TextBlock Text="Nơi đến:" Foreground="Black" FontSize="24" FontWeight="Bold"/>
+                                <TextBlock x:Name="txtEndAddress" TextWrapping="Wrap" Foreground="Black" FontSize="20" FontWeight="Bold" Width="450" Height="70"/>
+
+                            </StackPanel>
+                        </ListBoxItem>
+                        <ListBoxItem Background="White">
+                            <StackPanel Margin="10,0,0,0">
+                                <TextBlock Text="Thời gian hoàn thành dự trù:" Foreground="Black" FontSize="24" FontWeight="Bold"/>
+                                <TextBlock x:Name="txtDuration" TextWrapping="Wrap" Foreground="Black" FontSize="20" FontWeight="Bold" Width="450" Height="70"/>
+                            </StackPanel>
+                        </ListBoxItem>
+                        <ListBoxItem Background="White" Margin="0,1,0,1">
+                            <StackPanel Margin="10,0,0,0">
+                                <TextBlock Text="Khoảng cách (km):" Foreground="Black" FontSize="24" FontWeight="Bold"/>
+                                <TextBlock x:Name="txtDistance" TextWrapping="Wrap" Foreground="Black" FontSize="20" FontWeight="Bold" Width="450" Height="70"/>
+                            </StackPanel>
+                        </ListBoxItem>
+                        <ListBoxItem Background="White" Margin="0,1,0,1">
+                            <StackPanel Margin="10,0,0,0">
+                                <TextBlock Text="Ngày đi:" Foreground="Black" FontSize="24" FontWeight="Bold"/>
+                                <TextBlock x:Name="txtLeaveDay" TextWrapping="Wrap" Foreground="Black" FontSize="20" FontWeight="Bold" Width="450" Height="70" />
+                            </StackPanel>
+                        </ListBoxItem>
+                        <ListBoxItem Background="White" Margin="0,1,0,1">
+                            <StackPanel Margin="10,0,0,0">
+                                <TextBlock Text="Giá tiền (VND):" Foreground="Black" FontSize="24" FontWeight="Bold"/>
+                                <TextBlock x:Name="txtCost" TextWrapping="Wrap" Foreground="Black" FontSize="20" FontWeight="Bold" Width="450" Height="70"/>
+
+                            </StackPanel>
+                        </ListBoxItem>
+                        <ListBoxItem Background="White" Margin="0,1,0,1">
+                            <StackPanel Margin="10,0,0,0">
+                                <TextBlock Text="Điện thoại liên lạc" Foreground="Black" FontSize="24" FontWeight="Bold" />
+                                <TextBlock x:Name="txtPhone" TextWrapping="Wrap" Foreground="Black" FontSize="20" FontWeight="Bold" Width="450" Height="70" />
+                            </StackPanel>
+                        </ListBoxItem>
+                    </ListBox>
+                    <Button x:Name="btnAccept2"  Background="#3DA5E1" Grid.Row="1" Content="Xác Nhận" Click="btnAccept2_Click" />
+                </Grid>
+            </phone:PivotItem>
+        </phone:Pivot>
+    </Grid>
+
+</phone:PhoneApplicationPage>

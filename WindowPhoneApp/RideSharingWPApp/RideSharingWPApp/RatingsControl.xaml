@@ -1,0 +1,34 @@
+﻿<UserControl
+    x:Class="MetroRate.RatingsControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:controls="using:RControl">
+
+    <!--<StackPanel x:Name="spStars" Orientation="Horizontal">
+        <toolkit:Rating Height="Auto" Grid.Row="1" Value="0.6"  x:Name="ctAbundantcodeRating" Margin="0,385,0,327" Width="477"/>
+    </StackPanel>
+    -->
+   <toolkit:Rating Grid.Row="1" HorizontalAlignment="Left" Width="480" Height="Auto" x:Name="RatingControl" RatingItemCount="5" Value="2" Margin="0,289,0,399" >
+        <toolkit:Rating.FilledItemStyle>
+            <Style TargetType="toolkit:RatingItem">
+                <Setter Property="Background" Value="Red" />
+            </Style>
+        </toolkit:Rating.FilledItemStyle>
+        <toolkit:Rating.UnfilledItemStyle>
+            <Style TargetType="toolkit:RatingItem">
+                <Setter Property="Background" Value="Gray" />
+            </Style>
+        </toolkit:Rating.UnfilledItemStyle>
+    </toolkit:Rating>
+    <!-- Ratings -->
+    <!--  <StackPanel Grid.Row="1">
+        <StackPanel Orientation="Horizontal">
+            <toolkit:Rating x:Name="rtFive" Tap="" Width="239"/>
+            <TextBlock Text="{Binding ElementName=rtFive, Path=Value}" Margin="138,0,0,0"/>
+        </StackPanel>
+    </StackPanel>-->
+</UserControl>
+
