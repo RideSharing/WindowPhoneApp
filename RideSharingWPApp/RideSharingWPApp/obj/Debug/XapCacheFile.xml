@@ -1,8 +1,8 @@
-﻿<xapCache source="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\RideSharingWPApp_Debug_AnyCPU.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="4/24/2015 11:42:20 AM">
-  <file source="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\resources.pri" archivePath="resources.pri" lastWriteTime="4/24/2015 11:42:18 AM" />
-  <file source="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\RideSharingWPApp.dll" archivePath="RideSharingWPApp.dll" lastWriteTime="4/24/2015 11:42:17 AM" />
-  <file source="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\qps-ploc\RideSharingWPApp.resources.dll" archivePath="qps-ploc\RideSharingWPApp.resources.dll" lastWriteTime="4/24/2015 11:42:17 AM" />
-  <file source="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\vi-VN\RideSharingWPApp.resources.dll" archivePath="vi-VN\RideSharingWPApp.resources.dll" lastWriteTime="4/24/2015 11:42:17 AM" />
+﻿<xapCache source="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\RideSharingWPApp_Debug_AnyCPU.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="4/26/2015 2:43:55 PM">
+  <file source="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\resources.pri" archivePath="resources.pri" lastWriteTime="4/26/2015 2:43:53 PM" />
+  <file source="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\RideSharingWPApp.dll" archivePath="RideSharingWPApp.dll" lastWriteTime="4/26/2015 2:43:51 PM" />
+  <file source="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\qps-ploc\RideSharingWPApp.resources.dll" archivePath="qps-ploc\RideSharingWPApp.resources.dll" lastWriteTime="4/26/2015 2:43:52 PM" />
+  <file source="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\vi-VN\RideSharingWPApp.resources.dll" archivePath="vi-VN\RideSharingWPApp.resources.dll" lastWriteTime="4/26/2015 2:43:52 PM" />
   <file source="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\packages\WPtoolkit.4.2013.08.16\lib\wp8\vi-VN\Microsoft.Phone.Controls.Toolkit.resources.dll" archivePath="vi-VN\Microsoft.Phone.Controls.Toolkit.resources.dll" lastWriteTime="4/23/2015 11:47:17 AM" />
   <file source="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\AppBar\ic_home.png" archivePath="Assets\AppBar\ic_home.png" lastWriteTime="4/23/2015 11:47:13 AM" />
   <file source="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Assets\AppBar\ic_ItiMana.png" archivePath="Assets\AppBar\ic_ItiMana.png" lastWriteTime="4/23/2015 11:47:13 AM" />
@@ -74,6 +74,6 @@
   <file source="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\packages\Microsoft.Net.Http.2.2.28\lib\sl4-windowsphone71\System.Net.Http.Extensions.xml" archivePath="System.Net.Http.Extensions.xml" lastWriteTime="4/23/2015 11:47:15 AM" />
   <file source="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\packages\Microsoft.Net.Http.2.2.28\lib\sl4-windowsphone71\System.Net.Http.Primitives.xml" archivePath="System.Net.Http.Primitives.xml" lastWriteTime="4/23/2015 11:47:15 AM" />
   <file source="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\Properties\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="4/24/2015 11:39:01 AM" />
-  <file source="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\MDILProjectFiles.xml" archivePath="MDILProjectFiles.xml" lastWriteTime="4/24/2015 11:42:20 AM" />
+  <file source="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\MDILProjectFiles.xml" archivePath="MDILProjectFiles.xml" lastWriteTime="4/26/2015 2:43:55 PM" />
   <file source="D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\AppxManifest.xml" archivePath="AppxManifest.xml" lastWriteTime="4/24/2015 11:42:18 AM" />
 </xapCache>

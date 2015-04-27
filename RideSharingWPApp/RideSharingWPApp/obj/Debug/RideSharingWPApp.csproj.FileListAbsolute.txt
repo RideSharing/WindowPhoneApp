@@ -340,6 +340,7 @@ D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\qps-
 D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\Bin\Debug\vi-VN\RideSharingWPApp.resources.dll
 D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\RideSharingWPApp.Resources.AppResources.qps-ploc.qps-ploc.resources
 D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\RideSharingWPApp.Resources.AppResources.vi-VN.resources
+D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\RideSharingWPApp.csprojResolveAssemblyReference.cache
 D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\Microsoft.AspNet.SignalR.Client\layout.resfiles
 D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\Microsoft.AspNet.SignalR.Client\layout.resfiles.intermediate
 D:\SeniorProject\WindowPhoneApp\RideSharingWPApp\RideSharingWPApp\obj\Debug\Microsoft.AspNet.SignalR.Client\Resources.resfiles
