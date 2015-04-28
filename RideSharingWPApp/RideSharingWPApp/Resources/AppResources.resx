@@ -155,4 +155,55 @@
   <data name="tracking" xml:space="preserve">
     <value>Tracking</value>
   </data>
+  <data name="btnChangePass" xml:space="preserve">
+    <value>Change Password</value>
+  </data>
+  <data name="driverInformation" xml:space="preserve">
+    <value>Driver's Information</value>
+  </data>
+  <data name="driverLicense" xml:space="preserve">
+    <value>Driver's License</value>
+  </data>
+  <data name="driverLincensePhoto" xml:space="preserve">
+    <value>Driver Lincense's photo</value>
+  </data>
+  <data name="txtEmail" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="txtPersonalID" xml:space="preserve">
+    <value>Personal ID</value>
+  </data>
+  <data name="txtPhone" xml:space="preserve">
+    <value>Phone</value>
+  </data>
+  <data name="headerStartingDay" xml:space="preserve">
+    <value>Starting day</value>
+  </data>
+  <data name="headerStartingTime" xml:space="preserve">
+    <value>Starting time</value>
+  </data>
+  <data name="hintCost" xml:space="preserve">
+    <value>Cost...</value>
+  </data>
+  <data name="hintDeparture" xml:space="preserve">
+    <value>Departure point...</value>
+  </data>
+  <data name="hintDescription" xml:space="preserve">
+    <value>Itinerary description...</value>
+  </data>
+  <data name="hintDestination" xml:space="preserve">
+    <value>Destination point....</value>
+  </data>
+  <data name="hintDistance" xml:space="preserve">
+    <value>Distance...</value>
+  </data>
+  <data name="passwordAlready" xml:space="preserve">
+    <value>Have password. Log in now!</value>
+  </data>
+  <data name="sendPassword" xml:space="preserve">
+    <value>Sending password for this email</value>
+  </data>
+  <data name="title" xml:space="preserve">
+    <value>Ride Sharing application</value>
+  </data>
 </root>

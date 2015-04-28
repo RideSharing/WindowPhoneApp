@@ -36,7 +36,7 @@
                     Background="#FF20E017">
             <TextBlock Margin="9,0,0,0" 
                        Style="{StaticResource PhoneTextTitle1Style}" 
-                       FontSize="22" Text="Đăng ký bổ sung" 
+                       FontSize="22" Text="{Binding Path=LocalizedResources.title, Source={StaticResource LocalizedStrings}}" 
                        Foreground="White" HorizontalAlignment="Left"/>
         </StackPanel>
 
@@ -46,7 +46,7 @@
                  Margin="0,0,0,0"
                  Width="480" Height="72"
                  Grid.Row="1" TextWrapping="Wrap" 
-                 Hint="Mô tả hành trình..." 
+                 Hint="{Binding Path=LocalizedResources.hintDescription, Source={StaticResource LocalizedStrings}}" 
                  VerticalAlignment="Center" 
                  Background="{StaticResource PhoneTextBoxEditBackgroundBrush}"/>
         <toolkit:PhoneTextBox x:Name="txtbStart" 
@@ -55,7 +55,7 @@
                  Margin="0,0,0,0" 
                  Grid.Row="2" 
                  TextWrapping="Wrap" 
-                 Hint="Điểm đi..." 
+                 Hint="{Binding Path=LocalizedResources.hintDeparture, Source={StaticResource LocalizedStrings}}" 
                  VerticalAlignment="Center" 
                  Background="{StaticResource PhoneTextBoxSelectionForegroundBrush}"/>
         <toolkit:PhoneTextBox x:Name="txtbEnd"
@@ -63,7 +63,7 @@
                  Margin="0,0,0,0" 
                  Grid.Row="3" 
                  TextWrapping="Wrap" 
-                 Hint="Điểm đến..." 
+                 Hint="{Binding Path=LocalizedResources.hintDestination, Source={StaticResource LocalizedStrings}}" 
                  VerticalAlignment="Center" 
                  Width="480" Height="72"
                  Background="{StaticResource PhoneTextBoxSelectionForegroundBrush}"/>
@@ -71,18 +71,18 @@
                  HorizontalAlignment="Center" 
                  Grid.Row="4" 
                  TextWrapping="Wrap" 
-                 Hint="Quãng đường đi..." 
+                 Hint="{Binding Path=LocalizedResources.hintDistance, Source={StaticResource LocalizedStrings}}" 
                  VerticalAlignment="Center" 
                  Width="480" Height="72"
                  Background="{StaticResource PhoneTextBoxSelectionForegroundBrush}"/>
         <toolkit:DatePicker x:Name="datePicker"
-                Header="Ngày đi"
+                Header="{Binding Path=LocalizedResources.headerStartingDay, Source={StaticResource LocalizedStrings}}"
                 ValueStringFormat="{}{0:dd-MM-yyyy}"
                 Margin="0,0,0,0"
                 VerticalAlignment="Center"
                 Grid.Row="5"/>
         <toolkit:TimePicker x:Name="timePicker"
-                Header="Thời gian đi"
+                Header="{Binding Path=LocalizedResources.headerStartingTime, Source={StaticResource LocalizedStrings}}" 
                 Margin="0,0,0,0"
                 VerticalAlignment="Center"
                 Grid.Row="6"/>
@@ -90,12 +90,12 @@
                  HorizontalAlignment="Center" 
                  Margin="0,0,0,0" 
                  Grid.Row="7" TextWrapping="Wrap" 
-                 Hint=" Giá tiền..." VerticalAlignment="Center" 
+                 Hint="{Binding Path=LocalizedResources.hintCost, Source={StaticResource LocalizedStrings}}" VerticalAlignment="Center" 
                  Background="{StaticResource PhoneTextBoxSelectionForegroundBrush}"/>
 
         <Button x:Name="btnRegister"
             Height="70" 
-            Content="Đăng ký" 
+            Content="{Binding Path=LocalizedResources.btnRegister, Source={StaticResource LocalizedStrings}}" 
             HorizontalAlignment="Center" 
             Margin="0,0,0,0" Grid.Row="8" 
             VerticalAlignment="Top" 

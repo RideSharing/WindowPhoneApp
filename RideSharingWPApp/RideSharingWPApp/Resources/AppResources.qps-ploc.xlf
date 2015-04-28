@@ -56,6 +56,74 @@
           <source>Tracking</source>
           <target state="new">Tracking</target>
         </trans-unit>
+        <trans-unit id="Resx/txtPhone" translate="yes" xml:space="preserve">
+          <source>Phone</source>
+          <target state="new">Phone</target>
+        </trans-unit>
+        <trans-unit id="Resx/hintDistance" translate="yes" xml:space="preserve">
+          <source>Distance...</source>
+          <target state="new">Distance...</target>
+        </trans-unit>
+        <trans-unit id="Resx/hintDestination" translate="yes" xml:space="preserve">
+          <source>Destination point....</source>
+          <target state="new">Destination point....</target>
+        </trans-unit>
+        <trans-unit id="Resx/hintDescription" translate="yes" xml:space="preserve">
+          <source>Itinerary description...</source>
+          <target state="new">Itinerary description...</target>
+        </trans-unit>
+        <trans-unit id="Resx/hintDeparture" translate="yes" xml:space="preserve">
+          <source>Departure point...</source>
+          <target state="new">Departure point...</target>
+        </trans-unit>
+        <trans-unit id="Resx/headerStartingTime" translate="yes" xml:space="preserve">
+          <source>Starting time</source>
+          <target state="new">Starting time</target>
+        </trans-unit>
+        <trans-unit id="Resx/hintCost" translate="yes" xml:space="preserve">
+          <source>Cost...</source>
+          <target state="new">Cost...</target>
+        </trans-unit>
+        <trans-unit id="Resx/headerStartingDay" translate="yes" xml:space="preserve">
+          <source>Starting day</source>
+          <target state="new">Starting day</target>
+        </trans-unit>
+        <trans-unit id="Resx/sendPassword" translate="yes" xml:space="preserve">
+          <source>Sending password for this email</source>
+          <target state="new">Sending password for this email</target>
+        </trans-unit>
+        <trans-unit id="Resx/title" translate="yes" xml:space="preserve">
+          <source>Ride Sharing application</source>
+          <target state="new">Ride Sharing application</target>
+        </trans-unit>
+        <trans-unit id="Resx/passwordAlready" translate="yes" xml:space="preserve">
+          <source>Have password. Log in now!</source>
+          <target state="new">Have password. Log in now!</target>
+        </trans-unit>
+        <trans-unit id="Resx/txtPersonalID" translate="yes" xml:space="preserve">
+          <source>Personal ID</source>
+          <target state="new">Personal ID</target>
+        </trans-unit>
+        <trans-unit id="Resx/txtEmail" translate="yes" xml:space="preserve">
+          <source>Email</source>
+          <target state="new">Email</target>
+        </trans-unit>
+        <trans-unit id="Resx/driverLincensePhoto" translate="yes" xml:space="preserve">
+          <source>Driver Lincense's photo</source>
+          <target state="new">Driver Lincense's photo</target>
+        </trans-unit>
+        <trans-unit id="Resx/driverLicense" translate="yes" xml:space="preserve">
+          <source>Driver's License</source>
+          <target state="new">Driver's License</target>
+        </trans-unit>
+        <trans-unit id="Resx/driverInformation" translate="yes" xml:space="preserve">
+          <source>Driver's Information</source>
+          <target state="new">Driver's Information</target>
+        </trans-unit>
+        <trans-unit id="Resx/btnChangePass" translate="yes" xml:space="preserve">
+          <source>Change Password</source>
+          <target state="new">Change Password</target>
+        </trans-unit>
       </group>
     </body>
   </file>

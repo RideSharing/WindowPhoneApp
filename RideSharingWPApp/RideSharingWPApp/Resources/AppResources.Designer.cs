@@ -70,6 +70,15 @@ namespace RideSharingWPApp.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Change Password.
+        /// </summary>
+        public static string btnChangePass {
+            get {
+                return ResourceManager.GetString("btnChangePass", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Login.
         /// </summary>
         public static string btnLogin {
@@ -93,6 +102,96 @@ namespace RideSharingWPApp.Resources {
         public static string displayMessage {
             get {
                 return ResourceManager.GetString("displayMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Driver&apos;s Information.
+        /// </summary>
+        public static string driverInformation {
+            get {
+                return ResourceManager.GetString("driverInformation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Driver&apos;s License.
+        /// </summary>
+        public static string driverLicense {
+            get {
+                return ResourceManager.GetString("driverLicense", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Driver Lincense&apos;s photo.
+        /// </summary>
+        public static string driverLincensePhoto {
+            get {
+                return ResourceManager.GetString("driverLincensePhoto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Starting day.
+        /// </summary>
+        public static string headerStartingDay {
+            get {
+                return ResourceManager.GetString("headerStartingDay", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Starting time.
+        /// </summary>
+        public static string headerStartingTime {
+            get {
+                return ResourceManager.GetString("headerStartingTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cost....
+        /// </summary>
+        public static string hintCost {
+            get {
+                return ResourceManager.GetString("hintCost", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Departure point....
+        /// </summary>
+        public static string hintDeparture {
+            get {
+                return ResourceManager.GetString("hintDeparture", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Itinerary description....
+        /// </summary>
+        public static string hintDescription {
+            get {
+                return ResourceManager.GetString("hintDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Destination point.....
+        /// </summary>
+        public static string hintDestination {
+            get {
+                return ResourceManager.GetString("hintDestination", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Distance....
+        /// </summary>
+        public static string hintDistance {
+            get {
+                return ResourceManager.GetString("hintDistance", resourceCulture);
             }
         }
         
@@ -124,6 +223,15 @@ namespace RideSharingWPApp.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Have password. Log in now!.
+        /// </summary>
+        public static string passwordAlready {
+            get {
+                return ResourceManager.GetString("passwordAlready", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to LeftToRight.
         /// </summary>
         public static string ResourceFlowDirection {
@@ -151,6 +259,15 @@ namespace RideSharingWPApp.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Sending password for this email.
+        /// </summary>
+        public static string sendPassword {
+            get {
+                return ResourceManager.GetString("sendPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Ride Sharing- Your Happiness moment.
         /// </summary>
         public static string slogan {
@@ -160,11 +277,47 @@ namespace RideSharingWPApp.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Ride Sharing application.
+        /// </summary>
+        public static string title {
+            get {
+                return ResourceManager.GetString("title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Tracking.
         /// </summary>
         public static string tracking {
             get {
                 return ResourceManager.GetString("tracking", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Email.
+        /// </summary>
+        public static string txtEmail {
+            get {
+                return ResourceManager.GetString("txtEmail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Personal ID.
+        /// </summary>
+        public static string txtPersonalID {
+            get {
+                return ResourceManager.GetString("txtPersonalID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Phone.
+        /// </summary>
+        public static string txtPhone {
+            get {
+                return ResourceManager.GetString("txtPhone", resourceCulture);
             }
         }
     }

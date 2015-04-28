@@ -149,4 +149,61 @@
   <data name="hintInputEmail" xml:space="preserve">
     <value>Email của bạn:</value>
   </data>
+  <data name="ApplicationTitle" xml:space="preserve">
+    <value>đơn xin của tôi</value>
+  </data>
+  <data name="SampleProperty" xml:space="preserve">
+    <value>Giá trị thuộc tính thời gian chạy mẫu</value>
+  </data>
+  <data name="txtPhone" xml:space="preserve">
+    <value>Điện thoại</value>
+  </data>
+  <data name="txtPersonalID" xml:space="preserve">
+    <value>Số Chứng minh nhân dân</value>
+  </data>
+  <data name="txtEmail" xml:space="preserve">
+    <value>Thư điện tử</value>
+  </data>
+  <data name="driverLincensePhoto" xml:space="preserve">
+    <value>Ảnh bằng lái xe máy</value>
+  </data>
+  <data name="driverLicense" xml:space="preserve">
+    <value>Bằng lái xe máy</value>
+  </data>
+  <data name="driverInformation" xml:space="preserve">
+    <value>Thông tin lái xe</value>
+  </data>
+  <data name="btnChangePass" xml:space="preserve">
+    <value>Đổi mật khẩu</value>
+  </data>
+  <data name="hintDistance" xml:space="preserve">
+    <value>Khoảng cách...</value>
+  </data>
+  <data name="hintDestination" xml:space="preserve">
+    <value>Điểm kết thúc...</value>
+  </data>
+  <data name="hintDescription" xml:space="preserve">
+    <value>Mô tả hành trình...</value>
+  </data>
+  <data name="hintDeparture" xml:space="preserve">
+    <value>Điểm khởi hành...</value>
+  </data>
+  <data name="headerStartingTime" xml:space="preserve">
+    <value>Thời gian bắt đầu</value>
+  </data>
+  <data name="headerStartingDay" xml:space="preserve">
+    <value>Ngày bắt đầu</value>
+  </data>
+  <data name="sendPassword" xml:space="preserve">
+    <value>Gửi mật khẩu cho email này</value>
+  </data>
+  <data name="passwordAlready" xml:space="preserve">
+    <value>Đã có mật khẩu. Đăng nhập ngay!</value>
+  </data>
+  <data name="hintCost" xml:space="preserve">
+    <value>Chi phí...</value>
+  </data>
+  <data name="title" xml:space="preserve">
+    <value>Ứng dụng Ride Sharing </value>
+  </data>
 </root>

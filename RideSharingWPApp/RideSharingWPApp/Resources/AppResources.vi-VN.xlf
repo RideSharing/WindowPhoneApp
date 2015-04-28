@@ -18,11 +18,11 @@
           </trans-unit>
         <trans-unit id="Resx/ApplicationTitle" translate="yes" xml:space="preserve">
           <source>my application</source>
-          <target state="new">my application</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">đơn xin của tôi</target>
         </trans-unit>
         <trans-unit id="Resx/SampleProperty" translate="yes" xml:space="preserve">
           <source>Sample Runtime Property Value</source>
-          <target state="new">Sample Runtime Property Value</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Giá trị thuộc tính thời gian chạy mẫu</target>
         </trans-unit>
         <trans-unit id="Resx/btnRegister" translate="yes" xml:space="preserve">
           <source>Register</source>
@@ -55,6 +55,74 @@
         <trans-unit id="Resx/tracking" translate="yes" xml:space="preserve">
           <source>Tracking</source>
           <target state="translated" state-qualifier="tm-suggestion">Theo dõi</target>
+        </trans-unit>
+        <trans-unit id="Resx/txtPhone" translate="yes" xml:space="preserve">
+          <source>Phone</source>
+          <target state="translated" state-qualifier="tm-suggestion">Điện thoại</target>
+        </trans-unit>
+        <trans-unit id="Resx/hintDistance" translate="yes" xml:space="preserve">
+          <source>Distance...</source>
+          <target state="translated">Khoảng cách...</target>
+        </trans-unit>
+        <trans-unit id="Resx/hintDestination" translate="yes" xml:space="preserve">
+          <source>Destination point....</source>
+          <target state="translated">Điểm kết thúc...</target>
+        </trans-unit>
+        <trans-unit id="Resx/hintDescription" translate="yes" xml:space="preserve">
+          <source>Itinerary description...</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Mô tả hành trình...</target>
+        </trans-unit>
+        <trans-unit id="Resx/hintDeparture" translate="yes" xml:space="preserve">
+          <source>Departure point...</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Điểm khởi hành...</target>
+        </trans-unit>
+        <trans-unit id="Resx/headerStartingTime" translate="yes" xml:space="preserve">
+          <source>Starting time</source>
+          <target state="translated">Thời gian bắt đầu</target>
+        </trans-unit>
+        <trans-unit id="Resx/hintCost" translate="yes" xml:space="preserve">
+          <source>Cost...</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Chi phí...</target>
+        </trans-unit>
+        <trans-unit id="Resx/headerStartingDay" translate="yes" xml:space="preserve">
+          <source>Starting day</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ngày bắt đầu</target>
+        </trans-unit>
+        <trans-unit id="Resx/sendPassword" translate="yes" xml:space="preserve">
+          <source>Sending password for this email</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Gửi mật khẩu cho email này</target>
+        </trans-unit>
+        <trans-unit id="Resx/title" translate="yes" xml:space="preserve">
+          <source>Ride Sharing application</source>
+          <target state="translated">Ứng dụng Ride Sharing </target>
+        </trans-unit>
+        <trans-unit id="Resx/passwordAlready" translate="yes" xml:space="preserve">
+          <source>Have password. Log in now!</source>
+          <target state="translated">Đã có mật khẩu. Đăng nhập ngay!</target>
+        </trans-unit>
+        <trans-unit id="Resx/txtPersonalID" translate="yes" xml:space="preserve">
+          <source>Personal ID</source>
+          <target state="translated">Số Chứng minh nhân dân</target>
+        </trans-unit>
+        <trans-unit id="Resx/txtEmail" translate="yes" xml:space="preserve">
+          <source>Email</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Thư điện tử</target>
+        </trans-unit>
+        <trans-unit id="Resx/driverLincensePhoto" translate="yes" xml:space="preserve">
+          <source>Driver Lincense's photo</source>
+          <target state="translated">Ảnh bằng lái xe máy</target>
+        </trans-unit>
+        <trans-unit id="Resx/driverLicense" translate="yes" xml:space="preserve">
+          <source>Driver's License</source>
+          <target state="translated">Bằng lái xe máy</target>
+        </trans-unit>
+        <trans-unit id="Resx/driverInformation" translate="yes" xml:space="preserve">
+          <source>Driver's Information</source>
+          <target state="translated">Thông tin lái xe</target>
+        </trans-unit>
+        <trans-unit id="Resx/btnChangePass" translate="yes" xml:space="preserve">
+          <source>Change Password</source>
+          <target state="translated">Đổi mật khẩu</target>
         </trans-unit>
       </group>
     </body>

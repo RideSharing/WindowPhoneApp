@@ -33,7 +33,7 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="0,0,0,0" HorizontalAlignment="Center">
-            <TextBlock Margin="0,100,0,0" Text="Update Driver's Information" HorizontalAlignment="Center" FontSize="24" FontWeight="Bold"/>
+            <TextBlock Margin="0,100,0,0" Text="{Binding Path=LocalizedResources.driverInformation, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Center" FontSize="24" FontWeight="Bold"/>
 
         </Grid>
         <Grid Grid.Row="2" Background="White">
@@ -55,7 +55,7 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <TextBlock x:Name="txtbDriverLicense" HorizontalAlignment="Center" FontWeight="Bold" FontSize="36" Foreground="#FF060606" Margin="10,10,10,10"/>
-                <TextBlock Grid.Row="1" HorizontalAlignment="Center" Text="Driver Lincense" Foreground="#FF060606" FontWeight="Bold"/>
+                <TextBlock Grid.Row="1" HorizontalAlignment="Center" Text="{Binding Path=LocalizedResources.driverLicense, Source={StaticResource LocalizedStrings}}" Foreground="#FF060606" FontWeight="Bold"/>
             </Grid>
             <Button Grid.Column="2" Width="90" Height="90" BorderThickness="0">
                 <Image x:Name="btnUpdatePID" Tap="btnUpdatePID_Tap" Source="/Assets/ic_acc/ic_edit.png"/>
@@ -84,7 +84,7 @@
                         <BitmapImage />
                     </Image.Source>
                 </Image>
-                <TextBlock Grid.Row="1" HorizontalAlignment="Center" Text="Driver Lincense photo" Foreground="#FF060606" FontWeight="Bold"/>
+                <TextBlock Grid.Row="1" HorizontalAlignment="Center" Text="{Binding Path=LocalizedResources.driverLincensePhoto, Source={StaticResource LocalizedStrings}}" Foreground="#FF060606" FontWeight="Bold"/>
             </Grid>
             <Button Grid.Column="2" Width="90" Height="90" BorderThickness="0">
                 <Image x:Name="btnCaptureLicenseImg" Tap="btnCaptureLicenseImg_Tap" Source="/Assets/ic_acc/ic_image2.png"/>

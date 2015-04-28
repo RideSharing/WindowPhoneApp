@@ -93,7 +93,7 @@
                         <Image Source="/Assets/ic_acc/email-blue-icon.png"  Width="99" Height="99" MinWidth="99" MinHeight="99" />
                     </Border>
                     <StackPanel Width="311" Margin="8,-7,0,0">
-                        <TextBlock Text="Email" Foreground="Blue" TextWrapping="Wrap" Margin="10,0" Style="{StaticResource PhoneTextExtraLargeStyle}" FontSize="{StaticResource PhoneFontSizeLarge}" />
+                        <TextBlock Text="{Binding Path=LocalizedResources.txtEmail, Source={StaticResource LocalizedStrings}}" Foreground="Blue" TextWrapping="Wrap" Margin="10,0" Style="{StaticResource PhoneTextExtraLargeStyle}" FontSize="{StaticResource PhoneFontSizeLarge}" />
                         <TextBlock x:Name="txtbEmail" Text="{Binding end_address}" Foreground="Black" TextWrapping="Wrap" Margin="10,-2,10,0" Style="{StaticResource PhoneTextSubtleStyle}" />
                     </StackPanel>
                 </StackPanel>
@@ -106,7 +106,7 @@
                         <Image Source="/Assets/ic_acc/Personal.png"  Width="99" Height="99" MinWidth="99" MinHeight="99" />
                     </Border>
                     <StackPanel Width="311" Margin="8,-7,0,0">
-                        <TextBlock Text="Personal ID" Foreground="Blue" TextWrapping="Wrap" Margin="10,0" Style="{StaticResource PhoneTextExtraLargeStyle}" FontSize="{StaticResource PhoneFontSizeLarge}" />
+                        <TextBlock Text="{Binding Path=LocalizedResources.txtPersonalID, Source={StaticResource LocalizedStrings}}" Foreground="Blue" TextWrapping="Wrap" Margin="10,0" Style="{StaticResource PhoneTextExtraLargeStyle}" FontSize="{StaticResource PhoneFontSizeLarge}" />
                         <TextBlock x:Name="txtbPersonalID" Text="{Binding end_address}" Foreground="Black" TextWrapping="Wrap" Margin="10,-2,10,0" Style="{StaticResource PhoneTextSubtleStyle}" />
                     </StackPanel>
                 </StackPanel>
@@ -119,7 +119,7 @@
                         <Image Source="/Assets/ic_acc/phone.png"  Width="99" Height="99" MinWidth="99" MinHeight="99" />
                     </Border>
                     <StackPanel Width="311" Margin="8,-7,0,0">
-                        <TextBlock Text="Phone" Foreground="Blue" TextWrapping="Wrap" Margin="10,0" Style="{StaticResource PhoneTextExtraLargeStyle}" FontSize="{StaticResource PhoneFontSizeLarge}" />
+                        <TextBlock Text="{Binding Path=LocalizedResources.txtPhone, Source={StaticResource LocalizedStrings}}" Foreground="Blue" TextWrapping="Wrap" Margin="10,0" Style="{StaticResource PhoneTextExtraLargeStyle}" FontSize="{StaticResource PhoneFontSizeLarge}" />
                         <TextBlock x:Name="txtbPhone" Text="{Binding end_address}" Foreground="Black" TextWrapping="Wrap" Margin="10,-2,10,0" Style="{StaticResource PhoneTextSubtleStyle}" />
                     </StackPanel>
                 </StackPanel>
@@ -158,7 +158,7 @@
             </Button>-->
         </StackPanel>
         <StackPanel HorizontalAlignment="Left" Margin="0,5,0,0" Grid.Row="3" Width="229">
-            <Button x:Name="btnChangePassword" Height="68" Content="Change Password" Margin="-1,0,1,0" Click="btnChangePassword_Click"/>
+            <Button x:Name="btnChangePassword" Height="68" Content="{Binding Path=LocalizedResources.btnChangePass, Source={StaticResource LocalizedStrings}}" Margin="-1,0,1,0" Click="btnChangePassword_Click"/>
         </StackPanel>
     </Grid>
 

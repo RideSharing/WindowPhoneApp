@@ -31,9 +31,9 @@
             <Image Grid.Row="0" Source="Assets/avatar/ic_logo.png"/>
 
         </Grid>
-        <toolkit:PhoneTextBox Hint="Nhập Email:" Grid.Row="1" Background="White" Width="Auto" />
-        <Button Grid.Row="2" x:Name="btnForgotPass"  Content="Gửi mật khẩu cho email này"  Width="Auto" FontWeight="Bold" BorderThickness="0" Background="#FFDF0174" Click="btnForgotPass_Click"/>
-        <HyperlinkButton x:Name="hplFogot" Click="hplFogot_Click" Content="Đã có mật khẩu.Đăng nhập ngay" Grid.Row="4"/>
+        <toolkit:PhoneTextBox  Hint="{Binding Path=LocalizedResources.hintInputEmail, Source={StaticResource LocalizedStrings}}" Grid.Row="1" Background="White" Width="Auto" />
+        <Button Grid.Row="2" x:Name="btnForgotPass"  Content="{Binding Path=LocalizedResources.sendPassword, Source={StaticResource LocalizedStrings}}"  Width="Auto" FontWeight="Bold" BorderThickness="0" Background="#FFDF0174" Click="btnForgotPass_Click"/>
+        <HyperlinkButton x:Name="hplFogot" Click="hplFogot_Click" Content="{Binding Path=LocalizedResources.passwordAlready, Source={StaticResource LocalizedStrings}}" Grid.Row="4"/>
     </Grid>
 
 </phone:PhoneApplicationPage>

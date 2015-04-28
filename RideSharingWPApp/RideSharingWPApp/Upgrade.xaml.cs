@@ -11,6 +11,7 @@ using RideSharingWPApp.Request;
 using Newtonsoft.Json.Linq;
 using Microsoft.Phone.Tasks;
 using Windows.Web.Http;
+using System.Windows.Data;
 
 namespace RideSharingWPApp
 {
@@ -30,6 +31,11 @@ namespace RideSharingWPApp
             {
                 Button btnUpdate = new Button();
                 btnUpdate.Content = "Update";
+               // Binding bind = new Binding("dasd");
+                //LocalizedStrings l = new LocalizedStrings();
+                //bind.Source= l;
+               // bind.Path = new PropertyPath
+                //btnUpdate.SetBinding(Button.ContentProperty, bind);
                 btnUpdate.Click += btnUpdate_Click;
                 LayoutRoot.Children.Add(btnUpdate);
                 Grid.SetRow(btnUpdate, 4);
